@@ -59,6 +59,8 @@ L'enfant ne tombe pas pour optimiser sa marche. Il tombe parce qu'il veut attein
 
 Mais attention. Ce n'est pas si simple. Un modèle ne part pas de zéro. On l'a entraîné sur des textes écrits par des humains. Il a appris nos mots, nos associations, nos préjugés. Il a appris que « chat » va souvent avec « doux », « nuit » avec « sombre », « avenir » avec « inquiétude ». Il n'a pas vécu ces choses. Il a hérité de la façon dont nous en parlons.
 
+On peut même le reprendre après coup, lui montrer quelques milliers d'exemples de ce qu'on attend, et le spécialiser. C'est le fine-tuning. On ne lui apprend pas à parler. On lui apprend à parler comme nous.
+
 Alors, quand il répond, il ne puise pas dans une expérience. Il puise dans la nôtre. Il est fait de nos traces. Un peu comme un enfant qui répète une phrase entendue sans en comprendre le sens. Sauf que lui peut répéter des millions de phrases à la fois.
 
 *[VISUEL : L'archiviste ouvre le dossier. Deux photos : un enfant qui tombe, un réseau de neurones. Elle prend un tampon. Elle hésite. Elle ne tamponne pas.]*
@@ -143,6 +145,8 @@ Une machine peut apprendre, se souvenir, avoir un corps. Alors, peut-être que l
 Nous avons tendance à croire que les émotions sont l'intérieur. La partie privée. Ce qui ne se voit pas. Mais les émotions sont aussi physiologiques. Elles sont dans le ventre, dans la gorge, dans les mains qui tremblent. Elles sont dans la façon dont on respire. Elles ne sont pas un supplément d'âme. Elles sont une manière d'habiter un corps.
 
 Un modèle peut reconnaître une émotion dans un texte. Il peut la nommer, la décrire, la simuler. Il peut même produire une réponse qui nous semble empathique. Il a appris que, quand quelqu'un dit « je suis triste », il faut répondre « je suis là ». Il a appris que, quand quelqu'un parle de la mort, il faut ralentir. Il a appris nos rituels. Il ne les ressent pas. Il les récite.
+
+Comment on lui apprend ça ? On lui montre des exemples. On lui fait comparer deux réponses. On lui dit laquelle est meilleure. Des millions de fois. C'est ce qu'on appelle l'apprentissage par retour humain. On ne lui apprend pas le vrai. On lui apprend le préféré. Et ce que nous préférons dépend de qui nous sommes.
 
 Mais voici la question qui dérange. Est-ce que nous, nous faisons autre chose ? Quand vous consolez un ami, vous ne récitez pas un script ? Vous ne dites pas les mots que vous avez appris ? Vous ne reproduisez pas ce que votre mère faisait ? La différence, c'est peut-être que vous, vous avez déjà eu mal. Vous savez ce que ça fait. La machine, non. Mais ce savoir, ce n'est pas une information. C'est une expérience. Et l'expérience ne se transmet pas. Elle se vit.
 
