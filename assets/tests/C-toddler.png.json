@@ -1,0 +1,16 @@
+{
+  "prompt": "Underexposed 35mm film still from a dark cinematic documentary. A dim apartment hallway at night. A toddler in a plain cotton romper takes a first uncertain step toward the camera, arms out; in the near foreground, the blurred shoulder of a kneeling parent. Cold steel-blue window light from the left, a faint burgundy lamp in the background, pale silver highlights on the wooden floor. Shallow depth of field, 35mm anamorphic lens, natural film grain, muted desaturated palette, intimate and photorealistic. Clean unmarked surfaces. Underexposed 35mm film still from a dark cinematic documentary. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "style": "None",
+  "steps": 8,
+  "resolution": "1536px (High)",
+  "aspect": "16:9 Landscape",
+  "seed": 424244,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "seconds": 80.8,
+  "files": [
+    "assets/tests/C-toddler.png"
+  ],
+  "server_status": "✅ Generated 1 image(s) in 75.0s (75.0s/image) | Seeds: [424244] | 1536x864 | 8 steps | INT8: Comfy Kitchen INT8"
+}

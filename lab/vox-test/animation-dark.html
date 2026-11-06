@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Reference look — salle de dossier</title>
+<style>
+  @font-face { font-family: JBMono; src: url(fonts/JetBrainsMono.ttf); }
+  html,body { margin:0; background:#000; }
+  canvas { display:block; width:100vw; height:auto; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// ------------------------------------------------------------------ design tokens (reference absolue)
+const T = {
+  bg:        '#04070A',   // noir froid, jamais pur
+  shadowTeal:'#0A1A1E',   // ombres cyan
+  warm:      '#2A1512',   // bois / avant-plan chaud
+  screen:    '#C9C4B8',   // papier de l'écran
+  screenDim: '#8E8C84',
+  glow:      '#8FD6D6',   // halo cyan
+  red:       '#A81F16',   // encre rouge
+  redHot:    '#C9331F',
+  ink:       '#050607',
+  text:      '#C6D3CF',
+  textDim:   '#6E827E',
+  grain:     0.075,
+  vignette:  0.62,
+  blackLift: 0.02,
+};
+
+const W = 1920, H = 1080, DUR = 8, FPS = 30;
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const TAU = Math.PI * 2;
+const clamp = (x,a=0,b=1) => Math.min(b, Math.max(a, x));
+const lerp = (a,b,t) => a + (b-a)*t;
+const smooth = t => { t = clamp(t); return t*t*(3-2*t); };
+const out = t => 1 - Math.pow(1-clamp(t), 3);
+const prog = (t, at, dur) => clamp((t-at)/dur);
+const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let x = Math.imul(seed ^ seed >>> 15, 1 | seed); x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x; return ((x ^ x >>> 14) >>> 0) / 4294967296; };
+
+// ------------------------------------------------------------------ assets + textures
+const shipless = new Image(); // world map
+const world = new Image(); world.src = 'assets/world.png';
+const figure = new Image(); figure.src = 'assets/figure.png';
+const F1 = new FontFace('JBMono', 'url(fonts/JetBrainsMono.ttf)');
+window.READY = Promise.all([F1.load().then(f => document.fonts.add(f)), new Promise(r => { if (world.complete) r(); else world.onload = r; }), new Promise(r => { if (figure.complete) r(); else figure.onload = r; })]);
+
+const grain = document.createElement('canvas'); grain.width = 960; grain.height = 540;
+{
+  const g = grain.getContext('2d'), id = g.createImageData(960, 540), r = rng(31);
+  for (let i = 0; i < id.data.length; i += 4) {
+    const v = 30 + r()*225;
+    id.data[i] = id.data[i+1] = id.data[i+2] = v;
+    id.data[i+3] = 26 + r()*34;
+  }
+  g.putImageData(id, 0, 0);
+}
+
+// screen surface (offscreen)
+const SW = 1200, SH = 560;
+const scr = document.createElement('canvas'); scr.width = SW; scr.height = SH;
+const sx = scr.getContext('2d');
+// figure (offscreen)
+const fig = document.createElement('canvas'); fig.width = W; fig.height = H;
+const fx = fig.getContext('2d');
+
+// ------------------------------------------------------------------ screen content
+function screenPlate(t, flick) {
+  const g = sx;
+  g.clearRect(0,0,SW,SH);
+  // paper
+  g.fillStyle = T.screen; g.fillRect(0,0,SW,SH);
+  g.fillStyle = 'rgba(10,14,14,.44)'; g.fillRect(0,0,SW,SH);
+  const vg = g.createRadialGradient(SW*.5, SH*.45, SW*.08, SW*.5, SH*.5, SW*.72);
+  vg.addColorStop(0,'rgba(255,250,235,.10)'); vg.addColorStop(1,'rgba(20,26,26,.42)');
+  g.fillStyle = vg; g.fillRect(0,0,SW,SH);
+  // world map, thin print
+  g.save();
+  g.globalAlpha = .42; g.globalCompositeOperation = 'multiply';
+  g.beginPath(); g.rect(0,0,SW,SH); g.clip();
+  const mw = 1180, mh = mw * 975/1920;
+  g.drawImage(world, 20, (SH-mh)*.40, mw, mh);
+  g.restore();
+  // horizon scanlines
+  g.save(); g.globalAlpha = .06; g.fillStyle = '#000';
+  for (let y = 0; y < SH; y += 3) g.fillRect(0, y, SW, 1);
+  g.restore();
+  // top projector bar
+  g.fillStyle = 'rgba(18,20,20,.55)'; g.fillRect(0, 0, SW, 22);
+  g.fillStyle = 'rgba(230,235,225,.10)'; g.fillRect(40, 8, 380, 4);
+  g.fillStyle = 'rgba(230,235,225,.06)'; g.fillRect(760, 8, 220, 4);
+
+  // red ink bursts
+  const bursts = [
+    [250, 210, 0.9, 11], [470, 300, .55, 12], [700, 190, 1.15, 13],
+    [905, 300, .8, 14], [1010, 390, 1.0, 15], [560, 420, .6, 16],
+  ];
+  bursts.forEach(([x,y,s,seed], i) => {
+    const at = 1.1 + i*.32, p = out(prog(t, at, .55));
+    if (p <= 0) return;
+    g.save(); g.translate(x,y); g.scale(p*s, p*s); g.rotate(seed*.37);
+    g.filter = 'blur(.7px)';
+    const glow = g.createRadialGradient(0,0,0,0,0,76);
+    glow.addColorStop(0,'rgba(168,31,22,.26)'); glow.addColorStop(1,'rgba(168,31,22,0)');
+    g.fillStyle = glow; g.fillRect(-100,-100,200,200);
+    const r = rng(seed * 101);
+    g.globalAlpha = 1; g.fillStyle = T.red;
+    for (let k = 0; k < 74; k++) {
+      const a = r()*TAU, len = 14 + Math.pow(r(), 2.4) * 78, w = .5 + r()*1.35;
+      g.save(); g.rotate(a);
+      g.beginPath(); g.moveTo(0,0); g.lineTo(len, -w/2); g.lineTo(len*1.05, 0); g.lineTo(len, w/2); g.closePath(); g.fill();
+      g.restore();
+    }
+    g.globalAlpha = 1;
+    g.beginPath(); g.arc(0,0, 6 + r()*6, 0, TAU); g.fill();
+    g.filter = 'none';
+    g.restore();
+  });
+
+  // pinned photos
+  const pins = [
+    [180, 330, -8, 34, 42], [330, 130, 5, 30, 38], [620, 300, -4, 32, 40],
+    [820, 120, 7, 28, 36], [980, 250, -6, 34, 42], [1100, 400, 3, 28, 36],
+  ];
+  pins.forEach(([x,y,rot,pw,ph], i) => {
+    const a = out(prog(t, 2.2 + i*.18, .4)); if (a <= 0) return;
+    g.save(); g.translate(x,y); g.rotate(rot*Math.PI/180); g.globalAlpha = a * .9;
+    g.fillStyle = 'rgba(228,226,214,.85)'; g.fillRect(-pw/2-2, -ph/2-2, pw+4, ph+4);
+    const pg = g.createLinearGradient(-pw/2, -ph/2, pw/2, ph/2);
+    pg.addColorStop(0,'#5A5E58'); pg.addColorStop(.55,'#333733'); pg.addColorStop(1,'#191C19');
+    g.fillStyle = pg; g.fillRect(-pw/2, -ph/2, pw, ph);
+    g.fillStyle = 'rgba(210,220,210,.16)'; g.fillRect(-pw/2+3, -ph/2+4, pw-6, 4);
+    g.fillStyle = T.redHot; g.beginPath(); g.arc(0, -ph/2-3, 2.2, 0, TAU); g.fill();
+    g.restore();
+  });
+
+  // redaction bars
+  g.fillStyle = 'rgba(28,30,28,.85)';
+  g.fillRect(520, 355, 190, 13); g.fillRect(760, 440, 150, 11); g.fillRect(300, 470, 120, 10);
+  g.fillStyle = 'rgba(168,31,22,.55)';
+  g.fillRect(520, 355, 44, 13);
+
+  // connective dashes
+  g.save(); g.strokeStyle = 'rgba(40,45,42,.35)'; g.lineWidth = 1; g.setLineDash([4,6]);
+  const links = [[250,210,330,130],[700,190,820,120],[905,300,980,250],[470,300,620,300],[560,420,620,300],[1010,390,1100,400]];
+  for (const [a,b,c,d] of links) { g.beginPath(); g.moveTo(a,b); g.lineTo(c,d); g.stroke(); }
+  g.restore();
+
+  // header typography
+  g.save(); g.globalAlpha = .5; g.fillStyle = '#2A302D'; g.font = '13px JBMono'; g.letterSpacing = '2px';
+  g.fillText('ARCHIVE 07', 40, 50);
+  g.globalAlpha = .34; g.fillText('RÉSEAU / TRACE 1998—2026', 40, 72);
+  g.globalAlpha = .30; g.fillText('ÉCHELLE 1:40 000 000', SW-250, SH-28);
+  g.globalAlpha = .22; g.fillText('07 / 12', SW-90, SH-28);
+  g.restore();
+
+  // paper fibre on the screen
+  g.save(); g.globalAlpha = .10; g.globalCompositeOperation = 'overlay';
+  g.drawImage(grain, 0, 0, SW, SH);
+  g.restore();
+
+  // warm/cool print blotches + edge falloff
+  const blot = g.createRadialGradient(SW*.72, SH*.28, 10, SW*.72, SH*.28, 420);
+  blot.addColorStop(0,'rgba(214,160,140,.10)'); blot.addColorStop(1,'rgba(214,160,140,0)');
+  g.fillStyle = blot; g.fillRect(0,0,SW,SH);
+  const edge = g.createRadialGradient(SW*.5, SH*.5, SW*.22, SW*.5, SH*.5, SW*.68);
+  edge.addColorStop(0,'rgba(0,0,0,0)'); edge.addColorStop(1,'rgba(4,8,8,.38)');
+  g.fillStyle = edge; g.fillRect(0,0,SW,SH);
+
+  // scanline sweep + flicker
+  const sy = ((t*.13) % 1) * SH;
+  const sg = g.createLinearGradient(0, sy-60, 0, sy+60);
+  sg.addColorStop(0,'rgba(255,255,255,0)'); sg.addColorStop(.5,'rgba(255,255,255,.04)'); sg.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle = sg; g.fillRect(0, sy-60, SW, 120);
+  g.fillStyle = `rgba(120,190,190,${.03 + flick*.035})`; g.fillRect(0,0,SW,SH);
+}
+
+// ------------------------------------------------------------------ figure
+function drawFigure(blurAmt) {
+  fx.clearRect(0,0,W,H);
+  fx.globalCompositeOperation = 'source-over';
+  fx.drawImage(figure, 580, 380, 640, 1150);
+  // rim light + warm bounce, clipped to the silhouette
+  fx.globalCompositeOperation = 'source-atop';
+  const rim = fx.createLinearGradient(1000, 0, 1210, 0);
+  rim.addColorStop(0,'rgba(143,214,214,0)');
+  rim.addColorStop(.55,'rgba(143,214,214,.22)');
+  rim.addColorStop(1,'rgba(190,240,238,.46)');
+  fx.fillStyle = rim; fx.fillRect(990, 360, 240, 740);
+  const warm = fx.createLinearGradient(560, 900, 760, 900);
+  warm.addColorStop(0,'rgba(168,31,22,.20)'); warm.addColorStop(1,'rgba(168,31,22,0)');
+  fx.fillStyle = warm; fx.fillRect(540, 700, 240, 400);
+  fx.globalCompositeOperation = 'source-over';
+
+  ctx.save();
+  if (blurAmt > .05) ctx.filter = `blur(${blurAmt}px)`;
+  ctx.drawImage(fig, 0, 0);
+  ctx.restore();
+}
+
+// ------------------------------------------------------------------ room + foreground
+function room(t) {
+  ctx.fillStyle = T.bg; ctx.fillRect(0,0,W,H);
+  // warm desk glow bottom
+  const wg = ctx.createLinearGradient(0, H*.62, 0, H);
+  wg.addColorStop(0,'rgba(42,21,18,0)'); wg.addColorStop(1,'rgba(42,21,18,.85)');
+  ctx.fillStyle = wg; ctx.fillRect(0, H*.6, W, H*.4);
+  // back wall falloff
+  const wall = ctx.createLinearGradient(0, 0, 0, H*.8);
+  wall.addColorStop(0,'rgba(12,32,36,.30)'); wall.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle = wall; ctx.fillRect(0, 0, W, H*.8);
+  // desk edge
+  const desk = ctx.createLinearGradient(0, H*.86, 0, H);
+  desk.addColorStop(0,'rgba(48,22,16,0)'); desk.addColorStop(.55,'rgba(48,22,16,.55)'); desk.addColorStop(1,'rgba(20,9,7,.9)');
+  ctx.fillStyle = desk; ctx.fillRect(0, H*.86, W, H*.14);
+  // wall texture
+  const r = rng(9);
+  ctx.save(); ctx.globalAlpha = .05; ctx.fillStyle = '#1A2A2C';
+  for (let i = 0; i < 60; i++) { const x = r()*W, y = r()*H*.7; ctx.fillRect(x, y, 1 + r()*2, 1 + r()*2); }
+  ctx.restore();
+}
+
+function screenGlow(t, flick) {
+  const g = ctx.createRadialGradient(960, 460, 80, 960, 500, 900);
+  g.addColorStop(0, `rgba(143,214,214,${.12 + flick*.03})`);
+  g.addColorStop(.45,'rgba(120,190,190,.06)');
+  g.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+}
+
+function foreground(t) {
+  // out-of-focus desk object, lower left
+  ctx.save(); ctx.filter = 'blur(24px)';
+  ctx.fillStyle = 'rgba(230,238,228,.12)';
+  ctx.fillRect(110, 918, 120, 40);
+  ctx.fillStyle = 'rgba(143,214,214,.06)';
+  ctx.fillRect(96, 950, 180, 14);
+  ctx.restore();
+  // blurred camera / mic on the right, mostly out of frame
+  ctx.save(); ctx.filter = 'blur(18px)';
+  ctx.fillStyle = 'rgba(2,4,4,.95)';
+  ctx.beginPath(); ctx.ellipse(1800, 560, 150, 230, -.3, 0, TAU); ctx.fill();
+  ctx.strokeStyle = 'rgba(143,214,214,.10)'; ctx.lineWidth = 6;
+  ctx.beginPath(); ctx.ellipse(1762, 500, 70, 120, -.3, 0, TAU); ctx.stroke();
+  ctx.restore();
+  // bokeh
+  const bokeh = [[300,180,60,.035],[1640,930,70,.03],[1450,200,34,.04]];
+  for (const [x,y,rad,a] of bokeh) {
+    const g = ctx.createRadialGradient(x,y,0,x,y,rad);
+    g.addColorStop(0,`rgba(200,230,225,${a})`); g.addColorStop(.7,`rgba(200,230,225,${a*.3})`); g.addColorStop(1,'rgba(200,230,225,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,rad,0,TAU); ctx.fill();
+  }
+}
+
+function dust(t) {
+  const r = rng(131);
+  ctx.save(); ctx.globalCompositeOperation = 'lighter';
+  for (let i = 0; i < 46; i++) {
+    const x = r()*W, y = r()*H, s = .5 + r()*1.5, ph = r()*TAU, sp = .2 + r()*.5;
+    const glowZone = Math.exp(-Math.pow((x-960)/620,2)) * Math.exp(-Math.pow((y-470)/420,2));
+    ctx.globalAlpha = (.05 + .16*Math.abs(Math.sin(t*sp + ph))) * (0.25 + glowZone);
+    ctx.fillStyle = '#BFE2DD';
+    ctx.beginPath(); ctx.arc((x + Math.sin(t*.35+ph)*22) % W, (y + Math.cos(t*.27+ph)*14) % H, s, 0, TAU); ctx.fill();
+  }
+  ctx.restore();
+}
+
+function hud(t) {
+  ctx.save();
+  ctx.globalAlpha = .38; ctx.fillStyle = T.text; ctx.font = '17px JBMono'; ctx.letterSpacing = '5px';
+  ctx.textAlign = 'right';
+  ctx.fillText('DOSSIER 07', 1810, 946);
+  ctx.globalAlpha = .22; ctx.font = '13px JBMono'; ctx.letterSpacing = '4px';
+  ctx.fillText('RÉSEAU MONDIAL', 1810, 976);
+  ctx.globalAlpha = .14; ctx.fillStyle = T.redHot;
+  ctx.fillRect(1560, 998, 250, 1);
+  ctx.restore();
+}
+
+function finish(t, flick) {
+  // grain
+  ctx.save(); ctx.globalCompositeOperation = 'overlay'; ctx.globalAlpha = T.grain;
+  const ox = (t*53)%40, oy = (t*37)%40;
+  ctx.drawImage(grain, -ox, -oy, W+80, H+80);
+  ctx.restore();
+  // vignette
+  const v = ctx.createRadialGradient(W*.5, H*.47, H*.22, W*.5, H*.5, H*.82);
+  v.addColorStop(0,'rgba(0,0,0,0)'); v.addColorStop(.62,'rgba(0,0,0,.18)'); v.addColorStop(1,`rgba(0,0,0,${T.vignette})`);
+  ctx.fillStyle = v; ctx.fillRect(0,0,W,H);
+  // teal cast in shadows + tiny lift
+  ctx.save(); ctx.globalCompositeOperation = 'soft-light';
+  ctx.fillStyle = 'rgba(20,90,110,.16)'; ctx.fillRect(0,0,W,H);
+  ctx.restore();
+  ctx.fillStyle = `rgba(6,14,16,${T.blackLift})`; ctx.fillRect(0,0,W,H);
+}
+
+// ------------------------------------------------------------------ frame
+function draw(t) {
+  const flick = Math.sin(t*31.7)*.5 + Math.sin(t*7.3)*.5;
+  const push = 1 + .045 * smooth(t/DUR);
+  const hx = Math.sin(t*1.7)*1.1 + Math.sin(t*.63)*.8;
+  const hy = Math.cos(t*1.3)*1.0;
+
+  ctx.save();
+  ctx.translate(W/2 + hx, H/2 + hy); ctx.scale(push, push); ctx.translate(-W/2, -H/2);
+
+  room(t);
+
+  // screen plate
+  screenPlate(t, flick);
+  const rack = smooth((t-4.1)/2.2);          // 0 = écran net, 1 = silhouette nette
+  const screenBlur = 6.5 * rack;
+  const figBlur = 5.5 * (1-rack);
+
+  // screen housing + spill
+  screenGlow(t, flick);
+  ctx.save();
+  ctx.translate(360, 190); ctx.rotate(-.35*Math.PI/180);
+  ctx.shadowColor = `rgba(143,214,214,${.30 + flick*.04})`; ctx.shadowBlur = 90;
+  ctx.fillStyle = '#0B1010'; ctx.fillRect(-14,-14,SW+28,SH+28);
+  ctx.shadowColor = 'transparent';
+  ctx.beginPath(); ctx.rect(0,0,SW,SH); ctx.clip();
+  if (screenBlur > .05) ctx.filter = `blur(${screenBlur}px)`;
+  ctx.drawImage(scr, 0, 0);
+  ctx.filter = 'none';
+  // glass reflection
+  const gl = ctx.createLinearGradient(0,0,SW,SH);
+  gl.addColorStop(0,'rgba(255,255,255,.05)'); gl.addColorStop(.4,'rgba(255,255,255,0)'); gl.addColorStop(1,'rgba(255,255,255,.03)');
+  ctx.fillStyle = gl; ctx.fillRect(0,0,SW,SH);
+  ctx.restore();
+
+  // screen bloom / projection spill
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = .09;
+  ctx.filter = 'blur(34px)';
+  ctx.drawImage(scr, 360, 190);
+  ctx.restore();
+
+  drawFigure(figBlur);
+  foreground(t);
+  dust(t);
+  hud(t);
+  ctx.restore();
+
+  finish(t, flick);
+}
+
+window.setT = t => draw(t);
+window.SPEC = { duration: DUR, fps: FPS };
+draw(0);
+</script>
+</body>
+</html>

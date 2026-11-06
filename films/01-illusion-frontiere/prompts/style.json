@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "project": "01-illusion-frontiere",
+  "model": "Krea-2-Turbo 12B (8-step distilled)",
+  "settings": {
+    "steps": 8,
+    "resolution": "1536px (High)",
+    "aspect": "16:9 Landscape",
+    "style": "None",
+    "nag": 1.25
+  },
+  "look": "Underexposed 35mm film still from a dark cinematic documentary. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "palette": {
+    "black": "#080A0D",
+    "deepBlue": "#17232D",
+    "steelBlue": "#344B5B",
+    "mutedGrey": "#75818A",
+    "burgundy": "#653E4A",
+    "silver": "#A1A1A0",
+    "screen": "#C9C4B8",
+    "redInk": "#A81F16"
+  },
+  "rules": [
+    "One coherent physical space per image: foreground, subject, background.",
+    "The light source must be visible or implied inside the scene.",
+    "Leave 25-40% of the frame quiet for typography and motion overlays.",
+    "No generated text, no fake UI, no collage.",
+    "People are never presented as archival documentary subjects; archival material is sourced separately.",
+    "Every asset stores its exact prompt, seed and settings in a sidecar JSON."
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules/
+lab/**/node_modules/
+lab/**/frames/
+lab/**/frames-dark/
+lab/**/check/
+*.mp4
+*.mov
+*.webm
+out/
+studio/out/
+.DS_Store
+video-agent-skills/
