@@ -1,0 +1,17 @@
+{
+  "id": "B05-S04",
+  "block": "B05",
+  "act": "V — Conscience",
+  "title": "Le dossier vide",
+  "prompt": "Underexposed 35mm film still, extreme close-up of an open empty beige file folder on a dark table, a single blank sheet, a red stamp mark, a woman's hand at the edge, single overhead lamp, cold blue shadow, shallow depth of field, film grain, no text. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7504,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 30.2s (30.2s/image) | Seeds: [7504] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 37.2,
+  "generated_at": "2026-11-06T20:02:27+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "B02-S01",
+  "block": "B02",
+  "act": "II — Mémoire",
+  "title": "H.M., la fenêtre",
+  "prompt": "Underexposed 35mm film still from a dark cinematic documentary. An elderly man in a plain hospital gown sits by a tall window in a dim 1950s hospital room, seen from behind and slightly to the side, holding a small photograph. Cold steel-blue daylight through the window, the room in deep shadow, a burgundy blanket on the bed, dust in the air, medium shot, shallow depth of field, film grain, quiet, photorealistic, no visible face. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7201,
+  "resolution": "1536px (High)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 74.4s (74.4s/image) | Seeds: [7201] | 1536x864 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 79.7,
+  "generated_at": "2026-11-06T19:48:08+00:00"
+}

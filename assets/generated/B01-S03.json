@@ -1,0 +1,17 @@
+{
+  "id": "B01-S03",
+  "block": "B01",
+  "act": "I — Apprendre",
+  "title": "La machine qui apprend",
+  "prompt": "Underexposed 35mm film still, a dark 1970s computer room, a single green-phosphor terminal glowing on a metal desk, a translucent diagram of a neural network reflected on a pale projection screen behind it, magnetic tape reels, cables, cold steel-blue light, a small burgundy lamp, thin haze, wide shot, no people, clean unmarked screens. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7103,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 29.5s (29.5s/image) | Seeds: [7103] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 36.2,
+  "generated_at": "2026-11-06T19:46:13+00:00"
+}

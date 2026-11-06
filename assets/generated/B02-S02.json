@@ -1,0 +1,17 @@
+{
+  "id": "B02-S02",
+  "block": "B02",
+  "act": "II — Mémoire",
+  "title": "La table des souvenirs",
+  "prompt": "Underexposed 35mm film still, top-down view of a dark archive table covered with black-and-white photographs, index cards, a reel-to-reel tape recorder, a pair of reading glasses, a single warm lamp at the edge, cold blue shadows, shallow depth of field, film grain, no people, no readable text. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7202,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 29.3s (29.3s/image) | Seeds: [7202] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 34.9,
+  "generated_at": "2026-11-06T19:48:44+00:00"
+}

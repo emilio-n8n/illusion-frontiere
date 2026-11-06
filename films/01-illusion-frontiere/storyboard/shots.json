@@ -184,7 +184,8 @@
       "seed": 7304,
       "camera": "push-in",
       "overlay": "16 ORGANOÏDES",
-      "prompt": "Underexposed 35mm film still, a dark biotech laboratory at night, rows of incubators with faint green displays, a scientist in a lab coat seen from behind, a glowing microscope screen showing a translucent brain organoid, cold steel-blue light, a burgundy cable, volumetric haze, wide shot, film grain, no readable text."
+      "prompt": "Underexposed 35mm film still, a dark biotech laboratory at night, rows of incubators with faint green light, a scientist in a lab coat seen from behind, a microscope with a small glass dish glowing on the bench, no screen, no monitor, cold steel-blue light, a burgundy cable, volumetric haze, wide shot, film grain, clean unmarked surfaces.",
+      "negativeExtra": "screen, monitor, UI, interface, text, labels, charts, numbers, captions"
     },
     {
       "id": "B04-S01",

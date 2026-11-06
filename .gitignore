@@ -12,3 +12,6 @@ studio/out/
 video-agent-skills/
 
 __pycache__/
+
+assets/generated/contact-*.jpg
+assets/generated/batch.log

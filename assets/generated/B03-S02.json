@@ -1,0 +1,17 @@
+{
+  "id": "B03-S02",
+  "block": "B03",
+  "act": "III — Le corps",
+  "title": "La main coupée",
+  "prompt": "Underexposed 35mm film still, extreme close-up of a human hand with a small fresh cut on the knuckle, a single drop of blood, dirty fingernails, cold steel-blue light from the side, deep shadow, shallow depth of field, natural skin texture, film grain, cinematic, no face. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7302,
+  "resolution": "1536px (High)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 74.7s (74.7s/image) | Seeds: [7302] | 1536x864 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 78.7,
+  "generated_at": "2026-11-06T19:52:35+00:00"
+}
