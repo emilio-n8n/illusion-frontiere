@@ -51,7 +51,7 @@ jobs:
   render:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       max-parallel: 8
@@ -79,17 +79,24 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
 
       - name: Render ${{ matrix.block }}
+        shell: bash
         run: |
-          node studio/render_block.mjs \
-            --block "${{ matrix.block }}" \
-            --dir "${{ inputs.dir }}" \
-            --out "out/${{ inputs.dir }}/${{ matrix.block }}.mp4" \
-            --scale "${{ inputs.scale }}" \
-            --preset "${{ inputs.preset }}" \
-            --crf "${{ inputs.crf }}"
+          for attempt in 1 2; do
+            echo "render attempt $attempt for ${{ matrix.block }}"
+            node studio/render_block.mjs \
+              --block "${{ matrix.block }}" \
+              --dir "${{ inputs.dir }}" \
+              --out "out/${{ inputs.dir }}/${{ matrix.block }}.mp4" \
+              --scale "${{ inputs.scale }}" \
+              --preset "${{ inputs.preset }}" \
+              --crf "${{ inputs.crf }}" && exit 0
+            echo "attempt $attempt failed"
+            sleep 5
+          done
+          exit 1
 
       - uses: actions/upload-artifact@v4
         with:
@@ -109,7 +116,7 @@ jobs:
           node-version: 20
 
       - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
 
       - uses: actions/download-artifact@v4
         with:
