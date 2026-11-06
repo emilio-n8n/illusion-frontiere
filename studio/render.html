@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Frontière — render</title>
+<style>
+  @font-face { font-family: JBMono; src: url(/studio/fonts/JetBrainsMono.ttf); }
+  @font-face { font-family: ArchivoBlack; src: url(/studio/fonts/ArchivoBlack.ttf); }
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const W = 1920, H = 1080;
+const params = new URLSearchParams(location.search);
+const blockId = params.get('block') || 'B00';
+const scale = Math.max(0.1, Math.min(1, Number(params.get('scale') || 1)));
+const cv = document.getElementById('c');
+cv.width = Math.round(W * scale);
+cv.height = Math.round(H * scale);
+const ctx = cv.getContext('2d', { alpha: false });
+
+const T = {
+  bg: '#04070A',
+  ink: '#050607',
+  text: '#C6D3CF',
+  dim: '#6E827E',
+  red: '#A81F16',
+  redHot: '#C9331F',
+  screen: '#C9C4B8',
+};
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const smooth = t => { t = clamp(t); return t * t * (3 - 2 * t); };
+const lerp = (a, b, t) => a + (b - a) * t;
+
+let block = null;
+let shots = [];
+let starts = [];
+let total = 0;
+let images = [];
+let grain = null, vignette = null, grade = null, scan = null;
+
+function makeCanvas(w, h) {
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  return c;
+}
+
+function makeGrain() {
+  const c = makeCanvas(960, 540), g = c.getContext('2d');
+  const id = g.createImageData(960, 540);
+  let seed = 0x9e3779b9;
+  const rnd = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296; };
+  for (let i = 0; i < id.data.length; i += 4) {
+    const v = 15 + rnd() * 240;
+    id.data[i] = id.data[i + 1] = id.data[i + 2] = v;
+    id.data[i + 3] = 24 + rnd() * 38;
+  }
+  g.putImageData(id, 0, 0);
+  return c;
+}
+
+function makeVignette() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  const v = g.createRadialGradient(W * .5, H * .47, H * .18, W * .5, H * .5, H * .82);
+  v.addColorStop(0, 'rgba(0,0,0,0)');
+  v.addColorStop(.58, 'rgba(0,0,0,.10)');
+  v.addColorStop(1, 'rgba(0,0,0,.66)');
+  g.fillStyle = v; g.fillRect(0, 0, W, H);
+  return c;
+}
+
+function makeGrade() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  g.fillStyle = 'rgba(7,17,24,.11)'; g.fillRect(0, 0, W, H);
+  g.globalCompositeOperation = 'soft-light';
+  const lg = g.createLinearGradient(0, 0, W, H);
+  lg.addColorStop(0, 'rgba(52,110,132,.26)');
+  lg.addColorStop(.52, 'rgba(20,42,52,.08)');
+  lg.addColorStop(1, 'rgba(96,38,30,.20)');
+  g.fillStyle = lg; g.fillRect(0, 0, W, H);
+  g.globalCompositeOperation = 'source-over';
+  return c;
+}
+
+function makeScan() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  g.fillStyle = 'rgba(0,0,0,.025)';
+  for (let y = 0; y < H; y += 4) g.fillRect(0, y, W, 1);
+  return c;
+}
+
+function loadImage(src) {
+  return new Promise((res, rej) => {
+    const im = new Image();
+    im.onload = () => res(im);
+    im.onerror = () => rej(new Error('image failed: ' + src));
+    im.src = src;
+  });
+}
+
+function drawShot(img, shot, local, alpha) {
+  if (!img) return;
+  const p = clamp(local / Math.max(0.001, shot.duration));
+  const e = smooth(p);
+  let zoom = 1.04, dx = 0, dy = 0, rot = 0;
+  if (shot.camera === 'push-in') zoom = 1.035 + .055 * e;
+  else if (shot.camera === 'push-out') zoom = 1.09 - .055 * e;
+  else if (shot.camera === 'pan-left') { zoom = 1.075; dx = -30 + 60 * e; }
+  else if (shot.camera === 'pan-right') { zoom = 1.075; dx = 30 - 60 * e; }
+  else zoom = 1.045;
+
+  // a little life, never a still card
+  dx += Math.sin(local * .55 + shot.seed * .01) * 1.8;
+  dy += Math.cos(local * .43 + shot.seed * .013) * 1.4;
+  rot = Math.sin(local * .21 + shot.seed * .007) * .0009;
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(W / 2 + dx, H / 2 + dy);
+  ctx.rotate(rot);
+  ctx.scale(zoom, zoom);
+  const sc = Math.max(W / img.width, H / img.height) * 1.03;
+  ctx.drawImage(img, -img.width * sc / 2, -img.height * sc / 2, img.width * sc, img.height * sc);
+  ctx.restore();
+}
+
+function drawOverlay(shot, local) {
+  if (!shot.overlay) return;
+  const inA = smooth(clamp((local - .35) / .55));
+  const outA = 1 - smooth(clamp((local - shot.duration + .65) / .55));
+  const a = inA * outA;
+  if (a <= .001) return;
+
+  const text = shot.overlay.toUpperCase();
+  ctx.save();
+  ctx.globalAlpha = a;
+
+  if (shot.overlayPos === 'center') {
+    ctx.textAlign = 'center';
+    ctx.font = '600 54px ArchivoBlack';
+    ctx.letterSpacing = '6px';
+    const tw = ctx.measureText(text).width;
+    ctx.fillStyle = T.screen;
+    ctx.fillText(text, W / 2, H / 2 + 12);
+    ctx.fillStyle = 'rgba(168,31,22,.8)';
+    ctx.fillRect(W / 2 - tw / 2, H / 2 + 44, tw, 2);
+    ctx.font = '500 14px JBMono';
+    ctx.letterSpacing = '6px';
+    ctx.fillStyle = T.text;
+    ctx.globalAlpha = a * .55;
+    ctx.fillText('UN DOCUMENTAIRE SUR LA FRONTIÈRE', W / 2, H / 2 + 88);
+    ctx.restore();
+    return;
+  }
+
+  const x = 120, y = H - 150;
+  ctx.fillStyle = T.red;
+  ctx.fillRect(x, y - 42, 3, 64);
+
+  ctx.font = '500 23px JBMono';
+  ctx.letterSpacing = '5px';
+  const tw = ctx.measureText(text).width;
+  ctx.fillStyle = T.text;
+  ctx.fillText(text, x + 24, y - 4);
+
+  ctx.fillStyle = 'rgba(168,31,22,.65)';
+  ctx.fillRect(x + 24, y + 14, Math.min(190, tw), 1);
+
+  if (shot.stamp) {
+    ctx.translate(x + 24 + tw / 2, y - 18);
+    ctx.rotate(-.028);
+    ctx.strokeStyle = 'rgba(168,31,22,.72)';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(-tw / 2 - 16, -28, tw + 32, 52);
+  }
+  ctx.restore();
+}
+
+function drawHud(t) {
+  ctx.save();
+  ctx.font = '500 13px JBMono';
+  ctx.letterSpacing = '5px';
+  ctx.fillStyle = T.text;
+  ctx.globalAlpha = .30;
+  ctx.textAlign = 'left';
+  ctx.fillText('BUREAU DES FRONTIÈRES', 120, 78);
+  ctx.globalAlpha = .20;
+  ctx.textAlign = 'right';
+  ctx.fillText('DOSSIER 01 — FRONTIÈRE', W - 120, 78);
+
+  ctx.globalAlpha = .24;
+  ctx.textAlign = 'right';
+  ctx.letterSpacing = '3px';
+  ctx.fillText(`${block.id} / ${block.title.toUpperCase()}`, W - 120, H - 70);
+  ctx.globalAlpha = .45;
+  ctx.fillStyle = T.redHot;
+  ctx.fillRect(W - 330, H - 56, 210, 1);
+  ctx.restore();
+}
+
+function drawDust(t) {
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (let i = 0; i < 38; i++) {
+    const px = ((i * 173.3 + t * (7 + (i % 5) * 1.7)) % (W + 120)) - 60;
+    const py = ((i * 311.7 + Math.sin(t * .25 + i) * 24 + t * 2.2) % (H + 80)) - 40;
+    const r = .6 + (i % 4) * .45;
+    const a = .035 + .055 * Math.abs(Math.sin(t * .6 + i * 1.7));
+    ctx.fillStyle = `rgba(190,225,220,${a})`;
+    ctx.beginPath();
+    ctx.arc(px, py, r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+function draw(t) {
+  t = clamp(t, 0, Math.max(0, total - .0001));
+  let i = 0;
+  while (i < shots.length - 1 && t >= starts[i] + shots[i].duration) i++;
+  const shot = shots[i];
+  const local = t - starts[i];
+
+  ctx.save();
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  ctx.fillStyle = T.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // a dissolve only where the block asks for one
+  if (i > 0 && shot.transition === 'dissolve' && local < .5) {
+    drawShot(images[i - 1], shots[i - 1], shots[i - 1].duration, 1);
+    drawShot(images[i], shot, local, smooth(local / .5));
+  } else {
+    drawShot(images[i], shot, local, 1);
+  }
+
+  ctx.drawImage(grade, 0, 0);
+  ctx.drawImage(vignette, 0, 0);
+  ctx.globalCompositeOperation = 'overlay';
+  ctx.globalAlpha = .11;
+  const ox = (t * 37) % 40, oy = (t * 53) % 40;
+  ctx.drawImage(grain, -ox, -oy, W + 80, H + 80);
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.globalAlpha = 1;
+
+  ctx.drawImage(scan, 0, 0);
+  drawDust(t);
+  drawOverlay(shot, local);
+  drawHud(t);
+
+  // block-level fade in/out
+  const fi = block.fadeIn || 0, fo = block.fadeOut || 0;
+  let black = 0;
+  if (fi > 0 && t < fi) black = 1 - smooth(t / fi);
+  if (fo > 0 && t > total - fo) black = Math.max(black, smooth((t - (total - fo)) / fo));
+  if (black > 0) {
+    ctx.fillStyle = `rgba(0,0,0,${black})`;
+    ctx.fillRect(0, 0, W, H);
+  }
+  ctx.restore();
+}
+
+async function boot() {
+  block = await fetch(`/studio/blocks/${blockId}.json`).then(r => {
+    if (!r.ok) throw new Error(`block ${blockId}: HTTP ${r.status}`);
+    return r.json();
+  });
+  shots = block.shots;
+  starts = [];
+  let acc = 0;
+  for (const s of shots) { starts.push(acc); acc += Number(s.duration); }
+  total = acc;
+
+  images = await Promise.all(shots.map(s => loadImage(s.src)));
+  grain = makeGrain();
+  vignette = makeVignette();
+  grade = makeGrade();
+  scan = makeScan();
+
+  await Promise.all([
+    document.fonts.load('16px JBMono'),
+    document.fonts.load('16px ArchivoBlack'),
+    document.fonts.ready,
+  ]);
+
+  window.SPEC = { duration: total, fps: block.fps || 24, width: W, height: H };
+  window.setT = draw;
+  draw(0);
+  window.READY = true;
+}
+
+boot().catch(err => {
+  window.READY_ERROR = String(err && err.stack || err);
+  console.error(err);
+});
+</script>
+</body>
+</html>

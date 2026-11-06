@@ -1,0 +1,60 @@
+{
+  "id": "B03",
+  "title": "Le corps",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.35,
+  "fadeOut": 0.35,
+  "duration": 26,
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 6,
+      "camera": "pan-left",
+      "overlay": "LE CORPS",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "DOULEUR",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    },
+    {
+      "id": "B03-S03",
+      "src": "/assets/generated/B03-S03.png",
+      "duration": 8,
+      "camera": "push-in",
+      "overlay": "800 000 NEURONES",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7303,
+      "title": "Les neurones dans la boîte"
+    },
+    {
+      "id": "B03-S04",
+      "src": "/assets/generated/B03-S04.png",
+      "duration": 7,
+      "camera": "push-in",
+      "overlay": "16 ORGANOÏDES",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7304,
+      "title": "Le laboratoire des organoïdes"
+    }
+  ]
+}

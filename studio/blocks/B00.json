@@ -1,0 +1,48 @@
+{
+  "id": "B00",
+  "title": "Prologue — Le meuble",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 1.2,
+  "fadeOut": 0.35,
+  "duration": 18,
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 8,
+      "camera": "push-in",
+      "overlay": "BUREAU DES FRONTIÈRES",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "APPRENDRE",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B00-S03",
+      "src": "/assets/generated/B00-S03.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7003,
+      "title": "Le couloir"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "B06",
+  "title": "La frontière",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.35,
+  "fadeOut": 1.4,
+  "duration": 23,
+  "shots": [
+    {
+      "id": "B06-S01",
+      "src": "/assets/generated/B06-S01.png",
+      "duration": 9,
+      "camera": "push-out",
+      "overlay": "CONSCIENT : PRÉSUMÉ",
+      "overlayPos": "left",
+      "stamp": true,
+      "transition": "cut",
+      "seed": 7601,
+      "title": "Le retour au Bureau"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 6,
+      "camera": "push-in",
+      "overlay": "CONSCIENT : PRÉSUMÉ",
+      "overlayPos": "left",
+      "stamp": true,
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    },
+    {
+      "id": "B06-S03",
+      "src": "/assets/generated/B06-S03.png",
+      "duration": 8,
+      "camera": "push-out",
+      "overlay": "L’ILLUSION DE LA FRONTIÈRE",
+      "overlayPos": "center",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7603,
+      "title": "La salle vide"
+    }
+  ]
+}

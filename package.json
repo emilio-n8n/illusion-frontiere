@@ -1,0 +1,19 @@
+{
+  "name": "video-test",
+  "version": "1.0.0",
+  "description": "Dépôt de production de la chaîne. Premier film : **L'Illusion de la frontière**.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

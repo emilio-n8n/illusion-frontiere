@@ -1,0 +1,111 @@
+name: render
+
+on:
+  workflow_dispatch:
+    inputs:
+      blocks:
+        description: "all, or a comma-separated list (B00,B01,...)"
+        required: true
+        default: "all"
+      scale:
+        description: "1 = 1920x1080, 0.5 = 960x540 preview"
+        required: true
+        default: "1"
+      preset:
+        description: "x264 preset"
+        required: true
+        default: "medium"
+      crf:
+        description: "x264 CRF (lower = better)"
+        required: true
+        default: "18"
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.value }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: matrix
+        shell: bash
+        run: |
+          if [ "${{ inputs.blocks }}" = "all" ]; then
+            value="$(node studio/list_blocks.mjs)"
+          else
+            value="$(node -e "console.log(JSON.stringify('${{ inputs.blocks }}'.split(',').map(s => s.trim()).filter(Boolean)))")"
+          fi
+          echo "value=$value" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        block: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Render ${{ matrix.block }}
+        run: |
+          node studio/render_block.mjs \
+            --block "${{ matrix.block }}" \
+            --out "out/${{ matrix.block }}.mp4" \
+            --scale "${{ inputs.scale }}" \
+            --preset "${{ inputs.preset }}" \
+            --crf "${{ inputs.crf }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: block-${{ matrix.block }}
+          path: out/${{ matrix.block }}.mp4
+          if-no-files-found: error
+          retention-days: 7
+
+  join:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: block-*
+          merge-multiple: true
+          path: out/blocks
+
+      - name: Concatenate
+        run: node studio/concat.mjs --out out/film-silent.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: film-silent
+          path: out/film-silent.mp4
+          if-no-files-found: error
+          retention-days: 7

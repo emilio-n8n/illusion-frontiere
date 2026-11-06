@@ -1,0 +1,60 @@
+{
+  "id": "B05",
+  "title": "Conscience",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.35,
+  "fadeOut": 0.35,
+  "duration": 26,
+  "shots": [
+    {
+      "id": "B05-S01",
+      "src": "/assets/generated/B05-S01.png",
+      "duration": 7,
+      "camera": "push-in",
+      "overlay": "CONSCIENCE",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7501,
+      "title": "L'IRM"
+    },
+    {
+      "id": "B05-S02",
+      "src": "/assets/generated/B05-S02.png",
+      "duration": 8,
+      "camera": "push-in",
+      "overlay": "QUI SAIT ?",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7502,
+      "title": "Le miroir"
+    },
+    {
+      "id": "B05-S03",
+      "src": "/assets/generated/B05-S03.png",
+      "duration": 6,
+      "camera": "static",
+      "overlay": "TURING / 1950",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7503,
+      "title": "La salle du test"
+    },
+    {
+      "id": "B05-S04",
+      "src": "/assets/generated/B05-S04.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "COMMENT SAVOIR ?",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7504,
+      "title": "Le dossier vide"
+    }
+  ]
+}

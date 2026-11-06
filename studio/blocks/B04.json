@@ -1,0 +1,60 @@
+{
+  "id": "B04",
+  "title": "Émotion",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.35,
+  "fadeOut": 0.35,
+  "duration": 25,
+  "shots": [
+    {
+      "id": "B04-S01",
+      "src": "/assets/generated/B04-S01.png",
+      "duration": 8,
+      "camera": "push-in",
+      "overlay": "3H DU MATIN",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7401,
+      "title": "La femme et le téléphone"
+    },
+    {
+      "id": "B04-S02",
+      "src": "/assets/generated/B04-S02.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "« JE SUIS LÀ »",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7402,
+      "title": "L'écran"
+    },
+    {
+      "id": "B04-S03",
+      "src": "/assets/generated/B04-S03.png",
+      "duration": 6,
+      "camera": "static",
+      "overlay": "RELATION",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7403,
+      "title": "La chaise vide"
+    },
+    {
+      "id": "B04-S04",
+      "src": "/assets/generated/B04-S04.png",
+      "duration": 6,
+      "camera": "push-in",
+      "overlay": "NOUS / EUX / RELATION",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7404,
+      "title": "Les trois dossiers"
+    }
+  ]
+}

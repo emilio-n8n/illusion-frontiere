@@ -1,0 +1,60 @@
+{
+  "id": "B01",
+  "title": "Apprendre",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.35,
+  "fadeOut": 0.35,
+  "duration": 22,
+  "shots": [
+    {
+      "id": "B01-S01",
+      "src": "/assets/generated/B01-S01.png",
+      "duration": 7,
+      "camera": "push-in",
+      "overlay": "APPRENDRE",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7101,
+      "title": "L'enfant qui tombe"
+    },
+    {
+      "id": "B01-S02",
+      "src": "/assets/generated/B01-S02.png",
+      "duration": 5,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7102,
+      "title": "Le visage de l'enfant"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 6,
+      "camera": "pan-right",
+      "overlay": "ERREUR = MÉCANISME",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    },
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 4,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "stamp": false,
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    }
+  ]
+}

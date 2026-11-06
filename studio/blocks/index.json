@@ -1,0 +1,44 @@
+[
+  {
+    "id": "B00",
+    "title": "Prologue — Le meuble",
+    "duration": 18,
+    "shots": 3
+  },
+  {
+    "id": "B01",
+    "title": "Apprendre",
+    "duration": 22,
+    "shots": 4
+  },
+  {
+    "id": "B02",
+    "title": "Mémoire",
+    "duration": 25,
+    "shots": 4
+  },
+  {
+    "id": "B03",
+    "title": "Le corps",
+    "duration": 26,
+    "shots": 4
+  },
+  {
+    "id": "B04",
+    "title": "Émotion",
+    "duration": 25,
+    "shots": 4
+  },
+  {
+    "id": "B05",
+    "title": "Conscience",
+    "duration": 26,
+    "shots": 4
+  },
+  {
+    "id": "B06",
+    "title": "La frontière",
+    "duration": 23,
+    "shots": 3
+  }
+]

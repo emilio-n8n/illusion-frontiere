@@ -10,3 +10,5 @@ out/
 studio/out/
 .DS_Store
 video-agent-skills/
+
+__pycache__/
