@@ -66,6 +66,8 @@ jobs:
           cache: npm
 
       - run: npm ci
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
       - name: Cache Playwright browsers
         uses: actions/cache@v4
