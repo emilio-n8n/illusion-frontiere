@@ -11,7 +11,8 @@ Dépôt de production de la chaîne. Premier film : **L'Illusion de la frontièr
 - Prompts et style : `films/01-illusion-frontiere/prompts/style.json`
 - Images générées : `assets/generated/`
 - Rendu : `studio/`
-- Actions : `.github/workflows/render.yml`
+- Preuve visuelle : `out/film-proof.mp4` — 2 min 45, 1080p, 24 fps, sans audio
+- Actions : `.github/workflows/render.yml` (run B00 validé, run 7 blocs en cours)
 
 ## Structure
 
@@ -67,6 +68,12 @@ Un bloc = une page HTML + un JSON de timeline + un mp4. Le rendu d'un bloc de 25
 ### Blocs de preuve (B00–B06)
 
 Sept blocs, 165 s, qui couvrent les moments visuels clés du film : le Bureau, l'enfant, H.M., le corps, l'émotion, la conscience, la frontière. C'est la preuve de look.
+
+```bash
+node studio/concat.mjs --dir blocks --out out/film-proof.mp4
+```
+
+Le rendu local 1080p est dans `out/film-proof.mp4`. Le même assemblage est produit par GitHub Actions en artefact `film-silent`.
 
 ### Blocs de narration (N001–N070)
 
