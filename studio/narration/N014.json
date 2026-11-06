@@ -1,0 +1,35 @@
+{
+  "id": "N014",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 30.3,
+  "subtitle": "L'enfant ne tombe pas pour optimiser sa marche. Il tombe parce qu'il veut atteindre quelqu'un. Il y a un corps qui a faim, qui a froid, qui cherche un visage. Il y a une voix, une main, un rire. Son apprentissage est orienté par un besoin. La machine, elle, n'a besoin de rien. On lui donne un objectif. Elle l'optimise. Elle ne veut pas reconnaître le chat. Elle n'a jamais vu un chat. Elle n'a jamais eu envie de voir un chat.",
+  "shots": [
+    {
+      "id": "B01-S02",
+      "src": "/assets/generated/B01-S02.png",
+      "duration": 16.665,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7102,
+      "title": "Le visage de l'enfant"
+    },
+    {
+      "id": "B01-S01",
+      "src": "/assets/generated/B01-S01.png",
+      "duration": 13.635,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7101,
+      "title": "L'enfant qui tombe"
+    }
+  ]
+}

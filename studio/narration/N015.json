@@ -1,0 +1,35 @@
+{
+  "id": "N015",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 23.8,
+  "subtitle": "Mais attention. Ce n'est pas si simple. Un modèle ne part pas de zéro. On l'a entraîné sur des textes écrits par des humains. Il a appris nos mots, nos associations, nos préjugés. Il a appris que « chat » va souvent avec « doux », « nuit » avec « sombre », « avenir » avec « inquiétude ». Il n'a pas vécu ces choses. Il a hérité de la façon dont nous en parlons.",
+  "shots": [
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 13.09,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    },
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 10.71,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "N061",
+  "title": "FINALE — LA FRONTIÈRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 21.6,
+  "subtitle": "Elle l'ouvre. À l'intérieur, il n'y a pas de rapport. Pas de photo. Pas de preuve. Il y a une fiche, comme celles qu'elle remplit depuis des années. En haut, un nom. Le sien. En dessous, une liste. « Apprendre : oui. Se souvenir : oui. Avoir un corps : oui. Ressentir : oui. » Et en bas, une case à cocher. « Conscient : présumé. »",
+  "shots": [
+    {
+      "id": "B06-S01",
+      "src": "/assets/generated/B06-S01.png",
+      "duration": 9.72,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7601,
+      "title": "Le retour au Bureau"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 6.48,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    },
+    {
+      "id": "B06-S03",
+      "src": "/assets/generated/B06-S03.png",
+      "duration": 5.4,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7603,
+      "title": "La salle vide"
+    }
+  ]
+}

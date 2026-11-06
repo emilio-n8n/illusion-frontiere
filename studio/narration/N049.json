@@ -1,0 +1,35 @@
+{
+  "id": "N049",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 6.7,
+  "subtitle": "Il reste une différence. La plus profonde. Celle que personne n'a jamais réussi à définir. La conscience.",
+  "shots": [
+    {
+      "id": "B05-S01",
+      "src": "/assets/generated/B05-S01.png",
+      "duration": 3.685,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7501,
+      "title": "L'IRM"
+    },
+    {
+      "id": "B05-S02",
+      "src": "/assets/generated/B05-S02.png",
+      "duration": 3.015,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7502,
+      "title": "Le miroir"
+    }
+  ]
+}

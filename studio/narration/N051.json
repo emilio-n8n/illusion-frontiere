@@ -1,0 +1,35 @@
+{
+  "id": "N051",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 23.4,
+  "subtitle": "Les philosophes appellent ça le problème difficile de la conscience. Pas le problème de savoir comment le cerveau traite l'information. Ça, on commence à le comprendre. Le problème, c'est de savoir pourquoi ce traitement s'accompagne d'une expérience. Pourquoi il y a quelque chose que ça fait d'être vous. Pourquoi le rouge est rouge. Pourquoi la douleur fait mal. Pourquoi la mort fait peur.",
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 12.87,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 10.53,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    }
+  ]
+}

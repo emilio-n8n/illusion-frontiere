@@ -1,0 +1,35 @@
+{
+  "id": "N019",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 3.4,
+  "subtitle": "Un dossier de plus. Une frontière de moins.",
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 1.87,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 1.53,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    }
+  ]
+}

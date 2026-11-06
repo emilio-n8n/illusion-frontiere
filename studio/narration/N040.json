@@ -1,0 +1,35 @@
+{
+  "id": "N040",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 7,
+  "subtitle": "Une machine peut apprendre, se souvenir, avoir un corps. Alors, peut-être que la différence est dans les émotions.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 3.85,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 3.15,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

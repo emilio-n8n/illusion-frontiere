@@ -1,0 +1,562 @@
+[
+  {
+    "id": "N001",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 12.1,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N002",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 5.6,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N003",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 20.5,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N004",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 10.7,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N005",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 5.6,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N006",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 6.7,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N007",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 22.7,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N008",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 19,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N009",
+    "title": "PROLOGUE — LE MEUBLE",
+    "duration": 4.1,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N010",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 27.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N011",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 14,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N012",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 28.5,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N013",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 15,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N014",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 30.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N015",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 23.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N016",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 13.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N017",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 18.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N018",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 22.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N019",
+    "title": "ACTE I — APPRENDRE",
+    "duration": 3.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N020",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 33.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N021",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 34.7,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N022",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 26.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N023",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 27,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N024",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 14,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N025",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 11.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N026",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 5.2,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N027",
+    "title": "ACTE II — MÉMOIRE",
+    "duration": 19.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N028",
+    "title": "ACTE III — LE CORPS",
+    "duration": 7,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N029",
+    "title": "ACTE III — LE CORPS",
+    "duration": 29.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N030",
+    "title": "ACTE III — LE CORPS",
+    "duration": 18,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N031",
+    "title": "ACTE III — LE CORPS",
+    "duration": 17.2,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N032",
+    "title": "ACTE III — LE CORPS",
+    "duration": 25.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N033",
+    "title": "ACTE III — LE CORPS",
+    "duration": 24.1,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N034",
+    "title": "ACTE III — LE CORPS",
+    "duration": 23.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N035",
+    "title": "ACTE III — LE CORPS",
+    "duration": 22.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N036",
+    "title": "ACTE III — LE CORPS",
+    "duration": 23.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N037",
+    "title": "ACTE III — LE CORPS",
+    "duration": 11.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N038",
+    "title": "ACTE III — LE CORPS",
+    "duration": 11.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N039",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 7.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N040",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 7,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N041",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 22.3,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N042",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 25.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N043",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 20.9,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N044",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 30.7,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N045",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 28.5,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N046",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 16.5,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N047",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 25.2,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N048",
+    "title": "ACTE IV — ÉMOTION",
+    "duration": 5.2,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N049",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 6.7,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N050",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 17.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N051",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 23.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N052",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 23,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N053",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 21.6,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N054",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 23.4,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N055",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 24.9,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N056",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 23.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N057",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 27,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N058",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 19.8,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N059",
+    "title": "ACTE V — CONSCIENCE",
+    "duration": 8.5,
+    "shots": 2,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N060",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 13.6,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N061",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 21.6,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N062",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 26.3,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N063",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 23.8,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N064",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 26.7,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N065",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 6.3,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N066",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 30,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N067",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 12.1,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N068",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 11.4,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N069",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 20.9,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  },
+  {
+    "id": "N070",
+    "title": "FINALE — LA FRONTIÈRE",
+    "duration": 6,
+    "shots": 3,
+    "audio": null,
+    "measured": false
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "id": "N012",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 28.5,
+  "subtitle": "Maintenant, regardez l'autre côté de la frontière. Une machine apprend à reconnaître un chat. On lui montre un million d'images. Elle se trompe. On lui dit : ce n'est pas un chat, c'est un chien. Elle ajuste des nombres. Des millions, des milliards de nombres. Elle se trompe encore. Elle ajuste encore. Jusqu'au jour où elle ne se trompe plus. Les chercheurs appellent ça la descente de gradient. L'erreur n'est pas l'échec de l'apprentissage. L'erreur est le mécanisme.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 15.675,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 12.825,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

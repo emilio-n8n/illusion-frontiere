@@ -1,0 +1,35 @@
+{
+  "id": "N046",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 16.5,
+  "subtitle": "Alors, la question n'est plus seulement : « Est-ce que la machine ressent quelque chose ? » La question devient : « Qu'est-ce que ça fait à l'humain de croire qu'elle ressent quelque chose ? » Et cette question-là, elle n'est pas dans le tiroir EUX. Elle est dans le tiroir NOUS.",
+  "shots": [
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 9.075,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    },
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 7.425,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    }
+  ]
+}

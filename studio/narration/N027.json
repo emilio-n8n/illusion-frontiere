@@ -1,0 +1,35 @@
+{
+  "id": "N027",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 19.4,
+  "subtitle": "Elle commence à comprendre quelque chose. Le meuble ne se vide pas. Plus elle classe, plus il y a de tiroirs. La frontière ne recule pas. Elle se multiplie. Chaque différence qu'elle déplace en crée deux autres. C'est peut-être ça, une frontière : pas une ligne, mais une machine à fabriquer des lignes.",
+  "shots": [
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 10.67,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    },
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 8.73,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    }
+  ]
+}

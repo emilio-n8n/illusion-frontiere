@@ -1,0 +1,35 @@
+{
+  "id": "N059",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 8.5,
+  "subtitle": "Elle referme le dossier. Elle regarde le meuble. Pour la première fois, elle se demande si le meuble n'est pas un miroir.",
+  "shots": [
+    {
+      "id": "B05-S02",
+      "src": "/assets/generated/B05-S02.png",
+      "duration": 4.675,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7502,
+      "title": "Le miroir"
+    },
+    {
+      "id": "B05-S03",
+      "src": "/assets/generated/B05-S03.png",
+      "duration": 3.825,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7503,
+      "title": "La salle du test"
+    }
+  ]
+}

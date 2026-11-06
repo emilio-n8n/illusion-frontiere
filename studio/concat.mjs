@@ -15,12 +15,13 @@ const get = (name, fallback) => {
   return i >= 0 && args[i + 1] ? args[i + 1] : fallback;
 };
 
-const index = JSON.parse(fs.readFileSync(path.join(root, 'studio/blocks/index.json'), 'utf8'));
-const dir = path.resolve(root, get('--dir', 'out/blocks'));
+const dir = get('--dir', 'blocks');
+const index = JSON.parse(fs.readFileSync(path.join(root, 'studio', dir, 'index.json'), 'utf8'));
+const blockDir = path.resolve(root, get('--blocks', `out/${dir}`));
 const out = path.resolve(root, get('--out', 'out/film-silent.mp4'));
 const audio = get('--audio', '');
 
-const files = index.map(b => path.join(dir, `${b.id}.mp4`));
+const files = index.map(b => path.join(blockDir, `${b.id}.mp4`));
 const missing = files.filter(f => !fs.existsSync(f));
 if (missing.length) {
   console.error(`missing ${missing.length} block(s):`);

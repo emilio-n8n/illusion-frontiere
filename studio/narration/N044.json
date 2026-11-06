@@ -1,0 +1,35 @@
+{
+  "id": "N044",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 30.7,
+  "subtitle": "Mais voici la question qui dérange. Est-ce que nous, nous faisons autre chose ? Quand vous consolez un ami, vous ne récitez pas un script ? Vous ne dites pas les mots que vous avez appris ? Vous ne reproduisez pas ce que votre mère faisait ? La différence, c'est peut-être que vous, vous avez déjà eu mal. Vous savez ce que ça fait. La machine, non. Mais ce savoir, ce n'est pas une information. C'est une expérience. Et l'expérience ne se transmet pas. Elle se vit.",
+  "shots": [
+    {
+      "id": "B05-S02",
+      "src": "/assets/generated/B05-S02.png",
+      "duration": 16.885,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7502,
+      "title": "Le miroir"
+    },
+    {
+      "id": "B05-S03",
+      "src": "/assets/generated/B05-S03.png",
+      "duration": 13.815,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7503,
+      "title": "La salle du test"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "N047",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 25.2,
+  "subtitle": "L'archiviste ne classe pas le dossier ÉMOTION. Elle le duplique. Une copie dans NOUS. Une copie dans EUX. Et une troisième, vierge, dans un tiroir qu'elle vient d'inventer. Sur l'étiquette, elle écrit : RELATION. Parce que l'émotion ne se passe pas seulement dans un corps. Elle se passe entre deux êtres. Et si l'un des deux est une machine, l'émotion est quand même réelle. Elle est juste répartie autrement.",
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 13.86,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 11.34,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    }
+  ]
+}

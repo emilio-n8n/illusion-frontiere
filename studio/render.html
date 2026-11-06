@@ -16,6 +16,7 @@
 const W = 1920, H = 1080;
 const params = new URLSearchParams(location.search);
 const blockId = params.get('block') || 'B00';
+const dir = params.get('dir') || 'blocks';
 const scale = Math.max(0.1, Math.min(1, Number(params.get('scale') || 1)));
 const cv = document.getElementById('c');
 cv.width = Math.round(W * scale);
@@ -180,6 +181,34 @@ function drawOverlay(shot, local) {
   ctx.restore();
 }
 
+function drawSubtitle(text) {
+  if (!text) return;
+  const maxChars = 88;
+  const words = text.split(/\s+/);
+  const lines = [];
+  let line = '';
+  for (const w of words) {
+    const t = line ? line + ' ' + w : w;
+    if (t.length > maxChars && line) { lines.push(line); line = w; } else line = t;
+  }
+  if (line) lines.push(line);
+  const shown = lines.slice(0, 3);
+  if (!shown.length) return;
+
+  ctx.save();
+  ctx.font = '500 22px JBMono';
+  ctx.letterSpacing = '0px';
+  ctx.textAlign = 'center';
+  const lineH = 31;
+  const maxW = Math.max(...shown.map(l => ctx.measureText(l).width));
+  const y0 = H - 118 - (shown.length - 1) * lineH;
+  ctx.fillStyle = 'rgba(4,7,10,.64)';
+  ctx.fillRect(W / 2 - maxW / 2 - 24, y0 - 30, maxW + 48, shown.length * lineH + 18);
+  ctx.fillStyle = 'rgba(220,228,224,.90)';
+  shown.forEach((l, i) => ctx.fillText(l, W / 2, y0 + i * lineH));
+  ctx.restore();
+}
+
 function drawHud(t) {
   ctx.save();
   ctx.font = '500 13px JBMono';
@@ -250,6 +279,7 @@ function draw(t) {
   ctx.drawImage(scan, 0, 0);
   drawDust(t);
   drawOverlay(shot, local);
+  drawSubtitle(block.subtitle);
   drawHud(t);
 
   // block-level fade in/out
@@ -265,7 +295,7 @@ function draw(t) {
 }
 
 async function boot() {
-  block = await fetch(`/studio/blocks/${blockId}.json`).then(r => {
+  block = await fetch(`/studio/${dir}/${blockId}.json`).then(r => {
     if (!r.ok) throw new Error(`block ${blockId}: HTTP ${r.status}`);
     return r.json();
   });

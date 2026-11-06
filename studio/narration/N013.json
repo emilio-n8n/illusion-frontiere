@@ -1,0 +1,35 @@
+{
+  "id": "N013",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 15,
+  "subtitle": "Vous voyez le parallèle. Il est si propre qu'il donne le vertige. Deux systèmes. Deux expériences. Deux façons de devenir meilleur en se trompant. Alors, la différence n'est pas là. Elle est peut-être dans la raison pour laquelle on apprend.",
+  "shots": [
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 8.25,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    },
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 6.75,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    }
+  ]
+}

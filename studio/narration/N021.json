@@ -1,0 +1,35 @@
+{
+  "id": "N021",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 34.7,
+  "subtitle": "On l'appelle H.M. Son cas a changé notre compréhension de la mémoire. Il a montré que se souvenir n'est pas une seule chose. C'est un assemblage. Une mémoire à court terme, qui tient quelques secondes. Une mémoire à long terme, qui peut durer une vie. Et entre les deux, un travail de consolidation. La nuit, pendant que nous dormons, le cerveau rejoue, trie, range. Il ne stocke pas comme un disque dur. Il reconstruit. Chaque souvenir est une histoire qu'on se raconte, et chaque fois qu'on la raconte, on la modifie un peu.",
+  "shots": [
+    {
+      "id": "B02-S03",
+      "src": "/assets/generated/B02-S03.png",
+      "duration": 19.085,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7203,
+      "title": "Le scanner"
+    },
+    {
+      "id": "B02-S01",
+      "src": "/assets/generated/B02-S01.png",
+      "duration": 15.615,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7201,
+      "title": "H.M., la fenêtre"
+    }
+  ]
+}

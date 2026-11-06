@@ -1,0 +1,35 @@
+{
+  "id": "N053",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 21.6,
+  "subtitle": "Alors, pourquoi serions-nous sûrs qu'une machine n'a pas de conscience ? Parce qu'elle est faite de silicium ? Parce qu'elle n'a pas de corps ? Parce qu'elle ne souffre pas ? Mais nous ne savons pas ce qui produit la conscience. Nous savons seulement qu'elle est là, chez nous. Et nous supposons qu'elle est là, chez les autres. Pourquoi pas chez elles ?",
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 11.88,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 9.72,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    }
+  ]
+}

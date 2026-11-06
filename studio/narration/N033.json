@@ -1,0 +1,35 @@
+{
+  "id": "N033",
+  "title": "ACTE III — LE CORPS",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 24.1,
+  "subtitle": "Leur article s'appelle, en substance : « Des neurones in vitro apprennent et manifestent de la sentience lorsqu'ils sont incarnés dans un monde de jeu simulé. » Le mot « sentience » a fait scandale. Dans leur article, il désigne un comportement adaptatif, pas une expérience subjective. Mais le mot était lâché. Et il a suffi pour que le monde se demande : est-ce qu'on vient de faire souffrir des neurones ?",
+  "shots": [
+    {
+      "id": "B03-S03",
+      "src": "/assets/generated/B03-S03.png",
+      "duration": 13.255,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7303,
+      "title": "Les neurones dans la boîte"
+    },
+    {
+      "id": "B03-S04",
+      "src": "/assets/generated/B03-S04.png",
+      "duration": 10.845,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7304,
+      "title": "Le laboratoire des organoïdes"
+    }
+  ]
+}

@@ -7,6 +7,10 @@ on:
         description: "all, or a comma-separated list (B00,B01,...)"
         required: true
         default: "all"
+      dir:
+        description: "blocks (visual proof) or narration (animatic)"
+        required: true
+        default: "blocks"
       scale:
         description: "1 = 1920x1080, 0.5 = 960x540 preview"
         required: true
@@ -34,7 +38,7 @@ jobs:
         shell: bash
         run: |
           if [ "${{ inputs.blocks }}" = "all" ]; then
-            value="$(node studio/list_blocks.mjs)"
+            value="$(node studio/list_blocks.mjs --dir "${{ inputs.dir }}")"
           else
             value="$(node -e "console.log(JSON.stringify('${{ inputs.blocks }}'.split(',').map(s => s.trim()).filter(Boolean)))")"
           fi
@@ -72,7 +76,8 @@ jobs:
         run: |
           node studio/render_block.mjs \
             --block "${{ matrix.block }}" \
-            --out "out/${{ matrix.block }}.mp4" \
+            --dir "${{ inputs.dir }}" \
+            --out "out/${{ inputs.dir }}/${{ matrix.block }}.mp4" \
             --scale "${{ inputs.scale }}" \
             --preset "${{ inputs.preset }}" \
             --crf "${{ inputs.crf }}"
@@ -80,7 +85,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: block-${{ matrix.block }}
-          path: out/${{ matrix.block }}.mp4
+          path: out/${{ inputs.dir }}/${{ matrix.block }}.mp4
           if-no-files-found: error
           retention-days: 7
 
@@ -98,10 +103,10 @@ jobs:
         with:
           pattern: block-*
           merge-multiple: true
-          path: out/blocks
+          path: out/${{ inputs.dir }}
 
       - name: Concatenate
-        run: node studio/concat.mjs --out out/film-silent.mp4
+        run: node studio/concat.mjs --dir "${{ inputs.dir }}" --out out/film-silent.mp4
 
       - uses: actions/upload-artifact@v4
         with:

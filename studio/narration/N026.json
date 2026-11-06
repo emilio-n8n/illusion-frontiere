@@ -1,0 +1,35 @@
+{
+  "id": "N026",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 5.2,
+  "subtitle": "Un dossier de plus. Une frontière de moins. Et un tiroir de plus.",
+  "shots": [
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 2.86,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 2.34,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    }
+  ]
+}

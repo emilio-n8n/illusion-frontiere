@@ -1,0 +1,35 @@
+{
+  "id": "N043",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 20.9,
+  "subtitle": "Comment on lui apprend ça ? On lui montre des exemples. On lui fait comparer deux réponses. On lui dit laquelle est meilleure. Des millions de fois. C'est ce qu'on appelle l'apprentissage par retour humain. On ne lui apprend pas le vrai. On lui apprend le préféré. Et ce que nous préférons dépend de qui nous sommes.",
+  "shots": [
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 11.495,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    },
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 9.405,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    }
+  ]
+}

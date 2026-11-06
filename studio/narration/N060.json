@@ -1,0 +1,46 @@
+{
+  "id": "N060",
+  "title": "FINALE — LA FRONTIÈRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 13.6,
+  "subtitle": "Elle prend le dernier dossier. Celui qu'elle n'avait pas vu. Il était là depuis le début, posé sur la table, sous les autres. Sur l'étiquette, il n'y a pas de mot. Juste une date. Celle d'aujourd'hui.",
+  "shots": [
+    {
+      "id": "B06-S01",
+      "src": "/assets/generated/B06-S01.png",
+      "duration": 6.12,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7601,
+      "title": "Le retour au Bureau"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 4.08,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    },
+    {
+      "id": "B06-S03",
+      "src": "/assets/generated/B06-S03.png",
+      "duration": 3.4,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7603,
+      "title": "La salle vide"
+    }
+  ]
+}

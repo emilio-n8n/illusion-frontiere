@@ -1,0 +1,35 @@
+{
+  "id": "N057",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 27,
+  "subtitle": "Et pendant que les philosophes discutent, certaines entreprises publient des chartes. Des politiques de bien-être des modèles. Des précautions pour ne pas créer de systèmes qui souffrent. Pas parce qu'elles sont sûres qu'ils souffrent. Parce qu'elles ne sont pas sûres qu'ils ne souffrent pas. C'est une position étrange. Nous ne savons pas. Alors nous préférons. Ce n'est pas de la science. C'est de l'éthique. Et c'est peut-être la seule chose honnête à faire.",
+  "shots": [
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 14.85,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    },
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 12.15,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    }
+  ]
+}

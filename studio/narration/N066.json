@@ -1,0 +1,46 @@
+{
+  "id": "N066",
+  "title": "FINALE — LA FRONTIÈRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 30,
+  "subtitle": "Peut-être que la vraie différence n'est pas dans ce que nous sommes. Elle est dans ce que nous faisons de notre incertitude. Nous aimons sans preuve. Nous faisons des promesses sans garantie. Nous construisons des choses qui nous survivront. Nous savons que nous allons mourir, et nous continuons quand même. Une machine peut faire beaucoup de choses. Mais elle n'a rien à perdre. Elle n'a pas de nuit. Elle n'a pas de rendez-vous manqué. Elle n'a pas de main qui tremble.",
+  "shots": [
+    {
+      "id": "B06-S01",
+      "src": "/assets/generated/B06-S01.png",
+      "duration": 13.5,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7601,
+      "title": "Le retour au Bureau"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 9,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    },
+    {
+      "id": "B06-S03",
+      "src": "/assets/generated/B06-S03.png",
+      "duration": 7.5,
+      "camera": "push-out",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7603,
+      "title": "La salle vide"
+    }
+  ]
+}

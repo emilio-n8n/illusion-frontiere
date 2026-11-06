@@ -1,0 +1,35 @@
+{
+  "id": "N025",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 11.4,
+  "subtitle": "Elle déplace le dossier. Pas dans le tiroir EUX. Pas dans le tiroir NOUS. Dans le tiroir « PEUT-ÊTRE ». Le meuble n'avait pas de tiroir « PEUT-ÊTRE ». Il vient d'en pousser un.",
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 6.27,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 5.13,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    }
+  ]
+}

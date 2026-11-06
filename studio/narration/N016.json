@@ -1,0 +1,35 @@
+{
+  "id": "N016",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 13.6,
+  "subtitle": "On peut même le reprendre après coup, lui montrer quelques milliers d'exemples de ce qu'on attend, et le spécialiser. C'est le fine-tuning. On ne lui apprend pas à parler. On lui apprend à parler comme nous.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 7.48,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 6.12,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

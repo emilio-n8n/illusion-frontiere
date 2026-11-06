@@ -1,0 +1,46 @@
+{
+  "id": "N002",
+  "title": "PROLOGUE — LE MEUBLE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 5.6,
+  "subtitle": "Et dans ces tiroirs, on ne range pas des gens. On range des différences.",
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 2.52,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 1.68,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B00-S03",
+      "src": "/assets/generated/B00-S03.png",
+      "duration": 1.4,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7003,
+      "title": "Le couloir"
+    }
+  ]
+}

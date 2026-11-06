@@ -1,0 +1,46 @@
+{
+  "id": "N007",
+  "title": "PROLOGUE — LE MEUBLE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 22.7,
+  "subtitle": "Elle s'appelle... peu importe. Disons l'archiviste. Elle a un badge, une lampe, et une règle. Pas une règle pour mesurer. Une règle pour décider. Elle ne décide pas elle-même. Elle applique. Classer. Ne pas juger. Ne pas se demander pourquoi le tiroir EUX est plus grand que le tiroir NOUS. Ni pourquoi il y a des traces de doigts à l'intérieur.",
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 10.215,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 6.81,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B00-S03",
+      "src": "/assets/generated/B00-S03.png",
+      "duration": 5.675,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7003,
+      "title": "Le couloir"
+    }
+  ]
+}

@@ -14,16 +14,17 @@ const get = (name, fallback) => {
 };
 const has = name => args.includes(name);
 
+const dir = get('--dir', 'blocks');
 const scale = get('--scale', '1');
 const preset = get('--preset', 'medium');
 const crf = get('--crf', '18');
 const parallel = Math.max(1, Number(get('--parallel', '3')));
 const force = has('--force');
 
-const index = JSON.parse(fs.readFileSync(path.join(root, 'studio/blocks/index.json'), 'utf8'));
+const index = JSON.parse(fs.readFileSync(path.join(root, 'studio', dir, 'index.json'), 'utf8'));
 const ready = [];
 for (const entry of index) {
-  const block = JSON.parse(fs.readFileSync(path.join(root, 'studio/blocks', `${entry.id}.json`), 'utf8'));
+  const block = JSON.parse(fs.readFileSync(path.join(root, 'studio', dir, `${entry.id}.json`), 'utf8'));
   const imagesOk = block.shots.every(s => {
     const file = path.join(root, s.src.replace(/^\//, ''));
     return fs.existsSync(file) && fs.statSync(file).size > 20_000;
@@ -32,7 +33,7 @@ for (const entry of index) {
     console.log(`skip ${entry.id}: images missing`);
     continue;
   }
-  const out = path.join(root, 'out/blocks', `${entry.id}.mp4`);
+  const out = path.join(root, 'out', dir, `${entry.id}.mp4`);
   if (fs.existsSync(out) && !force) {
     console.log(`skip ${entry.id}: already rendered (use --force)`);
     continue;
@@ -47,7 +48,8 @@ function render(id) {
     const p = spawn(process.execPath, [
       path.join(root, 'studio/render_block.mjs'),
       '--block', id,
-      '--out', `out/blocks/${id}.mp4`,
+      '--dir', dir,
+      '--out', `out/${dir}/${id}.mp4`,
       '--scale', scale,
       '--preset', preset,
       '--crf', crf,

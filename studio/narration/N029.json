@@ -1,0 +1,35 @@
+{
+  "id": "N029",
+  "title": "ACTE III — LE CORPS",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 29.6,
+  "subtitle": "Nous ne pensons pas avec un cerveau posé dans un bocal. Nous pensons avec un corps. Un corps qui a faim, qui a froid, qui a mal, qui vieillit. Un corps qui est tombé, qui s'est cassé, qui a guéri. Nos émotions ne sont pas seulement des programmes. Elles sont aussi des états du corps. La peur accélère le cœur, serre la gorge, dilate les pupilles. La tristesse ralentit tout. La douleur n'est pas une information. C'est une urgence.",
+  "shots": [
+    {
+      "id": "B01-S01",
+      "src": "/assets/generated/B01-S01.png",
+      "duration": 16.28,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7101,
+      "title": "L'enfant qui tombe"
+    },
+    {
+      "id": "B01-S02",
+      "src": "/assets/generated/B01-S02.png",
+      "duration": 13.32,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7102,
+      "title": "Le visage de l'enfant"
+    }
+  ]
+}

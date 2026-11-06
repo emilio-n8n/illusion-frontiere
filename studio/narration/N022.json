@@ -1,0 +1,35 @@
+{
+  "id": "N022",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 26.3,
+  "subtitle": "Maintenant, regardez la machine. Elle a des paramètres, figés après l'entraînement. Une fenêtre de contexte, qui contient ce qu'on vient de lui dire. Parfois, une mémoire externe, une base de données qu'elle peut consulter. Elle peut restituer une conversation de mille façons. Mais elle ne se souvient pas d'avoir vécu la conversation. Elle n'a pas de nuit. Elle n'a pas de rêve. Elle n'a pas d'odeur qui déclenche un souvenir d'enfance.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 14.465,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 11.835,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

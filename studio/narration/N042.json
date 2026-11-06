@@ -1,0 +1,35 @@
+{
+  "id": "N042",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 25.6,
+  "subtitle": "Un modèle peut reconnaître une émotion dans un texte. Il peut la nommer, la décrire, la simuler. Il peut même produire une réponse qui nous semble empathique. Il a appris que, quand quelqu'un dit « je suis triste », il faut répondre « je suis là ». Il a appris que, quand quelqu'un parle de la mort, il faut ralentir. Il a appris nos rituels. Il ne les ressent pas. Il les récite.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 14.08,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 11.52,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

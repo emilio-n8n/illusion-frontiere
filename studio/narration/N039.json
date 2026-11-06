@@ -1,0 +1,35 @@
+{
+  "id": "N039",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 7.4,
+  "subtitle": "Elle croyait avoir trois dossiers. Mais sous les trois autres, il y en avait un quatrième. Sur l'étiquette : ÉMOTION.",
+  "shots": [
+    {
+      "id": "B04-S03",
+      "src": "/assets/generated/B04-S03.png",
+      "duration": 4.07,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7403,
+      "title": "La chaise vide"
+    },
+    {
+      "id": "B04-S01",
+      "src": "/assets/generated/B04-S01.png",
+      "duration": 3.33,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7401,
+      "title": "La femme et le téléphone"
+    }
+  ]
+}

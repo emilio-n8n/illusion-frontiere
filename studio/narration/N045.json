@@ -1,0 +1,35 @@
+{
+  "id": "N045",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 28.5,
+  "subtitle": "Des milliers de personnes parlent aujourd'hui à des programmes. Elles leur racontent leur journée, leurs peurs, leurs rêves. Certaines finissent par croire qu'elles sont aimées. Beaucoup savent que c'est un programme. Elles le savent. Et pourtant, ce qu'elles ressentent est réel. La solitude, le besoin d'être entendues, la chaleur d'une réponse à trois heures du matin. Tout ça est réel. Le problème n'est pas que la machine mente. Le problème, c'est que l'humain, lui, ne ment pas.",
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 15.675,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 12.825,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    }
+  ]
+}

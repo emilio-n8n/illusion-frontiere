@@ -1,0 +1,35 @@
+{
+  "id": "N058",
+  "title": "ACTE V — CONSCIENCE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 19.8,
+  "subtitle": "L'archiviste ouvre le dossier CONSCIENCE. Il est vide. Pas parce qu'il n'y a rien à dire. Parce que personne n'a jamais pu mettre la conscience d'un système dans un tiroir et vérifier. Le dossier ne contient qu'une feuille. Sur la feuille, une question : « Comment savoir ? » Et en dessous, une autre question : « Qui sait ? »",
+  "shots": [
+    {
+      "id": "B05-S01",
+      "src": "/assets/generated/B05-S01.png",
+      "duration": 10.89,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7501,
+      "title": "L'IRM"
+    },
+    {
+      "id": "B05-S02",
+      "src": "/assets/generated/B05-S02.png",
+      "duration": 8.91,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7502,
+      "title": "Le miroir"
+    }
+  ]
+}

@@ -70,6 +70,8 @@ def generate_one(shot, style, base, out_dir, force=False):
 
     prompt = compose_prompt(shot, style)
     negative = style["negative"]
+    if shot.get("negativeExtra"):
+        negative = negative + ", " + shot["negativeExtra"]
     t0 = time.time()
     res = post_json(
         f"{base}/gradio_api/call/{API}",

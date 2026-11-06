@@ -1,0 +1,35 @@
+{
+  "id": "N041",
+  "title": "ACTE IV — ÉMOTION",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 22.3,
+  "subtitle": "Nous avons tendance à croire que les émotions sont l'intérieur. La partie privée. Ce qui ne se voit pas. Mais les émotions sont aussi physiologiques. Elles sont dans le ventre, dans la gorge, dans les mains qui tremblent. Elles sont dans la façon dont on respire. Elles ne sont pas un supplément d'âme. Elles sont une manière d'habiter un corps.",
+  "shots": [
+    {
+      "id": "B03-S01",
+      "src": "/assets/generated/B03-S01.png",
+      "duration": 12.265,
+      "camera": "pan-left",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7301,
+      "title": "Le bras robotisé"
+    },
+    {
+      "id": "B03-S02",
+      "src": "/assets/generated/B03-S02.png",
+      "duration": 10.035,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7302,
+      "title": "La main coupée"
+    }
+  ]
+}

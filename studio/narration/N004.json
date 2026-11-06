@@ -1,0 +1,46 @@
+{
+  "id": "N004",
+  "title": "PROLOGUE — LE MEUBLE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 10.7,
+  "subtitle": "Chaque fois que l'humanité découvre qu'une chose qu'elle croyait réservée aux humains peut être accomplie par une machine, une archiviste descend, ouvre un tiroir, et déplace une chemise.",
+  "shots": [
+    {
+      "id": "B00-S01",
+      "src": "/assets/generated/B00-S01.png",
+      "duration": 4.815,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7001,
+      "title": "Le Bureau des frontières"
+    },
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 3.21,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B00-S03",
+      "src": "/assets/generated/B00-S03.png",
+      "duration": 2.675,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7003,
+      "title": "Le couloir"
+    }
+  ]
+}

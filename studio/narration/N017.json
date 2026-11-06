@@ -1,0 +1,35 @@
+{
+  "id": "N017",
+  "title": "ACTE I — APPRENDRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 18.3,
+  "subtitle": "Alors, quand il répond, il ne puise pas dans une expérience. Il puise dans la nôtre. Il est fait de nos traces. Un peu comme un enfant qui répète une phrase entendue sans en comprendre le sens. Sauf que lui peut répéter des millions de phrases à la fois.",
+  "shots": [
+    {
+      "id": "B01-S01",
+      "src": "/assets/generated/B01-S01.png",
+      "duration": 10.065,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7101,
+      "title": "L'enfant qui tombe"
+    },
+    {
+      "id": "B01-S02",
+      "src": "/assets/generated/B01-S02.png",
+      "duration": 8.235,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7102,
+      "title": "Le visage de l'enfant"
+    }
+  ]
+}

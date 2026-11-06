@@ -1,0 +1,35 @@
+{
+  "id": "N020",
+  "title": "ACTE II — MÉMOIRE",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 33.6,
+  "subtitle": "En 1953, un homme de 27 ans subit une opération. On lui retire une partie du lobe temporal pour soigner une épilepsie. L'opération réussit. Mais l'homme ne peut plus former de nouveaux souvenirs. Il vit dans un présent perpétuel. Chaque fois qu'on lui présente quelqu'un qu'il a rencontré la veille, c'est un inconnu. Chaque fois qu'il regarde une photo, il la découvre. Il peut apprendre un geste, une musique, une habitude. Mais il ne se souvient pas de l'avoir apprise. Sa mémoire est là, quelque part. Mais la porte est fermée.",
+  "shots": [
+    {
+      "id": "B01-S04",
+      "src": "/assets/generated/B01-S04.png",
+      "duration": 18.48,
+      "camera": "static",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7104,
+      "title": "Les mains de l'archiviste"
+    },
+    {
+      "id": "B01-S03",
+      "src": "/assets/generated/B01-S03.png",
+      "duration": 15.12,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7103,
+      "title": "La machine qui apprend"
+    }
+  ]
+}

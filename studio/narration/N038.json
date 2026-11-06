@@ -1,0 +1,35 @@
+{
+  "id": "N038",
+  "title": "ACTE III — LE CORPS",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 11.4,
+  "subtitle": "Elle ne déplace pas le dossier. Elle le laisse ouvert sur la table. Pour la première fois, elle a peur de ce qu'elle va trouver dans le tiroir d'à côté.",
+  "shots": [
+    {
+      "id": "B00-S02",
+      "src": "/assets/generated/B00-S02.png",
+      "duration": 6.27,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7002,
+      "title": "Le dossier"
+    },
+    {
+      "id": "B06-S02",
+      "src": "/assets/generated/B06-S02.png",
+      "duration": 5.13,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7602,
+      "title": "La fiche"
+    }
+  ]
+}

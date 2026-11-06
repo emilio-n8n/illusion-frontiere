@@ -123,7 +123,8 @@
       "seed": 7203,
       "camera": "push-in",
       "overlay": "CONSOLIDATION",
-      "prompt": "Underexposed 35mm film still, a dark medical imaging room, a large glowing brain scan on a light box, a radiologist's silhouette standing in front of it, cold steel-blue light, burgundy reflection on the glass, thin haze, wide shot, film grain, no text."
+      "prompt": "Underexposed 35mm film still, a dark medical imaging room, a large light box showing an abstract monochrome brain scan without any labels, annotations or text, a radiologist's silhouette standing in front of it, cold steel-blue light, burgundy reflection on the glass, thin haze, wide shot, film grain, clean unmarked surfaces.",
+      "negativeExtra": "medical labels, annotations, letters, numbers, chart text, UI, captions, measurements"
     },
     {
       "id": "B02-S04",

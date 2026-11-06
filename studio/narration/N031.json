@@ -1,0 +1,35 @@
+{
+  "id": "N031",
+  "title": "ACTE III — LE CORPS",
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "fadeIn": 0.18,
+  "fadeOut": 0.18,
+  "duration": 17.2,
+  "subtitle": "Et pourtant, nous sommes en train de construire des machines avec des corps. Des robots qui marchent, qui saisissent, qui apprennent par essai-erreur. Des prothèses qui renvoient des sensations. Des interfaces qui connectent le cerveau à un ordinateur. La frontière du corps n'est plus si nette.",
+  "shots": [
+    {
+      "id": "B01-S01",
+      "src": "/assets/generated/B01-S01.png",
+      "duration": 9.46,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7101,
+      "title": "L'enfant qui tombe"
+    },
+    {
+      "id": "B01-S02",
+      "src": "/assets/generated/B01-S02.png",
+      "duration": 7.74,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 7102,
+      "title": "Le visage de l'enfant"
+    }
+  ]
+}
