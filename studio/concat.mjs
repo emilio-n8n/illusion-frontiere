@@ -20,13 +20,22 @@ const index = JSON.parse(fs.readFileSync(path.join(root, 'studio', dir, 'index.j
 const blockDir = path.resolve(root, get('--blocks', `out/${dir}`));
 const out = path.resolve(root, get('--out', 'out/film-silent.mp4'));
 const audio = get('--audio', '');
+const allowMissing = args.includes('--allow-missing');
 
-const files = index.map(b => path.join(blockDir, `${b.id}.mp4`));
-const missing = files.filter(f => !fs.existsSync(f));
-if (missing.length) {
+const allFiles = index.map(b => path.join(blockDir, `${b.id}.mp4`));
+const missing = allFiles.filter(f => !fs.existsSync(f));
+if (missing.length && !allowMissing) {
   console.error(`missing ${missing.length} block(s):`);
   for (const f of missing) console.error('  ' + path.relative(root, f));
   process.exit(1);
+}
+const files = allFiles.filter(f => fs.existsSync(f));
+if (!files.length) {
+  console.error('no rendered block to concatenate');
+  process.exit(1);
+}
+if (missing.length) {
+  console.log(`partial: ${missing.length} block(s) missing, concatenating ${files.length}`);
 }
 
 const list = path.join(root, 'out/concat.txt');

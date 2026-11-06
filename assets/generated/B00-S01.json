@@ -1,0 +1,17 @@
+{
+  "id": "B00-S01",
+  "block": "B00",
+  "act": "Prologue",
+  "title": "Le Bureau des frontières",
+  "prompt": "Underexposed 35mm film still from a dark cinematic documentary. A vast subterranean archive room at night, floor-to-ceiling filing cabinets disappearing into shadow. A lone woman in a heavy wool coat, seen from behind, stands in the left foreground, her head and shoulders a near-black silhouette rimmed by pale light. She faces a large projection screen across the room; the screen is the only strong light, pale warm grey, slightly blown out, showing a faint analog map of the world with thin red ink marks. Steel-blue walls, brushed metal, tangled cables, a single small burgundy desk lamp on a table. Foreground desk heavily out of focus. Thin volumetric haze, dust in the projector beam, anamorphic lens, shallow depth of field, heavy natural film grain, muted desaturated palette. The right third of the frame is quiet shadow. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 7001,
+  "resolution": "1536px (High)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://5ddf94cc911b396470.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 76.1s (76.1s/image) | Seeds: [7001] | 1536x864 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 80.3,
+  "generated_at": "2026-11-06T19:41:46+00:00"
+}

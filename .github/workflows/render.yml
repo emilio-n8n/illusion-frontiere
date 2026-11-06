@@ -23,6 +23,10 @@ on:
         description: "x264 CRF (lower = better)"
         required: true
         default: "18"
+      partial:
+        description: "true = concatenate only the rendered blocks"
+        required: true
+        default: "false"
 
 permissions:
   contents: read
@@ -106,7 +110,11 @@ jobs:
           path: out/${{ inputs.dir }}
 
       - name: Concatenate
-        run: node studio/concat.mjs --dir "${{ inputs.dir }}" --out out/film-silent.mp4
+        shell: bash
+        run: |
+          extra=""
+          if [ "${{ inputs.partial }}" = "true" ]; then extra="--allow-missing"; fi
+          node studio/concat.mjs --dir "${{ inputs.dir }}" --out out/film-silent.mp4 $extra
 
       - uses: actions/upload-artifact@v4
         with:
