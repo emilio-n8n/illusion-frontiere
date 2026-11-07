@@ -154,11 +154,15 @@ def main():
 
     if args.batch:
         tracks_path = Path(args.tracks)
+        if not tracks_path.is_absolute():
+            tracks_path = ROOT / tracks_path
         tracks = json.loads(tracks_path.read_text())["tracks"]
         if args.only:
             wanted = {x.strip() for x in args.only.split(",") if x.strip()}
             tracks = [t for t in tracks if t["id"] in wanted]
         out_dir = Path(args.outdir) if args.outdir else tracks_path.parent / tracks_path.stem
+        if not out_dir.is_absolute():
+            out_dir = ROOT / out_dir
         out_dir.mkdir(parents=True, exist_ok=True)
         status = load_status()
         print(f"music: {len(tracks)} track(s), endpoint {base}", flush=True)
