@@ -141,6 +141,10 @@ def main():
     ap.add_argument("--bpm", type=int, default=0)
     ap.add_argument("--key", default="")
     ap.add_argument("--batch", action="store_true")
+    ap.add_argument("--tracks", default=str(TRACKS),
+                    help="track list JSON (music.json or sfx.json)")
+    ap.add_argument("--outdir", default=None,
+                    help="output folder (default: alongside the track list)")
     ap.add_argument("--only", default="")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--url", default=DEFAULT_URL)
@@ -149,11 +153,12 @@ def main():
     ensure_engine(base)
 
     if args.batch:
-        tracks = json.loads(TRACKS.read_text())["tracks"]
+        tracks_path = Path(args.tracks)
+        tracks = json.loads(tracks_path.read_text())["tracks"]
         if args.only:
             wanted = {x.strip() for x in args.only.split(",") if x.strip()}
             tracks = [t for t in tracks if t["id"] in wanted]
-        out_dir = OUT_DIR
+        out_dir = Path(args.outdir) if args.outdir else tracks_path.parent / tracks_path.stem
         out_dir.mkdir(parents=True, exist_ok=True)
         status = load_status()
         print(f"music: {len(tracks)} track(s), endpoint {base}", flush=True)

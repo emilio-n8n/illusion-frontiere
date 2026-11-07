@@ -1,0 +1,25 @@
+{
+  "project": "studio-sfx-library",
+  "model": "ACE-Step 1.5 (DiT Turbo + 0.6B LM)",
+  "note": "Atmospheric beds and tonal textures, instrumental only. Concrete foley (paper, metal, footsteps) comes from Freesound (see SFX_SOURCES below). Seeds fixed.",
+  "tracks": [
+    {"id": "S01", "title": "Room tone — concrete bunker", "style": "raw field recording, empty concrete basement room tone, low airy rumble, complete silence feeling, no music, no rhythm, no vocals", "duration": 60, "seed": 9101, "bpm": 0, "key": ""},
+    {"id": "S02", "title": "Room tone — archive room", "style": "raw field recording, dusty archive room tone, faint paper rustle in stillness, very quiet air, no music, no rhythm, no vocals", "duration": 60, "seed": 9102, "bpm": 0, "key": ""},
+    {"id": "S03", "title": "Room tone — laboratory", "style": "raw field recording, laboratory room tone, soft ventilation and distant machine hum, sterile and cold, no music, no rhythm, no vocals", "duration": 60, "seed": 9103, "bpm": 0, "key": ""},
+    {"id": "S04", "title": "Room tone — server room", "style": "raw field recording, server room ambience, layered fan noise and electronic hum, cold and constant, no music, no rhythm, no vocals", "duration": 60, "seed": 9104, "bpm": 0, "key": ""},
+    {"id": "S05", "title": "Hum — neon tube 50Hz", "style": "raw field recording, fluorescent neon tube hum, mains buzz with faint flicker crackle, close-up, no music, no rhythm, no vocals", "duration": 60, "seed": 9105, "bpm": 0, "key": ""},
+    {"id": "S06", "title": "Hum — transformer", "style": "raw field recording, electrical transformer drone, deep vibrating hum with harmonics, ominous, no music, no rhythm, no vocals", "duration": 60, "seed": 9106, "bpm": 0, "key": ""},
+    {"id": "S07", "title": "Weather — night wind", "style": "raw field recording, cold night wind around a building, slow gusts, distant and hollow, no music, no rhythm, no vocals", "duration": 60, "seed": 9107, "bpm": 0, "key": ""},
+    {"id": "S08", "title": "Weather — rain on window", "style": "raw field recording, steady rain hitting a glass window at night, soft patter, intimate and calm, no music, no rhythm, no vocals", "duration": 60, "seed": 9108, "bpm": 0, "key": ""},
+    {"id": "S09", "title": "Weather — distant thunder", "style": "raw field recording, distant thunder rolling, deep low rumble fading slowly, night storm far away, no music, no rhythm, no vocals", "duration": 30, "seed": 9109, "bpm": 0, "key": ""},
+    {"id": "S10", "title": "Air — ventilation duct", "style": "raw field recording, air moving through a metal ventilation duct, hollow whoosh, constant, no music, no rhythm, no vocals", "duration": 60, "seed": 9110, "bpm": 0, "key": ""},
+    {"id": "S11", "title": "FX — slow riser 20s", "style": "cinematic riser, slow tension build over twenty seconds, filtered noise swelling, no melody, no drums, no vocals, ends at peak", "duration": 20, "seed": 9111, "bpm": 0, "key": ""},
+    {"id": "S12", "title": "FX — sub drop", "style": "deep sub bass drop, single descending tone into silence, cinematic impact tail, no melody, no drums, no vocals", "duration": 10, "seed": 9112, "bpm": 0, "key": ""},
+    {"id": "S13", "title": "FX — heartbeat pulse", "style": "low heartbeat pulse, slow sixty beats per minute, deep soft thump, tense and minimal, no melody, no vocals", "duration": 30, "seed": 9113, "bpm": 60, "key": ""},
+    {"id": "S14", "title": "FX — projector clatter loop", "style": "raw field recording, old film projector mechanism clattering rhythmically, mechanical loop, warm and dusty, no music, no vocals", "duration": 30, "seed": 9114, "bpm": 0, "key": ""},
+    {"id": "S15", "title": "FX — tape reel", "style": "raw field recording, reel-to-reel tape machine rolling, soft mechanical whir with occasional wobble, nostalgic, no music, no vocals", "duration": 30, "seed": 9115, "bpm": 0, "key": ""},
+    {"id": "S16", "title": "FX — hard drive clicks", "style": "raw field recording, old hard drive reading, sparse electronic clicks and whirrs, cold and technical, no music, no vocals", "duration": 20, "seed": 9116, "bpm": 0, "key": ""},
+    {"id": "S17", "title": "FX — shimmer tail", "style": "ethereal shimmer tail, high airy resonance decaying slowly into silence, delicate, no melody, no drums, no vocals", "duration": 20, "seed": 9117, "bpm": 0, "key": ""},
+    {"id": "S18", "title": "FX — MRI pulse bed", "style": "raw field recording, medical scanner rhythmic magnetic pulse, deep mechanical thump pattern, cold and clinical, no music, no vocals", "duration": 30, "seed": 9118, "bpm": 0, "key": ""}
+  ]
+}
