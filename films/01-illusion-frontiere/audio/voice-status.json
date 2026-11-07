@@ -1,38 +1,422 @@
 {
   "N001": {
-    "status": "ok",
-    "file": "assets/voice-test/clone/N001.wav",
-    "seconds": 64.3,
-    "at": "2026-11-07T07:50:47+00:00"
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N001.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
   },
   "N002": {
-    "status": "ok",
+    "status": "skipped",
     "file": "films/01-illusion-frontiere/audio/blocks/N002.wav",
-    "seconds": 27.8,
-    "at": "2026-11-07T07:31:35+00:00"
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
   },
   "N003": {
-    "status": "ok",
+    "status": "skipped",
     "file": "films/01-illusion-frontiere/audio/blocks/N003.wav",
-    "seconds": 84.8,
-    "at": "2026-11-07T07:33:00+00:00"
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
   },
   "N004": {
-    "status": "ok",
+    "status": "skipped",
     "file": "films/01-illusion-frontiere/audio/blocks/N004.wav",
-    "seconds": 59.1,
-    "at": "2026-11-07T07:33:59+00:00"
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
   },
   "N005": {
-    "status": "ok",
+    "status": "skipped",
     "file": "films/01-illusion-frontiere/audio/blocks/N005.wav",
-    "seconds": 29.9,
-    "at": "2026-11-07T07:34:29+00:00"
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
   },
   "N006": {
-    "status": "ok",
+    "status": "skipped",
     "file": "films/01-illusion-frontiere/audio/blocks/N006.wav",
-    "seconds": 21.8,
-    "at": "2026-11-07T07:34:51+00:00"
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N007": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N007.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N008": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N008.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N009": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N009.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N010": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N010.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N011": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N011.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N012": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N012.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N013": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N013.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N014": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N014.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N015": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N015.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:32+00:00"
+  },
+  "N016": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N016.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N017": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N017.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N018": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N018.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N019": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N019.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N020": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N020.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N021": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N021.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N022": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N022.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N023": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N023.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N024": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N024.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N025": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N025.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N026": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N026.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N027": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N027.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N028": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N028.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N029": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N029.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N030": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N030.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N031": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N031.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N032": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N032.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N033": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N033.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N034": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N034.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N035": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N035.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N036": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N036.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:02:33+00:00"
+  },
+  "N037": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N037.wav",
+    "seconds": 90.0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N038": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N038.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N039": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N039.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N040": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N040.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N041": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N041.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N042": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N042.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N043": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N043.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N044": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N044.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N045": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N045.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N046": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N046.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N047": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N047.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N048": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N048.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N049": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N049.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:04:03+00:00"
+  },
+  "N050": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N050.wav",
+    "seconds": 82.1,
+    "at": "2026-11-07T13:05:25+00:00"
+  },
+  "N051": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N051.wav",
+    "seconds": 77.6,
+    "at": "2026-11-07T13:06:42+00:00"
+  },
+  "N052": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N052.wav",
+    "seconds": 91.5,
+    "at": "2026-11-07T13:08:14+00:00"
+  },
+  "N053": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N053.wav",
+    "seconds": 94.1,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N054": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N054.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N055": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N055.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N056": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N056.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N057": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N057.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N058": {
+    "status": "skipped",
+    "file": "films/01-illusion-frontiere/audio/blocks/N058.wav",
+    "seconds": 0,
+    "at": "2026-11-07T13:09:48+00:00"
+  },
+  "N059": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N059.wav",
+    "seconds": 41.6,
+    "at": "2026-11-07T13:10:30+00:00"
+  },
+  "N060": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N060.wav",
+    "seconds": 40.1,
+    "at": "2026-11-07T13:11:10+00:00"
+  },
+  "N061": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N061.wav",
+    "seconds": 175.6,
+    "at": "2026-11-07T13:14:05+00:00"
+  },
+  "N062": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N062.wav",
+    "seconds": 124.8,
+    "at": "2026-11-07T13:16:10+00:00"
+  },
+  "N063": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N063.wav",
+    "seconds": 85.3,
+    "at": "2026-11-07T13:17:36+00:00"
+  },
+  "N064": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N064.wav",
+    "seconds": 74.2,
+    "at": "2026-11-07T13:18:50+00:00"
+  },
+  "N065": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N065.wav",
+    "seconds": 37.6,
+    "at": "2026-11-07T13:19:27+00:00"
+  },
+  "N066": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N066.wav",
+    "seconds": 116.8,
+    "at": "2026-11-07T13:21:24+00:00"
+  },
+  "N067": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N067.wav",
+    "seconds": 39.5,
+    "at": "2026-11-07T13:22:04+00:00"
+  },
+  "N068": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N068.wav",
+    "seconds": 41.0,
+    "at": "2026-11-07T13:22:45+00:00"
+  },
+  "N069": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N069.wav",
+    "seconds": 114.4,
+    "at": "2026-11-07T13:24:39+00:00"
+  },
+  "N070": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N070.wav",
+    "seconds": 35.9,
+    "at": "2026-11-07T13:25:15+00:00"
   }
 }
