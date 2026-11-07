@@ -1,0 +1,134 @@
+{
+  "project": "01-illusion-frontiere",
+  "note": "Vox-style graphics projected into the archive world: pale type, thin lines, red ink, no bright flat cards. Times are relative to the block start, seconds.",
+  "motions": {
+    "N011": [
+      {
+        "type": "dots",
+        "value": 86,
+        "unit": "MILLIARDS",
+        "label": "NEURONES DANS UN CERVEAU D'ENFANT",
+        "legend": "1 POINT = 540 MILLIONS",
+        "at": 0.4,
+        "dur": 5.2,
+        "x": 1010,
+        "y": 150,
+        "w": 760,
+        "h": 470,
+        "highlight": 0.35
+      }
+    ],
+    "N012": [
+      {
+        "type": "diagram",
+        "title": "L'ERREUR COMME MÉCANISME",
+        "at": 0.6,
+        "dur": 5.0,
+        "x": 1080,
+        "y": 230,
+        "w": 620,
+        "h": 420
+      }
+    ],
+    "N020": [
+      {
+        "type": "brackets",
+        "label": "1953",
+        "sublabel": "MÉMOIRE",
+        "at": 0.5,
+        "dur": 5.0,
+        "x": 930,
+        "y": 190,
+        "w": 570,
+        "h": 680
+      }
+    ],
+    "N032": [
+      {
+        "type": "number",
+        "value": "800 000",
+        "label": "NEURONES HUMAINS CULTIVÉS",
+        "sublabel": "CORTICAL LABS — DISHBRAIN, 2022",
+        "at": 0.4,
+        "dur": 5.0,
+        "x": 120,
+        "y": 150,
+        "size": 104
+      }
+    ],
+    "N034": [
+      {
+        "type": "bars",
+        "title": "NEURONES HUMAINS CULTIVÉS",
+        "bars": [
+          {
+            "label": "DISHBRAIN 2022",
+            "value": 800000,
+            "color": "red"
+          },
+          {
+            "label": "FINALSPARK 2024",
+            "value": 160000,
+            "color": "teal"
+          }
+        ],
+        "at": 0.4,
+        "dur": 5.0,
+        "x": 1080,
+        "y": 220,
+        "w": 660,
+        "barH": 12
+      }
+    ],
+    "N055": [
+      {
+        "type": "timeline",
+        "title": "LA FRONTIÈRE, MISE À L'ÉPREUVE",
+        "points": [
+          {
+            "year": "1950",
+            "label": "TURING"
+          },
+          {
+            "year": "1953",
+            "label": "H.M."
+          },
+          {
+            "year": "2022",
+            "label": "DISHBRAIN"
+          },
+          {
+            "year": "2024",
+            "label": "FINALSPARK"
+          }
+        ],
+        "at": 0.5,
+        "dur": 5.4,
+        "x": 200,
+        "y": 760,
+        "w": 1520
+      }
+    ],
+    "N061": [
+      {
+        "type": "redact",
+        "label": "DOSSIER 01",
+        "stamp": "CONSCIENT : PRÉSUMÉ",
+        "at": 0.5,
+        "dur": 5.0,
+        "x": 690,
+        "y": 330,
+        "w": 560,
+        "h": 300
+      }
+    ],
+    "N070": [
+      {
+        "type": "frontier",
+        "label": "LA FRONTIÈRE",
+        "at": 0.4,
+        "dur": 5.2
+      }
+    ]
+  }
+}

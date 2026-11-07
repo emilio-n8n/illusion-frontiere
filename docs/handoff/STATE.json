@@ -1,0 +1,62 @@
+{
+  "project": "01-illusion-frontiere",
+  "repo": "https://github.com/emilio-n8n/illusion-frontiere",
+  "updatedAt": "2026-11-07",
+  "film": {
+    "title": "L'Illusion de la frontière",
+    "durationVoiceSeconds": 1556.294,
+    "durationWithIntroSeconds": 1562.294,
+    "fps": 24,
+    "resolution": "1920x1080",
+    "v1": "out/film-final-intro.mp4",
+    "v2": "pending (130 unique images + motion design)"
+  },
+  "voice": {
+    "blocks": 70,
+    "model": "Fish Audio Drama 3",
+    "reference": "assets/voice-test/reference.wav",
+    "takes": "films/01-illusion-frontiere/audio/blocks",
+    "measured": true
+  },
+  "music": {
+    "beds": 6,
+    "path": "films/01-illusion-frontiere/audio/music",
+    "mix": "out/audio/mix.wav",
+    "mixWithIntro": "out/audio/mix-lead.wav"
+  },
+  "sfx": {
+    "textures": 18,
+    "foley": 10,
+    "path": "films/01-illusion-frontiere/audio",
+    "placedInEdit": false
+  },
+  "images": {
+    "hero": 26,
+    "uniqueV2": 130,
+    "generatedV2AtLastCheck": 87,
+    "status": "generating",
+    "prompts": "films/01-illusion-frontiere/storyboard/shots-v2.json",
+    "map": "films/01-illusion-frontiere/storyboard/narration-map.json"
+  },
+  "clips2_5d": {
+    "count": 26,
+    "path": "assets/clips",
+    "usedInV2": false
+  },
+  "render": {
+    "engine": "studio/render.html",
+    "localParallel": 1,
+    "actionsWorkflow": ".github/workflows/render.yml",
+    "blenderWorkflow": ".github/workflows/blender.yml"
+  },
+  "openTasks": [
+    "finish 130 unique images",
+    "build v2 blocks and render",
+    "motion design Vox overlays",
+    "place SFX",
+    "final mix -14 LUFS",
+    "fact-check final",
+    "SRT, generique, thumbnail, metadata",
+    "publish"
+  ]
+}

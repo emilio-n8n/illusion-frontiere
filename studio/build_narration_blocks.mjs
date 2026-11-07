@@ -11,6 +11,7 @@ const blocksPath = path.join(root, 'films/01-illusion-frontiere/script/blocks.js
 const shotsPath = path.join(root, 'films/01-illusion-frontiere/storyboard/shots.json');
 const shotsV2Path = path.join(root, 'films/01-illusion-frontiere/storyboard/shots-v2.json');
 const mapPath = path.join(root, 'films/01-illusion-frontiere/storyboard/narration-map.json');
+const motionPath = path.join(root, 'films/01-illusion-frontiere/storyboard/motion.json');
 const outDir = path.join(root, 'studio/narration');
 
 const data = JSON.parse(fs.readFileSync(blocksPath, 'utf8'));
@@ -21,6 +22,9 @@ if (fs.existsSync(shotsV2Path)) {
 }
 const narrationMap = fs.existsSync(mapPath)
   ? JSON.parse(fs.readFileSync(mapPath, 'utf8'))
+  : {};
+const motionMap = fs.existsSync(motionPath)
+  ? (JSON.parse(fs.readFileSync(motionPath, 'utf8')).motions || {})
   : {};
 
 function weights(n) {
@@ -79,6 +83,7 @@ for (const block of data.blocks) {
     fadeOut: .18,
     duration: Math.round(block.seconds * 1000) / 1000,
     subtitle: process.env.SUBTITLES === '0' ? null : block.text,
+    motions: motionMap[block.id] || [],
     shots,
   };
   fs.writeFileSync(path.join(outDir, `${block.id}.json`), JSON.stringify(json, null, 2) + '\n');

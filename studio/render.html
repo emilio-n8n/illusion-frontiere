@@ -35,6 +35,7 @@ const T = {
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const smooth = t => { t = clamp(t); return t * t * (3 - 2 * t); };
+const out = t => 1 - Math.pow(1 - clamp(t), 3);
 const lerp = (a, b, t) => a + (b - a) * t;
 
 let block = null;
@@ -263,6 +264,319 @@ function drawSubtitle(text) {
   ctx.restore();
 }
 
+function motionAlpha(local, m) {
+  const inA = smooth(clamp(local / .45));
+  const outA = 1 - smooth(clamp((local - m.dur + .5) / .5));
+  return inA * outA;
+}
+
+function motionPlate(x, y, w, h) {
+  const g = ctx.createLinearGradient(x, y, x, y + h);
+  g.addColorStop(0, 'rgba(4,7,10,.46)');
+  g.addColorStop(1, 'rgba(4,7,10,.18)');
+  ctx.fillStyle = g;
+  ctx.fillRect(x, y, w, h);
+}
+
+function drawMotion(m, local) {
+  const a = motionAlpha(local, m);
+  if (a <= .001) return;
+  ctx.save();
+  ctx.globalAlpha = a;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'alphabetic';
+  ctx.letterSpacing = '0px';
+
+  if (m.type === 'number') {
+    const target = parseFloat(String(m.value).replace(/[^\d.]/g, '')) || 0;
+    const p = out(clamp(local / 1.1));
+    const n = Math.round(target * p);
+    const fmt = new Intl.NumberFormat('fr-FR').format(n).replace(/[\u202f\u00a0]/g, ' ');
+    const size = m.size || 108;
+    ctx.shadowColor = 'rgba(0,0,0,.85)';
+    ctx.shadowBlur = 22;
+    ctx.fillStyle = T.screen;
+    ctx.font = `400 ${size}px ArchivoBlack`;
+    ctx.fillText(fmt, m.x, m.y + size);
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = T.red;
+    ctx.fillRect(m.x, m.y + size + 20, 170, 2);
+    ctx.font = '500 20px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.fillStyle = T.text;
+    ctx.fillText(m.label, m.x, m.y + size + 56);
+    if (m.sublabel) {
+      ctx.globalAlpha = a * .8;
+      ctx.font = '500 13px JBMono';
+      ctx.letterSpacing = '3px';
+      ctx.fillStyle = T.text;
+      ctx.fillText(m.sublabel, m.x, m.y + size + 82);
+    }
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'dots') {
+    const total = 160, cols = 20, rows = 8;
+    const gridTop = m.y + 170;
+    const gridH = m.h - 240;
+    const dx = m.w / (cols - 1), dy = gridH / (rows - 1);
+    const highlight = Math.floor(total * (m.highlight || .35));
+    for (let i = 0; i < total; i++) {
+      const col = i % cols, row = Math.floor(i / cols);
+      const pp = clamp((local - col * .012 - row * .012) / .8);
+      if (pp <= 0) continue;
+      const x = m.x + col * dx, y = gridTop + row * dy;
+      const r = 2.6 * (.55 + .45 * pp);
+      ctx.globalAlpha = a * pp * (i < highlight ? .95 : .42);
+      ctx.fillStyle = i < highlight ? T.red : T.screen;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = a;
+    ctx.fillStyle = T.screen;
+    ctx.font = '400 88px ArchivoBlack';
+    ctx.fillText(`${m.value}`, m.x, m.y + 78);
+    const nw = ctx.measureText(`${m.value}`).width;
+    ctx.font = '500 26px JBMono';
+    ctx.letterSpacing = '6px';
+    ctx.fillStyle = T.text;
+    ctx.fillText(m.unit, m.x + nw + 18, m.y + 76);
+    ctx.fillStyle = T.red;
+    ctx.fillRect(m.x, m.y + 102, 190, 2);
+    ctx.globalAlpha = a * .8;
+    ctx.font = '500 14px JBMono';
+    ctx.letterSpacing = '3px';
+    ctx.fillStyle = T.text;
+    ctx.fillText(m.label, m.x, m.y + 134);
+    ctx.globalAlpha = a * .55;
+    ctx.font = '500 12px JBMono';
+    ctx.letterSpacing = '2px';
+    ctx.fillStyle = T.dim;
+    ctx.fillText(m.legend, m.x, m.y + m.h - 8);
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'bars') {
+    const max = Math.max(...m.bars.map(b => b.value));
+    ctx.fillStyle = T.screen;
+    ctx.font = '500 18px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.fillText(m.title, m.x, m.y);
+    const rowH = 74;
+    m.bars.forEach((b, i) => {
+      const y = m.y + 40 + i * rowH;
+      const p = out(clamp((local - i * .18) / 1.1));
+      const w = (b.value / max) * m.w * p;
+      ctx.fillStyle = 'rgba(201,196,184,.12)';
+      ctx.fillRect(m.x, y + 20, m.w, m.barH);
+      ctx.fillStyle = b.color === 'red' ? T.red : 'rgba(143,214,214,.75)';
+      ctx.fillRect(m.x, y + 20, Math.max(2, w), m.barH);
+      ctx.fillStyle = T.text;
+      ctx.font = '500 14px JBMono';
+      ctx.letterSpacing = '3px';
+      ctx.fillText(b.label, m.x, y + 8);
+      ctx.textAlign = 'right';
+      ctx.fillStyle = T.screen;
+      ctx.font = '400 24px ArchivoBlack';
+      ctx.fillText(new Intl.NumberFormat('fr-FR').format(b.value).replace(/[\u202f\u00a0]/g, ' '), m.x + m.w, y + 8);
+      ctx.textAlign = 'left';
+    });
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'brackets') {
+    const p = out(clamp(local / .9));
+    const len = 34, x = m.x, y = m.y, w = m.w, h = m.h;
+    ctx.strokeStyle = 'rgba(201,196,184,.75)';
+    ctx.lineWidth = 2;
+    const corners = [
+      [[x, y + len], [x, y], [x + len, y]],
+      [[x + w - len, y], [x + w, y], [x + w, y + len]],
+      [[x + w, y + h - len], [x + w, y + h], [x + w - len, y + h]],
+      [[x + len, y + h], [x, y + h], [x, y + h - len]],
+    ];
+    for (const c of corners) {
+      ctx.beginPath();
+      ctx.moveTo(...c[0]);
+      ctx.lineTo(...c[1]);
+      ctx.lineTo(...c[2]);
+      ctx.stroke();
+    }
+    ctx.fillStyle = T.red;
+    ctx.beginPath();
+    ctx.arc(x - 6, y - 6, 3.5 * p, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = T.screen;
+    ctx.font = '500 16px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.fillText(m.label, x, y - 18);
+    if (m.sublabel) {
+      ctx.globalAlpha = a * .55;
+      ctx.font = '500 11px JBMono';
+      ctx.letterSpacing = '3px';
+      ctx.fillStyle = T.dim;
+      ctx.fillText(m.sublabel, x, y + h + 24);
+    }
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'timeline') {
+    const p = out(clamp(local / 1.4));
+    const y = m.y;
+    ctx.fillStyle = T.screen;
+    ctx.font = '500 17px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.fillText(m.title, m.x, y - 42);
+    ctx.strokeStyle = 'rgba(201,196,184,.45)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(m.x, y);
+    ctx.lineTo(m.x + m.w * p, y);
+    ctx.stroke();
+    const n = m.points.length;
+    m.points.forEach((pt, i) => {
+      const px = m.x + (i / (n - 1)) * m.w;
+      const pp = clamp((local - .5 - i * .16) / .4);
+      if (pp <= 0) return;
+      ctx.fillStyle = T.red;
+      ctx.beginPath();
+      ctx.arc(px, y, 4.5 * pp, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.textAlign = 'center';
+      ctx.fillStyle = T.screen;
+      ctx.font = '400 26px ArchivoBlack';
+      ctx.fillText(pt.year, px, y - 22);
+      ctx.globalAlpha = a * .7;
+      ctx.fillStyle = T.text;
+      ctx.font = '500 12px JBMono';
+      ctx.letterSpacing = '3px';
+      ctx.fillText(pt.label, px, y + 30);
+      ctx.globalAlpha = a;
+    });
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'redact') {
+    const p = out(clamp(local / 1.1));
+    ctx.fillStyle = T.text;
+    ctx.font = '500 13px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.globalAlpha = a * .55;
+    ctx.fillText(m.label, m.x, m.y - 18);
+    ctx.globalAlpha = a;
+    const bars = [
+      [0, 0.82], [1, 0.56], [2, 0.72], [3, 0.40],
+    ];
+    ctx.fillStyle = 'rgba(3,5,7,.92)';
+    bars.forEach(([i, frac], idx) => {
+      const bp = out(clamp((local - idx * .10) / .9));
+      ctx.fillRect(m.x, m.y + i * 58, m.w * frac * bp, 18);
+    });
+    const sp = out(clamp((local - .5) / .8));
+    ctx.save();
+    ctx.translate(m.x + m.w * .48, m.y + m.h + 10);
+    ctx.rotate(-.028);
+    ctx.globalAlpha = a * sp;
+    ctx.strokeStyle = 'rgba(168,31,22,.85)';
+    ctx.lineWidth = 2.5;
+    ctx.strokeRect(-250, -30, 500, 58);
+    ctx.fillStyle = T.red;
+    ctx.font = '400 26px ArchivoBlack';
+    ctx.textAlign = 'center';
+    ctx.fillText(m.stamp, 0, 8);
+    ctx.restore();
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'frontier') {
+    const p = out(clamp(local / 1.6));
+    const x = W / 2;
+    ctx.strokeStyle = 'rgba(201,196,184,.35)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([5, 9]);
+    ctx.beginPath();
+    ctx.moveTo(x, 120);
+    ctx.lineTo(x, 120 + 820 * p);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    const rp = out(clamp((local - 1.2) / 1.6));
+    ctx.strokeStyle = 'rgba(168,31,22,.85)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x, 120);
+    ctx.lineTo(x, 120 + 820 * rp);
+    ctx.stroke();
+    ctx.fillStyle = T.text;
+    ctx.font = '500 15px JBMono';
+    ctx.letterSpacing = '5px';
+    ctx.textAlign = 'right';
+    ctx.fillText('NOUS', x - 28, 150);
+    ctx.textAlign = 'left';
+    ctx.fillText('EUX', x + 28, 150);
+    ctx.textAlign = 'center';
+    ctx.globalAlpha = a * .55;
+    ctx.fillStyle = T.red;
+    ctx.font = '500 13px JBMono';
+    ctx.fillText(m.label, x, 1000);
+    ctx.restore();
+    return;
+  }
+
+  if (m.type === 'diagram') {
+    const p = out(clamp(local / 1.2));
+    const nodes = [
+      { x: m.x, y: m.y, label: 'EXPÉRIENCE', color: T.screen },
+      { x: m.x + m.w, y: m.y + m.h / 2, label: 'ERREUR', color: T.red },
+      { x: m.x, y: m.y + m.h, label: 'AJUSTEMENT', color: T.screen },
+    ];
+    ctx.fillStyle = T.screen;
+    ctx.font = '500 15px JBMono';
+    ctx.letterSpacing = '4px';
+    ctx.fillText(m.title, m.x, m.y - 28);
+    ctx.strokeStyle = 'rgba(201,196,184,.45)';
+    ctx.lineWidth = 1.2;
+    ctx.setLineDash([5, 7]);
+    for (let i = 0; i < 3; i++) {
+      const a1 = nodes[i], b1 = nodes[(i + 1) % 3];
+      ctx.beginPath();
+      ctx.moveTo(a1.x, a1.y);
+      ctx.lineTo(lerp(a1.x, b1.x, p), lerp(a1.y, b1.y, p));
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    nodes.forEach((n, i) => {
+      ctx.fillStyle = n.color;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.font = '500 13px JBMono';
+      ctx.letterSpacing = '3px';
+      ctx.textAlign = i === 1 ? 'left' : 'right';
+      ctx.fillText(n.label, n.x + (i === 1 ? 16 : -16), n.y + 4);
+    });
+    ctx.restore();
+    return;
+  }
+
+  ctx.restore();
+}
+
+function drawMotions(t) {
+  if (!block.motions || !block.motions.length) return;
+  for (const m of block.motions) {
+    const local = t - m.at;
+    if (local < 0 || local > m.dur) continue;
+    drawMotion(m, local);
+  }
+}
+
 function drawHud(t) {
   ctx.save();
   ctx.font = '500 13px JBMono';
@@ -323,6 +637,7 @@ async function draw(t) {
 
   ctx.drawImage(grade, 0, 0);
   ctx.drawImage(vignette, 0, 0);
+  drawMotions(t);
   ctx.globalCompositeOperation = 'overlay';
   ctx.globalAlpha = .11;
   const ox = (t * 37) % 40, oy = (t * 53) % 40;
