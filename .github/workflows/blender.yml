@@ -8,11 +8,11 @@ on:
         required: true
         default: "neural_net"
       frames:
-        description: "total frames"
+        description: "total frames (single mode)"
         required: true
         default: "144"
       chunks:
-        description: "parallel jobs to split the frame range into"
+        description: "parallel jobs (single mode: frame chunks; batch: chunks per shot)"
         required: true
         default: "8"
       res:
@@ -31,6 +31,10 @@ on:
         description: "extra scene args, e.g. --image X --depth Y --move push-in"
         required: false
         default: ""
+      batch:
+        description: "true = render every shot in blender/depth_batch.json"
+        required: true
+        default: "false"
 
 permissions:
   contents: read
@@ -40,12 +44,36 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set.outputs.matrix }}
+      mode: ${{ steps.set.outputs.mode }}
     steps:
       - uses: actions/checkout@v4
       - id: set
         shell: bash
         run: |
-          python3 - <<'PY' > chunk_matrix.json
+          if [ "${{ inputs.batch }}" = "true" ]; then
+            python3 - <<'PY' > chunk_matrix.json
+          import json, math
+          batch = json.load(open("blender/depth_batch.json"))
+          per_shot = max(1, int("${{ inputs.chunks }}"))
+          parts = []
+          for b in batch:
+              size = math.ceil(b["frames"] / per_shot)
+              s = 1
+              c = 0
+              while s <= b["frames"]:
+                  e = min(b["frames"], s + size - 1)
+                  parts.append({
+                      "shot": b["shot"], "chunk": c,
+                      "start": s, "end": e, "frames": b["frames"],
+                      "image": b["image"], "depth": b["depth"], "move": b["move"],
+                  })
+                  s = e + 1
+                  c += 1
+          print(json.dumps(parts))
+          PY
+            echo "mode=batch" >> "$GITHUB_OUTPUT"
+          else
+            python3 - <<'PY' > chunk_matrix.json
           import json, math
           frames = int("${{ inputs.frames }}")
           chunks = max(1, int("${{ inputs.chunks }}"))
@@ -58,6 +86,8 @@ jobs:
               s = e + 1; c += 1
           print(json.dumps(matrix))
           PY
+            echo "mode=single" >> "$GITHUB_OUTPUT"
+          fi
           echo "matrix=$(cat chunk_matrix.json)" >> "$GITHUB_OUTPUT"
 
   render:
@@ -66,7 +96,7 @@ jobs:
     timeout-minutes: 40
     strategy:
       fail-fast: false
-      max-parallel: 8
+      max-parallel: 20
       matrix:
         part: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
@@ -101,7 +131,8 @@ jobs:
             libxi6 libxrandr2 libxxf86vm1 libglu1-mesa libsm6 libice6 \
             libxfixes3 libxrender1 libfontconfig1
 
-      - name: Render chunk ${{ matrix.part.chunk }}
+      - name: Render chunk (single)
+        if: needs.plan.outputs.mode == 'single'
         env:
           LIBGL_ALWAYS_SOFTWARE: "1"
         run: |
@@ -115,34 +146,100 @@ jobs:
             ${{ inputs.args }} \
             --out "out/blender/${{ inputs.scene }}/chunk-${{ matrix.part.chunk }}"
 
+      - name: Render shot chunk (batch)
+        if: needs.plan.outputs.mode == 'batch'
+        env:
+          LIBGL_ALWAYS_SOFTWARE: "1"
+        run: |
+          blender -b --python blender/photo_depth.py -- \
+            --image "${{ matrix.part.image }}" \
+            --depth "${{ matrix.part.depth }}" \
+            --move "${{ matrix.part.move }}" \
+            --frames "${{ matrix.part.frames }}" \
+            --frame-start "${{ matrix.part.start }}" \
+            --frame-end "${{ matrix.part.end }}" \
+            --res "${{ inputs.res }}" \
+            --samples "${{ inputs.samples }}" \
+            --engine "${{ inputs.engine }}" \
+            --out "out/blender/batch/${{ matrix.part.shot }}/chunk-${{ matrix.part.chunk }}"
+
       - uses: actions/upload-artifact@v4
+        if: needs.plan.outputs.mode == 'single'
         with:
           name: blender-${{ inputs.scene }}-chunk-${{ matrix.part.chunk }}
           path: out/blender/${{ inputs.scene }}/chunk-${{ matrix.part.chunk }}
           if-no-files-found: error
           retention-days: 3
 
+      - uses: actions/upload-artifact@v4
+        if: needs.plan.outputs.mode == 'batch'
+        with:
+          name: blender-batch-${{ matrix.part.shot }}-chunk-${{ matrix.part.chunk }}
+          path: out/blender/batch/${{ matrix.part.shot }}/chunk-${{ matrix.part.chunk }}
+          if-no-files-found: error
+          retention-days: 3
+
   join:
     needs: render
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
       - uses: actions/download-artifact@v4
+        if: needs.plan.outputs.mode == 'single'
         with:
-          pattern: blender-${{ inputs.scene }}-chunk-*
+          pattern: blender-${{ inputs.scene }}-*
           merge-multiple: true
-          path: out/blender/${{ inputs.scene }}/frames
-      - name: Encode (glow + grade + grain)
+          path: out/blender/frames
+      - uses: actions/download-artifact@v4
+        if: needs.plan.outputs.mode == 'batch'
+        with:
+          pattern: blender-batch-*
+          path: out/blender/chunks
+      - name: Encode every shot (batch)
+        if: needs.plan.outputs.mode == 'batch'
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          batch = json.load(open("blender/depth_batch.json"))
+          for b in batch:
+              shot = b["shot"]
+              dest = Path("out/blender/shots") / shot
+              dest.mkdir(parents=True, exist_ok=True)
+              n = 0
+              for art in sorted(Path("out/blender/chunks").glob(f"blender-batch-{shot}-chunk-*")):
+                  for f in sorted(art.glob("frame-*.png")):
+                      link = dest / f.name
+                      if link.exists() or link.is_symlink():
+                          link.unlink()
+                      link.symlink_to(f.resolve())
+                      n += 1
+              print(f"{shot}: {n} frames (want {b['frames']})", flush=True)
+              assert n == b["frames"], f"{shot}: missing frames"
+              subprocess.run([
+                  "ffmpeg", "-y", "-loglevel", "error", "-framerate", "24",
+                  "-i", str(dest / "frame-%04d.png"),
+                  "-vf", "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,"
+                         "eq=saturation=0.85:contrast=1.06,vignette=PI/4,"
+                         "colorbalance=bs=0.10:bm=0.04,noise=alls=8:allf=t",
+                  "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+                  "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+                  f"out/blender/shots/{shot}.mp4",
+              ], check=True)
+          PY
+      - name: Encode (single)
+        if: needs.plan.outputs.mode != 'batch'
         run: |
           ffmpeg -y -loglevel error -framerate 24 \
-            -i "out/blender/${{ inputs.scene }}/frames/frame-%04d.png" \
+            -i "out/blender/frames/frame-%04d.png" \
             -vf "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,eq=saturation=0.85:contrast=1.06,vignette=PI/4,colorbalance=bs=0.10:bm=0.04,noise=alls=8:allf=t" \
             -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -movflags +faststart \
             "out/blender/${{ inputs.scene }}.mp4"
       - uses: actions/upload-artifact@v4
         with:
-          name: blender-${{ inputs.scene }}
-          path: out/blender/${{ inputs.scene }}.mp4
+          name: blender-${{ inputs.scene }}-shots
+          path: out/blender/shots
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 14

@@ -1,0 +1,210 @@
+[
+ {
+  "shot": "B00-S01",
+  "image": "assets/generated/B00-S01.png",
+  "depth": "assets/depth/B00-S01.png",
+  "move": "push-in",
+  "frames": 192,
+  "title": "Le Bureau des frontières"
+ },
+ {
+  "shot": "B00-S02",
+  "image": "assets/generated/B00-S02.png",
+  "depth": "assets/depth/B00-S02.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "Le dossier"
+ },
+ {
+  "shot": "B00-S03",
+  "image": "assets/generated/B00-S03.png",
+  "depth": "assets/depth/B00-S03.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "Le couloir"
+ },
+ {
+  "shot": "B01-S01",
+  "image": "assets/generated/B01-S01.png",
+  "depth": "assets/depth/B01-S01.png",
+  "move": "push-in",
+  "frames": 168,
+  "title": "L'enfant qui tombe"
+ },
+ {
+  "shot": "B01-S02",
+  "image": "assets/generated/B01-S02.png",
+  "depth": "assets/depth/B01-S02.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "Le visage de l'enfant"
+ },
+ {
+  "shot": "B01-S03",
+  "image": "assets/generated/B01-S03.png",
+  "depth": "assets/depth/B01-S03.png",
+  "move": "pan-right",
+  "frames": 144,
+  "title": "La machine qui apprend"
+ },
+ {
+  "shot": "B01-S04",
+  "image": "assets/generated/B01-S04.png",
+  "depth": "assets/depth/B01-S04.png",
+  "move": "drift",
+  "frames": 96,
+  "title": "Les mains de l'archiviste"
+ },
+ {
+  "shot": "B02-S01",
+  "image": "assets/generated/B02-S01.png",
+  "depth": "assets/depth/B02-S01.png",
+  "move": "push-in",
+  "frames": 192,
+  "title": "H.M., la fenêtre"
+ },
+ {
+  "shot": "B02-S02",
+  "image": "assets/generated/B02-S02.png",
+  "depth": "assets/depth/B02-S02.png",
+  "move": "pan-right",
+  "frames": 144,
+  "title": "La table des souvenirs"
+ },
+ {
+  "shot": "B02-S03",
+  "image": "assets/generated/B02-S03.png",
+  "depth": "assets/depth/B02-S03.png",
+  "move": "push-in",
+  "frames": 144,
+  "title": "Le scanner"
+ },
+ {
+  "shot": "B02-S04",
+  "image": "assets/generated/B02-S04.png",
+  "depth": "assets/depth/B02-S04.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "Le tiroir"
+ },
+ {
+  "shot": "B03-S01",
+  "image": "assets/generated/B03-S01.png",
+  "depth": "assets/depth/B03-S01.png",
+  "move": "pan-left",
+  "frames": 144,
+  "title": "Le bras robotisé"
+ },
+ {
+  "shot": "B03-S02",
+  "image": "assets/generated/B03-S02.png",
+  "depth": "assets/depth/B03-S02.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "La main coupée"
+ },
+ {
+  "shot": "B03-S03",
+  "image": "assets/generated/B03-S03.png",
+  "depth": "assets/depth/B03-S03.png",
+  "move": "push-in",
+  "frames": 192,
+  "title": "Les neurones dans la boîte"
+ },
+ {
+  "shot": "B03-S04",
+  "image": "assets/generated/B03-S04.png",
+  "depth": "assets/depth/B03-S04.png",
+  "move": "push-in",
+  "frames": 168,
+  "title": "Le laboratoire des organoïdes"
+ },
+ {
+  "shot": "B04-S01",
+  "image": "assets/generated/B04-S01.png",
+  "depth": "assets/depth/B04-S01.png",
+  "move": "push-in",
+  "frames": 192,
+  "title": "La femme et le téléphone"
+ },
+ {
+  "shot": "B04-S02",
+  "image": "assets/generated/B04-S02.png",
+  "depth": "assets/depth/B04-S02.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "L'écran"
+ },
+ {
+  "shot": "B04-S03",
+  "image": "assets/generated/B04-S03.png",
+  "depth": "assets/depth/B04-S03.png",
+  "move": "drift",
+  "frames": 144,
+  "title": "La chaise vide"
+ },
+ {
+  "shot": "B04-S04",
+  "image": "assets/generated/B04-S04.png",
+  "depth": "assets/depth/B04-S04.png",
+  "move": "push-in",
+  "frames": 144,
+  "title": "Les trois dossiers"
+ },
+ {
+  "shot": "B05-S01",
+  "image": "assets/generated/B05-S01.png",
+  "depth": "assets/depth/B05-S01.png",
+  "move": "push-in",
+  "frames": 168,
+  "title": "L'IRM"
+ },
+ {
+  "shot": "B05-S02",
+  "image": "assets/generated/B05-S02.png",
+  "depth": "assets/depth/B05-S02.png",
+  "move": "push-in",
+  "frames": 192,
+  "title": "Le miroir"
+ },
+ {
+  "shot": "B05-S03",
+  "image": "assets/generated/B05-S03.png",
+  "depth": "assets/depth/B05-S03.png",
+  "move": "drift",
+  "frames": 144,
+  "title": "La salle du test"
+ },
+ {
+  "shot": "B05-S04",
+  "image": "assets/generated/B05-S04.png",
+  "depth": "assets/depth/B05-S04.png",
+  "move": "push-in",
+  "frames": 120,
+  "title": "Le dossier vide"
+ },
+ {
+  "shot": "B06-S01",
+  "image": "assets/generated/B06-S01.png",
+  "depth": "assets/depth/B06-S01.png",
+  "move": "push-out",
+  "frames": 216,
+  "title": "Le retour au Bureau"
+ },
+ {
+  "shot": "B06-S02",
+  "image": "assets/generated/B06-S02.png",
+  "depth": "assets/depth/B06-S02.png",
+  "move": "push-in",
+  "frames": 144,
+  "title": "La fiche"
+ },
+ {
+  "shot": "B06-S03",
+  "image": "assets/generated/B06-S03.png",
+  "depth": "assets/depth/B06-S03.png",
+  "move": "push-out",
+  "frames": 192,
+  "title": "La salle vide"
+ }
+]
