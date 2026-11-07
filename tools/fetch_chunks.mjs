@@ -54,7 +54,7 @@ async function worker() {
   while (queue.length) {
     const name = queue.shift();
     const r = spawnSync('gh', ['run', 'download', String(runId), '-n', name,
-      '-D', path.join(root, 'out/blender/chunks')], { stdio: 'pipe' });
+      '-D', path.join(root, 'out/blender/chunks', name)], { stdio: 'pipe' });
     if (r.status !== 0) {
       console.error(`FAIL ${name}: ${r.stderr.toString().slice(-200)}`);
       failed++;
