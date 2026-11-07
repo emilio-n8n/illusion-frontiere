@@ -262,14 +262,15 @@ if ARGS.engine == "cycles":
     if ARGS.device == "CPU":
         cycles.device = "CPU"
     else:
-        # headless GPU (Colab T4): enable the compute device in prefs first
+        # headless GPU (Colab T4): enable the compute device in prefs first.
+        # Blender 5.x: prefs choose OPTIX/CUDA, the scene selector is just GPU.
         try:
             prefs = bpy.context.preferences.addons["cycles"].preferences
-            prefs.compute_device_type = "CUDA"
+            prefs.compute_device_type = ARGS.device  # OPTIX or CUDA
             prefs.get_devices()
             for d in prefs.devices:
                 d.use = (d.type != "CPU")
-            cycles.device = "OPTIX" if ARGS.device == "OPTIX" else "CUDA"
+            cycles.device = "GPU"
         except Exception as exc:
             print(f"  [warn] gpu setup ({exc}), falling back to CPU")
             cycles.device = "CPU"
