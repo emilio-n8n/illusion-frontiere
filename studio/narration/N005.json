@@ -11,7 +11,7 @@
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/out/blender/shots/B00-S01.mp4",
+      "src": "/assets/generated/B00-S01.png",
       "duration": 3.093,
       "camera": "push-in",
       "overlay": "",
