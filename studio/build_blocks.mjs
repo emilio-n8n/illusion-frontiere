@@ -28,15 +28,12 @@ for (const shot of manifest.shots) {
 fs.mkdirSync(outDir, { recursive: true });
 const index = [];
 
-// A rendered 2.5D travelling clip wins over the still image when present —
-// but only with USE_CLIPS=1 (clips live in out/, never pushed to git, so
-// CI renders stay on PNGs until clips arrive as workflow artifacts).
+// A rendered 2.5D travelling clip wins over the still image when present.
+// Clips are raw media (no grade): the engine applies the film look once.
 function shotSrc(id) {
-  if (process.env.USE_CLIPS === '1') {
-    const clip = path.join(root, 'out/blender/shots', `${id}.mp4`);
-    if (fs.existsSync(clip) && fs.statSync(clip).size > 50_000) {
-      return `/out/blender/shots/${id}.mp4`;
-    }
+  const clip = path.join(root, 'assets/clips', `${id}.mp4`);
+  if (fs.existsSync(clip) && fs.statSync(clip).size > 20_000) {
+    return `/assets/clips/${id}.mp4`;
   }
   return `/assets/generated/${id}.png`;
 }

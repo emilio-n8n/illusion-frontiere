@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B05-S01",
-      "src": "/assets/generated/B05-S01.png",
+      "src": "/assets/clips/B05-S01.mp4",
       "duration": 7,
       "camera": "push-in",
       "overlay": "CONSCIENCE",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B05-S02",
-      "src": "/assets/generated/B05-S02.png",
+      "src": "/assets/clips/B05-S02.mp4",
       "duration": 8,
       "camera": "push-in",
       "overlay": "QUI SAIT ?",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B05-S03",
-      "src": "/assets/generated/B05-S03.png",
+      "src": "/assets/clips/B05-S03.mp4",
       "duration": 6,
       "camera": "static",
       "overlay": "TURING / 1950",
@@ -46,7 +46,7 @@
     },
     {
       "id": "B05-S04",
-      "src": "/assets/generated/B05-S04.png",
+      "src": "/assets/clips/B05-S04.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "COMMENT SAVOIR ?",

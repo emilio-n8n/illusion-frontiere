@@ -11,7 +11,7 @@
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
+      "src": "/assets/clips/B00-S01.mp4",
       "duration": 3.093,
       "camera": "push-in",
       "overlay": "",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B00-S02",
-      "src": "/assets/generated/B00-S02.png",
+      "src": "/assets/clips/B00-S02.mp4",
       "duration": 2.062,
       "camera": "push-in",
       "overlay": "",
@@ -33,7 +33,7 @@
     },
     {
       "id": "B00-S03",
-      "src": "/assets/generated/B00-S03.png",
+      "src": "/assets/clips/B00-S03.mp4",
       "duration": 1.718,
       "camera": "push-in",
       "overlay": "",

@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B06-S01",
-      "src": "/assets/generated/B06-S01.png",
+      "src": "/assets/clips/B06-S01.mp4",
       "duration": 9,
       "camera": "push-out",
       "overlay": "CONSCIENT : PRÉSUMÉ",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B06-S02",
-      "src": "/assets/generated/B06-S02.png",
+      "src": "/assets/clips/B06-S02.mp4",
       "duration": 6,
       "camera": "push-in",
       "overlay": "CONSCIENT : PRÉSUMÉ",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B06-S03",
-      "src": "/assets/generated/B06-S03.png",
+      "src": "/assets/clips/B06-S03.mp4",
       "duration": 8,
       "camera": "push-out",
       "overlay": "L’ILLUSION DE LA FRONTIÈRE",

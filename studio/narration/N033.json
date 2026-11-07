@@ -11,7 +11,7 @@
   "shots": [
     {
       "id": "B03-S03",
-      "src": "/assets/generated/B03-S03.png",
+      "src": "/assets/clips/B03-S03.mp4",
       "duration": 12.746,
       "camera": "push-in",
       "overlay": "",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B03-S04",
-      "src": "/assets/generated/B03-S04.png",
+      "src": "/assets/clips/B03-S04.mp4",
       "duration": 10.428,
       "camera": "push-in",
       "overlay": "",

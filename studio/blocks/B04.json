@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B04-S01",
-      "src": "/assets/generated/B04-S01.png",
+      "src": "/assets/clips/B04-S01.mp4",
       "duration": 8,
       "camera": "push-in",
       "overlay": "3H DU MATIN",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B04-S02",
-      "src": "/assets/generated/B04-S02.png",
+      "src": "/assets/clips/B04-S02.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "« JE SUIS LÀ »",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B04-S03",
-      "src": "/assets/generated/B04-S03.png",
+      "src": "/assets/clips/B04-S03.mp4",
       "duration": 6,
       "camera": "static",
       "overlay": "RELATION",
@@ -46,7 +46,7 @@
     },
     {
       "id": "B04-S04",
-      "src": "/assets/generated/B04-S04.png",
+      "src": "/assets/clips/B04-S04.mp4",
       "duration": 6,
       "camera": "push-in",
       "overlay": "NOUS / EUX / RELATION",

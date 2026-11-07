@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B03-S01",
-      "src": "/assets/generated/B03-S01.png",
+      "src": "/assets/clips/B03-S01.mp4",
       "duration": 6,
       "camera": "pan-left",
       "overlay": "LE CORPS",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B03-S02",
-      "src": "/assets/generated/B03-S02.png",
+      "src": "/assets/clips/B03-S02.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "DOULEUR",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B03-S03",
-      "src": "/assets/generated/B03-S03.png",
+      "src": "/assets/clips/B03-S03.mp4",
       "duration": 8,
       "camera": "push-in",
       "overlay": "800 000 NEURONES",
@@ -46,7 +46,7 @@
     },
     {
       "id": "B03-S04",
-      "src": "/assets/generated/B03-S04.png",
+      "src": "/assets/clips/B03-S04.mp4",
       "duration": 7,
       "camera": "push-in",
       "overlay": "16 ORGANOÏDES",

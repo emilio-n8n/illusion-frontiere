@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B01-S01",
-      "src": "/assets/generated/B01-S01.png",
+      "src": "/assets/clips/B01-S01.mp4",
       "duration": 7,
       "camera": "push-in",
       "overlay": "APPRENDRE",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B01-S02",
-      "src": "/assets/generated/B01-S02.png",
+      "src": "/assets/clips/B01-S02.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B01-S03",
-      "src": "/assets/generated/B01-S03.png",
+      "src": "/assets/clips/B01-S03.mp4",
       "duration": 6,
       "camera": "pan-right",
       "overlay": "ERREUR = MÉCANISME",
@@ -46,7 +46,7 @@
     },
     {
       "id": "B01-S04",
-      "src": "/assets/generated/B01-S04.png",
+      "src": "/assets/clips/B01-S04.mp4",
       "duration": 4,
       "camera": "static",
       "overlay": "",

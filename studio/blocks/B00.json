@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
+      "src": "/assets/clips/B00-S01.mp4",
       "duration": 8,
       "camera": "push-in",
       "overlay": "BUREAU DES FRONTIÈRES",
@@ -22,7 +22,7 @@
     },
     {
       "id": "B00-S02",
-      "src": "/assets/generated/B00-S02.png",
+      "src": "/assets/clips/B00-S02.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "APPRENDRE",
@@ -34,7 +34,7 @@
     },
     {
       "id": "B00-S03",
-      "src": "/assets/generated/B00-S03.png",
+      "src": "/assets/clips/B00-S03.mp4",
       "duration": 5,
       "camera": "push-in",
       "overlay": "",

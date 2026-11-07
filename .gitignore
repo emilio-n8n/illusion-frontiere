@@ -21,3 +21,5 @@ films/01-illusion-frontiere/audio/blocks/*.wav
 assets/voice-test/clone/*.wav
 films/01-illusion-frontiere/audio/music/*.wav
 films/01-illusion-frontiere/audio/sfx/*.wav
+
+!assets/clips/*.mp4
