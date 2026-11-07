@@ -55,10 +55,17 @@ jobs:
           echo "/tmp/blender" >> "$GITHUB_PATH"
           blender --version | head -1
 
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Install system deps (ffmpeg + GL/EGL for headless EEVEE)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            ffmpeg libgl1 libegl1 libgles2 libxkbcommon0 libx11-6 libxext6 \
+            libxi6 libxrandr2 libxxf86vm1 libglu1-mesa libsm6 libice6 \
+            libxfixes3 libxrender1 libfontconfig1
 
       - name: Render scene
+        env:
+          LIBGL_ALWAYS_SOFTWARE: "1"
         run: |
           blender -b --python "blender/${{ inputs.scene }}.py" -- \
             --frames "${{ inputs.frames }}" \
