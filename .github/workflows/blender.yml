@@ -78,7 +78,7 @@ jobs:
         run: |
           ffmpeg -y -loglevel error -framerate 24 \
             -i "out/blender/${{ inputs.scene }}/frame-%04d.png" \
-            -vf "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,eq=saturation=0.85:contrast=1.06,vignette=PI/4,colorbalance=bs=0.06:ms=0.03:hs=-0.03,noise=alls=8:allf=t" \
+            -vf "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,eq=saturation=0.85:contrast=1.06,vignette=PI/4,colorbalance=bs=0.08:bm=0.02:hs=-0.02,noise=alls=8:allf=t" \
             -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -movflags +faststart \
             "out/blender/${{ inputs.scene }}.mp4"
 
