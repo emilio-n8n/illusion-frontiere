@@ -103,29 +103,83 @@ function loadImage(src) {
   });
 }
 
-function drawShot(img, shot, local, alpha) {
-  if (!img) return;
-  const p = clamp(local / Math.max(0.001, shot.duration));
-  const e = smooth(p);
-  let zoom = 1.04, dx = 0, dy = 0, rot = 0;
-  if (shot.camera === 'push-in') zoom = 1.035 + .055 * e;
-  else if (shot.camera === 'push-out') zoom = 1.09 - .055 * e;
-  else if (shot.camera === 'pan-left') { zoom = 1.075; dx = -30 + 60 * e; }
-  else if (shot.camera === 'pan-right') { zoom = 1.075; dx = 30 - 60 * e; }
-  else zoom = 1.045;
+const isVideoSrc = src => /\.(mp4|webm|mov)(\?|#|$)/i.test(src);
 
-  // a little life, never a still card
-  dx += Math.sin(local * .55 + shot.seed * .01) * 1.8;
-  dy += Math.cos(local * .43 + shot.seed * .013) * 1.4;
-  rot = Math.sin(local * .21 + shot.seed * .007) * .0009;
+function loadVideo(src) {
+  return new Promise((res, rej) => {
+    const v = document.createElement('video');
+    v.muted = true;
+    v.playsInline = true;
+    v.preload = 'auto';
+    v.crossOrigin = 'anonymous';
+    const done = () => { cleanup(); res(v); };
+    const fail = () => { cleanup(); rej(new Error('video failed: ' + src)); };
+    const cleanup = () => {
+      v.removeEventListener('loadeddata', done);
+      v.removeEventListener('error', fail);
+    };
+    v.addEventListener('loadeddata', done);
+    v.addEventListener('error', fail);
+    v.src = src;
+  });
+}
+
+// media item: {kind: 'img'|'clip', el, w, h}
+async function loadMedia(src) {
+  if (!isVideoSrc(src)) {
+    const im = await loadImage(src);
+    return { kind: 'img', el: im, w: im.naturalWidth || im.width, h: im.naturalHeight || im.height };
+  }
+  const v = await loadVideo(src);
+  await seekVideo({ kind: 'clip', el: v }, 0);
+  return { kind: 'clip', el: v, w: v.videoWidth, h: v.videoHeight };
+}
+
+function seekVideo(media, local) {
+  const v = media.el;
+  const dur = v.duration;
+  if (!Number.isFinite(dur) || dur <= 0) return Promise.resolve();
+  const target = clamp(local, 0, Math.max(0, dur - 0.04));
+  if (Math.abs(v.currentTime - target) < 1 / 60) return Promise.resolve();
+  return new Promise(res => {
+    const to = setTimeout(() => { v.removeEventListener('seeked', on); res(); }, 1500);
+    const on = () => { clearTimeout(to); v.removeEventListener('seeked', on); res(); };
+    v.addEventListener('seeked', on);
+    try { v.currentTime = target; } catch { clearTimeout(to); res(); }
+  });
+}
+
+async function drawShot(media, shot, local, alpha) {
+  if (!media) return;
+  const el = media.el;
+  const w = media.w || 1920, h = media.h || 1080;
+  let zoom = 1.04, dx = 0, dy = 0, rot = 0;
+  if (media.kind === 'clip') {
+    // the clip already moves: no synthetic motion, just cover the frame
+    await seekVideo(media, local);
+    zoom = 1.03;
+  } else {
+    const p = clamp(local / Math.max(0.001, shot.duration));
+    const e = smooth(p);
+    if (shot.camera === 'push-in') zoom = 1.035 + .055 * e;
+    else if (shot.camera === 'push-out') zoom = 1.09 - .055 * e;
+    else if (shot.camera === 'pan-left') { zoom = 1.075; dx = -30 + 60 * e; }
+    else if (shot.camera === 'pan-right') { zoom = 1.075; dx = 30 - 60 * e; }
+    else zoom = 1.045;
+
+    // a little life, never a still card
+    dx += Math.sin(local * .55 + shot.seed * .01) * 1.8;
+    dy += Math.cos(local * .43 + shot.seed * .013) * 1.4;
+    rot = Math.sin(local * .21 + shot.seed * .007) * .0009;
+  }
 
   ctx.save();
   ctx.globalAlpha = alpha;
   ctx.translate(W / 2 + dx, H / 2 + dy);
   ctx.rotate(rot);
   ctx.scale(zoom, zoom);
-  const sc = Math.max(W / img.width, H / img.height) * 1.03;
-  ctx.drawImage(img, -img.width * sc / 2, -img.height * sc / 2, img.width * sc, img.height * sc);
+  const sc = Math.max(W / w, H / h) * 1.03;
+  ctx.drawImage(el, -w * sc / 2, -h * sc / 2, w * sc, h * sc);
   ctx.restore();
 }
 
@@ -247,7 +301,7 @@ function drawDust(t) {
   ctx.restore();
 }
 
-function draw(t) {
+async function draw(t) {
   t = clamp(t, 0, Math.max(0, total - .0001));
   let i = 0;
   while (i < shots.length - 1 && t >= starts[i] + shots[i].duration) i++;
@@ -261,10 +315,10 @@ function draw(t) {
 
   // a dissolve only where the block asks for one
   if (i > 0 && shot.transition === 'dissolve' && local < .5) {
-    drawShot(images[i - 1], shots[i - 1], shots[i - 1].duration, 1);
-    drawShot(images[i], shot, local, smooth(local / .5));
+    await drawShot(images[i - 1], shots[i - 1], shots[i - 1].duration, 1);
+    await drawShot(images[i], shot, local, smooth(local / .5));
   } else {
-    drawShot(images[i], shot, local, 1);
+    await drawShot(images[i], shot, local, 1);
   }
 
   ctx.drawImage(grade, 0, 0);
@@ -305,7 +359,7 @@ async function boot() {
   for (const s of shots) { starts.push(acc); acc += Number(s.duration); }
   total = acc;
 
-  images = await Promise.all(shots.map(s => loadImage(s.src)));
+  images = await Promise.all(shots.map(s => loadMedia(s.src)));
   grain = makeGrain();
   vignette = makeVignette();
   grade = makeGrade();
@@ -319,7 +373,7 @@ async function boot() {
 
   window.SPEC = { duration: total, fps: block.fps || 24, width: W, height: H };
   window.setT = draw;
-  draw(0);
+  await draw(0);
   window.READY = true;
 }
 

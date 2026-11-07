@@ -28,6 +28,15 @@ for (const shot of manifest.shots) {
 fs.mkdirSync(outDir, { recursive: true });
 const index = [];
 
+// A rendered 2.5D travelling clip wins over the still image when present.
+function shotSrc(id) {
+  const clip = path.join(root, 'out/blender/shots', `${id}.mp4`);
+  if (fs.existsSync(clip) && fs.statSync(clip).size > 50_000) {
+    return `/out/blender/shots/${id}.mp4`;
+  }
+  return `/assets/generated/${id}.png`;
+}
+
 for (const id of [...groups.keys()].sort()) {
   const shots = groups.get(id);
   if (!shots.length) continue;
@@ -43,7 +52,7 @@ for (const id of [...groups.keys()].sort()) {
     duration: Number(duration.toFixed(3)),
     shots: shots.map((s, i) => ({
       id: s.id,
-      src: `/assets/generated/${s.id}.png`,
+      src: shotSrc(s.id),
       duration: Number(s.duration),
       camera: s.camera || 'static',
       overlay: s.overlay || '',

@@ -32,7 +32,8 @@ Chaque bloc est un dossier de données : un JSON de timeline + des images. Le mo
 ```
 
 - `duration` du bloc = somme des `duration` des shots. Le moteur s'arrête à la dernière frame.
-- `camera` : `push-in`, `push-out`, `pan-left`, `pan-right`, `static`.
+- `camera` : `push-in`, `push-out`, `pan-left`, `pan-right`, `static` (ignored for clips).
+- `src` : a PNG under `/assets/` or a clip under `/out/blender/shots/` (`.mp4`). Clips already move: the engine seeks the right frame and applies no synthetic motion, only cover-zoom. The builders prefer a clip when `out/blender/shots/<shot>.mp4` exists.
 - `overlay` : texte court affiché en bas à gauche (ou au centre avec `overlayPos: "center"`).
 - `stamp` : encadre l'overlay d'un tampon rouge.
 - `subtitle` : texte long affiché en bas, utilisé pour les animatiques sans voix.

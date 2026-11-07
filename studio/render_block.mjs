@@ -114,8 +114,8 @@ try {
     const dir = path.join(path.dirname(outPath), 'stills');
     fs.mkdirSync(dir, { recursive: true });
     for (const t of stillTimes) {
-      const data = await page.evaluate(t => {
-        window.setT(t);
+      const data = await page.evaluate(async t => {
+        await window.setT(t);
         return document.getElementById('c').toDataURL('image/jpeg', 0.95);
       }, t);
       const file = path.join(dir, `${blockId}-${t.toFixed(2)}.jpg`);
@@ -141,8 +141,8 @@ try {
     const t0 = Date.now();
     for (let i = 0; i < n; i++) {
       const t = i / fps;
-      const data = await page.evaluate(t => {
-        window.setT(t);
+      const data = await page.evaluate(async t => {
+        await window.setT(t);
         return document.getElementById('c').toDataURL('image/jpeg', 0.92);
       }, t);
       const buf = Buffer.from(data.slice(data.indexOf(',') + 1), 'base64');
