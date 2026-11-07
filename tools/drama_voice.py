@@ -15,9 +15,12 @@ Optional voice cloning:
 
 import argparse
 import json
+import mimetypes
 import os
 import sys
 import time
+import urllib.request
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -82,7 +85,43 @@ def save_status(status):
     tmp.replace(STATUS)
 
 
+_UPLOAD_CACHE = {}
+
+
+def upload_file(base, local):
+    """Upload a local file to the Gradio server, return a FileData dict.
+
+    The /run endpoint validates file inputs with pydantic: a plain local path
+    string is rejected, it wants {'path': <server path>, 'meta': {...}}.
+    """
+    key = f"{base}|{local}"
+    if key in _UPLOAD_CACHE:
+        return _UPLOAD_CACHE[key]
+    local = Path(local)
+    mime = mimetypes.guess_type(local.name)[0] or "application/octet-stream"
+    boundary = "----Boundary" + uuid.uuid4().hex
+    body = bytearray()
+    body += f"--{boundary}\r\n".encode()
+    body += f'Content-Disposition: form-data; name="files"; filename="{local.name}"\r\n'.encode()
+    body += f"Content-Type: {mime}\r\n\r\n".encode()
+    body += local.read_bytes()
+    body += f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(
+        base + "/gradio_api/upload",
+        data=bytes(body),
+        headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        server_paths = json.loads(r.read().decode())
+    filedata = {"path": server_paths[0], "meta": {"_type": "gradio.FileData"}}
+    _UPLOAD_CACHE[key] = filedata
+    return filedata
+
+
 def perform(base, text, ref, ref_transcript, temperature, top_p, max_frames, seed, one_pass):
+    if isinstance(ref, (str, Path)) and ref and Path(ref).exists():
+        ref = upload_file(base, ref)
     payload = {"data": [text, ref, ref_transcript, temperature, top_p, max_frames, seed, one_pass]}
     res = post_json(f"{base}/gradio_api/call/run", payload)
     event_id = res.get("event_id")
@@ -139,6 +178,7 @@ def main():
     ap.add_argument("--blocks", action="store_true")
     ap.add_argument("--only", default="")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--out-dir", default=str(OUT_DIR))
     ap.add_argument("--ref", default=None, help="5-30 s reference clip for voice cloning")
     ap.add_argument("--ref-transcript", default="", help="exact transcript of the reference clip")
     ap.add_argument("--seed", type=int, default=424242)
@@ -159,7 +199,9 @@ def main():
             blocks = [b for b in blocks if b["id"] in wanted]
         if args.limit:
             blocks = blocks[: args.limit]
-        out_dir = OUT_DIR
+        out_dir = Path(args.out_dir)
+        if not out_dir.is_absolute():
+            out_dir = ROOT / out_dir
         out_dir.mkdir(parents=True, exist_ok=True)
         status = load_status()
         print(f"voice: {len(blocks)} block(s), endpoint {base}", flush=True)

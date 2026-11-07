@@ -1,0 +1,38 @@
+{
+  "N001": {
+    "status": "ok",
+    "file": "assets/voice-test/clone/N001.wav",
+    "seconds": 64.3,
+    "at": "2026-11-07T07:50:47+00:00"
+  },
+  "N002": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N002.wav",
+    "seconds": 27.8,
+    "at": "2026-11-07T07:31:35+00:00"
+  },
+  "N003": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N003.wav",
+    "seconds": 84.8,
+    "at": "2026-11-07T07:33:00+00:00"
+  },
+  "N004": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N004.wav",
+    "seconds": 59.1,
+    "at": "2026-11-07T07:33:59+00:00"
+  },
+  "N005": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N005.wav",
+    "seconds": 29.9,
+    "at": "2026-11-07T07:34:29+00:00"
+  },
+  "N006": {
+    "status": "ok",
+    "file": "films/01-illusion-frontiere/audio/blocks/N006.wav",
+    "seconds": 21.8,
+    "at": "2026-11-07T07:34:51+00:00"
+  }
+}
