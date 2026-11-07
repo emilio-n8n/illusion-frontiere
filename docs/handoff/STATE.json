@@ -9,7 +9,7 @@
     "fps": 24,
     "resolution": "1920x1080",
     "v1": "out/film-final-intro.mp4",
-    "v2": "pending (130 unique images + motion design)"
+    "v2": "rendering on Actions (run 42406191098)"
   },
   "voice": {
     "blocks": 70,
@@ -33,10 +33,11 @@
   "images": {
     "hero": 26,
     "uniqueV2": 130,
-    "generatedV2AtLastCheck": 119,
-    "status": "generating",
+    "generatedV2AtLastCheck": 130,
+    "status": "complete",
     "prompts": "films/01-illusion-frontiere/storyboard/shots-v2.json",
-    "map": "films/01-illusion-frontiere/storyboard/narration-map.json"
+    "map": "films/01-illusion-frontiere/storyboard/narration-map.json",
+    "v2Mapping": "films/01-illusion-frontiere/storyboard/narration-map.json"
   },
   "clips2_5d": {
     "count": 26,
@@ -50,15 +51,13 @@
     "blenderWorkflow": ".github/workflows/blender.yml"
   },
   "openTasks": [
-    "finish 130 unique images",
-    "build v2 blocks and render",
-    "motion design Vox overlays",
+    "assemble v2 intro+film+mix and release",
     "place SFX",
-    "final mix -14 LUFS",
+    "final mix polish",
     "fact-check final",
     "SRT, generique, thumbnail, metadata",
     "publish"
   ],
-  "motionDesign": "kit implemented (number, dots, bars, brackets, timeline, redact, frontier, diagram)",
+  "motionDesign": "implemented and timed (8 inserts)",
   "handoff": "docs/handoff"
 }
