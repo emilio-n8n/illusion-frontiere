@@ -275,6 +275,10 @@ if ARGS.engine == "cycles":
             print(f"  [warn] gpu setup ({exc}), falling back to CPU")
             cycles.device = "CPU"
     safe_set(cycles, "use_denoising", True)
+    # cheap scene: emissive materials barely need indirect bounces
+    safe_set(cycles, "diffuse_bounces", 2)
+    safe_set(cycles, "glossy_bounces", 2)
+    safe_set(cycles, "transmission_bounces", 0)
 else:
     try:
         render.engine = "BLENDER_EEVEE"
