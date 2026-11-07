@@ -72,7 +72,7 @@ for (const block of data.blocks) {
     fadeIn: .18,
     fadeOut: .18,
     duration: Math.round(block.seconds * 1000) / 1000,
-    subtitle: block.text,
+    subtitle: process.env.SUBTITLES === '0' ? null : block.text,
     shots,
   };
   fs.writeFileSync(path.join(outDir, `${block.id}.json`), JSON.stringify(json, null, 2) + '\n');
