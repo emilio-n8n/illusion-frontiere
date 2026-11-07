@@ -41,6 +41,12 @@
 4. **Musique** : bibliothèque libre de droits, composition originale, ou génération. Le sound design est écrit pour une musique minimaliste, pas pour des cues de bibliothèque.
 5. **Format des blocs** : 70 blocs de narration (actuel) ou regroupement en 40 blocs de 30 s. 70 est plus précis pour la voix, 40 est plus rapide à rendre. Le moteur gère les deux.
 
+## Retour d'expérience (film 01)
+
+- **Transitions de voix** : les blocs sont collés sans silence, on entend la couture. Pour le prochain film : 0,25 s de silence entre blocs + 0,15 s de poignée en début et fin de chaque prise, et construire les blocs vidéo avec cette marge.
+- **Doublons d'images** : 160 emplacements de plans pour 22 images uniques au premier montage. Corrigé par 130 images dédiées (une par bloc, Nxxx-A/B), zéro réutilisation.
+- **Rendu local** : 7,6 Go de RAM, un seul Chromium à la fois. Les rendus longs vont sur Actions.
+
 ## Prochaines étapes concrètes
 
 ### Sans voix
