@@ -29,7 +29,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from imagine import download, post_json, stream_event  # noqa: E402
 
-DEFAULT_URL = os.environ.get("DRAMA_URL", "https://915cd4357dc265ed4e.gradio.live")
+DEFAULT_URL = os.environ.get("DRAMA_URL", "https://71d124528ac2c2c6ce.gradio.live")
 BLOCKS = ROOT / "films/01-illusion-frontiere/script/blocks.json"
 OUT_DIR = ROOT / "films/01-illusion-frontiere/audio/blocks"
 STATUS = ROOT / "films/01-illusion-frontiere/audio/voice-status.json"
