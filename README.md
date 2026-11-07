@@ -12,6 +12,7 @@ Dépôt de production de la chaîne. Premier film : **L'Illusion de la frontièr
 - Images générées : `assets/generated/`
 - Rendu : `studio/`
 - Preuve visuelle : `out/film-proof.mp4` — 2 min 45, 1080p, 24 fps, sans audio
+- Animatique complète : `out/animatic-silent.mp4` — 21 min 37, 70 blocs, 960×540, sous-titres, sans audio
 - Actions : `.github/workflows/render.yml` (run B00 validé, run 7 blocs en cours)
 
 ## Structure
