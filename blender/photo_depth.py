@@ -29,6 +29,8 @@ def parse_args():
     ap.add_argument("--move", default="push-in",
                     choices=["push-in", "push-out", "pan-left", "pan-right", "drift"])
     ap.add_argument("--frames", type=int, default=144)
+    ap.add_argument("--frame-start", type=int, default=None)
+    ap.add_argument("--frame-end", type=int, default=None)
     ap.add_argument("--res", type=int, default=100)
     ap.add_argument("--samples", type=int, default=32)
     ap.add_argument("--engine", default="eevee", choices=["eevee", "cycles"])
@@ -62,8 +64,8 @@ for coll in (bpy.data.meshes, bpy.data.materials, bpy.data.images,
         coll.remove(x)
 
 scene = bpy.context.scene
-scene.frame_start = 1
-scene.frame_end = max(1, ARGS.frames)
+scene.frame_start = ARGS.frame_start if ARGS.frame_start is not None else 1
+scene.frame_end = ARGS.frame_end if ARGS.frame_end is not None else max(1, ARGS.frames)
 
 world = bpy.data.worlds.new("World")
 world.use_nodes = True

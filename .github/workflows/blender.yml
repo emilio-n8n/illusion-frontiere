@@ -27,6 +27,10 @@ on:
         description: "eevee or cycles"
         required: true
         default: "eevee"
+      args:
+        description: "extra scene args, e.g. --image X --depth Y --move push-in"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -108,6 +112,7 @@ jobs:
             --res "${{ inputs.res }}" \
             --samples "${{ inputs.samples }}" \
             --engine "${{ inputs.engine }}" \
+            ${{ inputs.args }} \
             --out "out/blender/${{ inputs.scene }}/chunk-${{ matrix.part.chunk }}"
 
       - uses: actions/upload-artifact@v4
