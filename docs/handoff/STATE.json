@@ -33,7 +33,7 @@
   "images": {
     "hero": 26,
     "uniqueV2": 130,
-    "generatedV2AtLastCheck": 87,
+    "generatedV2AtLastCheck": 119,
     "status": "generating",
     "prompts": "films/01-illusion-frontiere/storyboard/shots-v2.json",
     "map": "films/01-illusion-frontiere/storyboard/narration-map.json"
@@ -58,5 +58,7 @@
     "fact-check final",
     "SRT, generique, thumbnail, metadata",
     "publish"
-  ]
+  ],
+  "motionDesign": "kit implemented (number, dots, bars, brackets, timeline, redact, frontier, diagram)",
+  "handoff": "docs/handoff"
 }
