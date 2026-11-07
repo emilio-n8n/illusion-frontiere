@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 25.6,
+  "duration": 35.666,
   "subtitle": "Mais il y a quelque chose de plus troublant. En 2022, une équipe australienne, Cortical Labs, a cultivé des neurones humains sur une puce. Environ 800 000 neurones. Ils les ont connectés à un système qui leur envoyait des signaux : la position d'une balle, la position d'une raquette. Les neurones pouvaient agir sur la raquette. Au bout de quelques minutes, la culture jouait mieux que le hasard. Elle apprenait.",
   "shots": [
     {
       "id": "B03-S02",
       "src": "/assets/generated/B03-S02.png",
-      "duration": 14.08,
+      "duration": 19.616,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B03-S01",
       "src": "/assets/generated/B03-S01.png",
-      "duration": 11.52,
+      "duration": 16.05,
       "camera": "pan-left",
       "overlay": "",
       "overlayPos": "left",

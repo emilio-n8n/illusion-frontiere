@@ -1,0 +1,15 @@
+{
+  "id": "N023",
+  "act": "ACTE II — MÉMOIRE",
+  "text": "Et pourtant. Une mémoire humaine n'est pas non plus un disque dur. Elle est faillible, sélective, réécrite. Nous oublions ce qui nous arrange. Nous inventons des détails. Nous sommes capables de jurer qu'un événement s'est déroulé d'une certaine façon, alors qu'il s'est déroulé autrement. La machine, elle, ne se trompe pas de la même façon. Elle hallucine, oui. Mais elle ne se ment pas à elle-même. Elle n'a pas de passé à protéger.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "29.2 s of audio in 108.3 s · RTF 3.71",
+  "seconds": 112.3,
+  "generated_at": "2026-11-07T09:13:40+00:00"
+}

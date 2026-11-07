@@ -1,0 +1,15 @@
+{
+  "id": "N042",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Un modèle peut reconnaître une émotion dans un texte. Il peut la nommer, la décrire, la simuler. Il peut même produire une réponse qui nous semble empathique. Il a appris que, quand quelqu'un dit « je suis triste », il faut répondre « je suis là ». Il a appris que, quand quelqu'un parle de la mort, il faut ralentir. Il a appris nos rituels. Il ne les ressent pas. Il les récite.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "28.7 s of audio in 98.5 s · RTF 3.43",
+  "seconds": 104.8,
+  "generated_at": "2026-11-07T10:02:15+00:00"
+}

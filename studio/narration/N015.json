@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 23.8,
+  "duration": 23.127,
   "subtitle": "Mais attention. Ce n'est pas si simple. Un modèle ne part pas de zéro. On l'a entraîné sur des textes écrits par des humains. Il a appris nos mots, nos associations, nos préjugés. Il a appris que « chat » va souvent avec « doux », « nuit » avec « sombre », « avenir » avec « inquiétude ». Il n'a pas vécu ces choses. Il a hérité de la façon dont nous en parlons.",
   "shots": [
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 13.09,
+      "duration": 12.72,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 10.71,
+      "duration": 10.407,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",

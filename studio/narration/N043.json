@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 20.9,
+  "duration": 19.691,
   "subtitle": "Comment on lui apprend ça ? On lui montre des exemples. On lui fait comparer deux réponses. On lui dit laquelle est meilleure. Des millions de fois. C'est ce qu'on appelle l'apprentissage par retour humain. On ne lui apprend pas le vrai. On lui apprend le préféré. Et ce que nous préférons dépend de qui nous sommes.",
   "shots": [
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 11.495,
+      "duration": 10.83,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 9.405,
+      "duration": 8.861,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",

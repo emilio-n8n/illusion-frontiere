@@ -1,0 +1,15 @@
+{
+  "id": "N044",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Mais voici la question qui dérange. Est-ce que nous, nous faisons autre chose ? Quand vous consolez un ami, vous ne récitez pas un script ? Vous ne dites pas les mots que vous avez appris ? Vous ne reproduisez pas ce que votre mère faisait ? La différence, c'est peut-être que vous, vous avez déjà eu mal. Vous savez ce que ça fait. La machine, non. Mais ce savoir, ce n'est pas une information. C'est une expérience. Et l'expérience ne se transmet pas. Elle se vit.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "47.6 s of audio in 159.0 s · RTF 3.34",
+  "seconds": 170.0,
+  "generated_at": "2026-11-07T10:06:31+00:00"
+}

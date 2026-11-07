@@ -1,0 +1,15 @@
+{
+  "id": "N036",
+  "act": "ACTE III — LE CORPS",
+  "text": "L'archiviste s'arrête. Jusqu'ici, elle pouvait toujours dire : « Oui, mais nous sommes biologiques. Eux sont faits de silicium. » C'était la dernière ligne. La plus solide. Celle qui ne se discute pas. Et voilà que des neurones humains poussent dans des boîtes, connectés à des machines, utilisés pour calculer. La ligne ne sépare plus deux mondes. Elle traverse le même monde. Elle traverse la même matière.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "28.2 s of audio in 94.9 s · RTF 3.37",
+  "seconds": 101.1,
+  "generated_at": "2026-11-07T09:57:03+00:00"
+}

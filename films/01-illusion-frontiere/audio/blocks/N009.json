@@ -1,0 +1,15 @@
+{
+  "id": "N009",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Le premier dossier est mince. Sur l'étiquette, un mot : APPRENDRE.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "5.2 s of audio in 24.0 s · RTF 4.66",
+  "seconds": 28.0,
+  "generated_at": "2026-11-07T08:51:30+00:00"
+}

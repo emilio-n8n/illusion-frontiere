@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 24.9,
+  "duration": 24.845,
   "subtitle": "En 1950, Alan Turing propose un test. Un juge converse avec deux interlocuteurs, sans les voir. L'un est humain, l'autre est une machine. Si le juge ne peut pas distinguer, la machine a gagné. Le test ne mesure pas la conscience. Il mesure l'imitation. Et pourtant, nous continuons à l'utiliser comme une frontière. Comme si le fait de ne pas pouvoir distinguer suffisait à effacer la différence.",
   "shots": [
     {
       "id": "B03-S01",
       "src": "/assets/generated/B03-S01.png",
-      "duration": 13.695,
+      "duration": 13.665,
       "camera": "pan-left",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B03-S02",
       "src": "/assets/generated/B03-S02.png",
-      "duration": 11.205,
+      "duration": 11.18,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

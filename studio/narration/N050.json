@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 17.6,
+  "duration": 22.291,
   "subtitle": "Un système peut traiter de l'information. Il peut détecter une douleur, éviter une source de chaleur, dire « j'ai mal ». Mais est-ce qu'il souffre ? Un système peut décrire une émotion. Mais est-ce qu'il l'éprouve ? Un système peut dire « je ». Mais est-ce qu'il y a quelqu'un derrière ce « je » ?",
   "shots": [
     {
       "id": "B03-S02",
       "src": "/assets/generated/B03-S02.png",
-      "duration": 9.68,
+      "duration": 12.26,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B03-S01",
       "src": "/assets/generated/B03-S01.png",
-      "duration": 7.92,
+      "duration": 10.031,
       "camera": "pan-left",
       "overlay": "",
       "overlayPos": "left",

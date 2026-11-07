@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 4.1,
+  "duration": 5.155,
   "subtitle": "Le premier dossier est mince. Sur l'étiquette, un mot : APPRENDRE.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 1.845,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 2.32,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 1.23,
+      "duration": 1.547,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 1.025,
+      "duration": 1.288,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

@@ -1,0 +1,15 @@
+{
+  "id": "N032",
+  "act": "ACTE III — LE CORPS",
+  "text": "Mais il y a quelque chose de plus troublant. En 2022, une équipe australienne, Cortical Labs, a cultivé des neurones humains sur une puce. Environ 800 000 neurones. Ils les ont connectés à un système qui leur envoyait des signaux : la position d'une balle, la position d'une raquette. Les neurones pouvaient agir sur la raquette. Au bout de quelques minutes, la culture jouait mieux que le hasard. Elle apprenait.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "35.7 s of audio in 119.5 s · RTF 3.35",
+  "seconds": 126.6,
+  "generated_at": "2026-11-07T09:50:45+00:00"
+}

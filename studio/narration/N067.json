@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 12.1,
+  "duration": 9.52,
   "subtitle": "Et si un jour elle a tout cela, alors la question ne sera plus de savoir si elle est comme nous. La question sera de savoir ce que nous, nous serons devenus.",
   "shots": [
     {
       "id": "B06-S01",
       "src": "/assets/generated/B06-S01.png",
-      "duration": 5.445,
+      "duration": 4.284,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 3.63,
+      "duration": 2.856,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B06-S03",
       "src": "/assets/generated/B06-S03.png",
-      "duration": 3.025,
+      "duration": 2.38,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",

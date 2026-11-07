@@ -1,0 +1,15 @@
+{
+  "id": "N010",
+  "act": "ACTE I — APPRENDRE",
+  "text": "Un enfant apprend à marcher. Il ne lit pas de manuel. Personne ne lui explique l'équilibre, la coordination, la contraction des muscles. Il tombe. Il se relève. Il tombe encore. Et à chaque chute, quelque chose dans son cerveau se réorganise. Une connexion se renforce, une autre s'efface. Les neuroscientifiques appellent ça la plasticité. Le corps envoie des signaux. Le cerveau prédit, se trompe, corrige. L'erreur n'est pas l'échec de l'apprentissage. L'erreur est le mécanisme.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "32.2 s of audio in 117.9 s · RTF 3.66",
+  "seconds": 124.4,
+  "generated_at": "2026-11-07T08:53:35+00:00"
+}

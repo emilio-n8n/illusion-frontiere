@@ -1,0 +1,15 @@
+{
+  "id": "N054",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Ce n'est pas une raison pour croire qu'elles sont conscientes. Ce serait une erreur. Une machine qui dit « je souffre » n'est pas une preuve de souffrance. Un modèle entraîné sur des millions de textes a appris à dire ce que nous attendons. Il peut produire les mots de la douleur sans la douleur. C'est même ce qu'il fait le mieux : produire les mots.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "21.5 s of audio in 74.6 s · RTF 3.48",
+  "seconds": 79.7,
+  "generated_at": "2026-11-07T10:15:02+00:00"
+}

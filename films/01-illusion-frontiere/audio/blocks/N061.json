@@ -1,0 +1,15 @@
+{
+  "id": "N061",
+  "act": "FINALE — LA FRONTIÈRE",
+  "text": "Elle l'ouvre. À l'intérieur, il n'y a pas de rapport. Pas de photo. Pas de preuve. Il y a une fiche, comme celles qu'elle remplit depuis des années. En haut, un nom. Le sien. En dessous, une liste. « Apprendre : oui. Se souvenir : oui. Avoir un corps : oui. Ressentir : oui. » Et en bas, une case à cocher. « Conscient : présumé. »",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "47.6 s of audio in 162.0 s · RTF 3.41",
+  "seconds": 175.6,
+  "generated_at": "2026-11-07T13:14:05+00:00"
+}

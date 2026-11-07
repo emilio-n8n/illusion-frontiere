@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 26.3,
+  "duration": 34.551,
   "subtitle": "Présumé. Le mot est là, en petits caractères. Elle ne l'avait jamais remarqué. Elle a rempli cette fiche elle-même, il y a longtemps, le jour de son embauche. Personne ne lui a demandé de prouver quoi que ce soit. Personne ne lui a fait passer de test. On l'a crue sur parole. Parce qu'elle était humaine. Parce qu'elle avait un corps. Parce qu'elle avait mal. Parce qu'elle avait peur de mourir.",
   "shots": [
     {
       "id": "B06-S01",
       "src": "/assets/generated/B06-S01.png",
-      "duration": 11.835,
+      "duration": 15.548,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 7.89,
+      "duration": 10.365,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B06-S03",
       "src": "/assets/generated/B06-S03.png",
-      "duration": 6.575,
+      "duration": 8.638,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 10.7,
+  "duration": 12.399,
   "subtitle": "Chaque fois que l'humanité découvre qu'une chose qu'elle croyait réservée aux humains peut être accomplie par une machine, une archiviste descend, ouvre un tiroir, et déplace une chemise.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 4.815,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 5.58,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 3.21,
+      "duration": 3.72,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 2.675,
+      "duration": 3.099,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

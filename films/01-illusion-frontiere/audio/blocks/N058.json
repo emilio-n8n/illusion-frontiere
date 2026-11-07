@@ -1,0 +1,15 @@
+{
+  "id": "N058",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "L'archiviste ouvre le dossier CONSCIENCE. Il est vide. Pas parce qu'il n'y a rien à dire. Parce que personne n'a jamais pu mettre la conscience d'un système dans un tiroir et vérifier. Le dossier ne contient qu'une feuille. Sur la feuille, une question : « Comment savoir ? » Et en dessous, une autre question : « Qui sait ? »",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "39.1 s of audio in 130.3 s · RTF 3.34",
+  "seconds": 137.6,
+  "generated_at": "2026-11-07T10:22:01+00:00"
+}

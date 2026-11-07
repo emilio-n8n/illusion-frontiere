@@ -7,9 +7,9 @@
   "temperature": 0.7,
   "top_p": 0.7,
   "one_pass": true,
-  "reference": null,
-  "reference_transcript": "",
-  "server_status": "16.3 s of audio in 54.7 s · RTF 3.37",
-  "seconds": 59.1,
-  "generated_at": "2026-11-07T07:33:59+00:00"
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "12.4 s of audio in 48.8 s · RTF 3.93",
+  "seconds": 52.9,
+  "generated_at": "2026-11-07T08:31:04+00:00"
 }

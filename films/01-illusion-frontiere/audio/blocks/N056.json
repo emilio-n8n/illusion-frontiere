@@ -1,0 +1,15 @@
+{
+  "id": "N056",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Certains chercheurs proposent d'autres tests. La théorie de l'information intégrée, qui mesure la quantité d'information intégrée dans un système. La théorie de l'espace de travail global, qui cherche un théâtre de la conscience. Les théories de l'ordre supérieur, qui demandent au système de représenter ses propres états. Aucune ne fait l'unanimité. Aucune ne permet de dire : ce système est conscient, celui-là ne l'est pas.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "24.7 s of audio in 85.0 s · RTF 3.45",
+  "seconds": 90.5,
+  "generated_at": "2026-11-07T10:18:10+00:00"
+}

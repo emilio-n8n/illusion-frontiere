@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 11.4,
+  "duration": 9.706,
   "subtitle": "Le dossier de la conscience est vide. Il l'a toujours été. Mais ce n'est pas une réponse. C'est une question. Et la question, ce soir, c'est vous qui la portez.",
   "shots": [
     {
       "id": "B06-S01",
       "src": "/assets/generated/B06-S01.png",
-      "duration": 5.13,
+      "duration": 4.368,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 3.42,
+      "duration": 2.912,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B06-S03",
       "src": "/assets/generated/B06-S03.png",
-      "duration": 2.85,
+      "duration": 2.426,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",

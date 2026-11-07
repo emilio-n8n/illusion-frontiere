@@ -1,0 +1,15 @@
+{
+  "id": "N069",
+  "act": "FINALE — LA FRONTIÈRE",
+  "text": "Vous avez un corps. Vous avez une mémoire. Vous avez peur, parfois. Vous aimez des gens qui vont mourir. Vous ne pouvez pas prouver que vous êtes conscient. Vous le savez, et c'est tout. Et ce savoir-là, aucune machine ne peut le vérifier. Pas parce qu'elle en est incapable. Parce que personne ne peut vérifier personne.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "32.0 s of audio in 109.0 s · RTF 3.41",
+  "seconds": 114.4,
+  "generated_at": "2026-11-07T13:24:39+00:00"
+}

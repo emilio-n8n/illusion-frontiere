@@ -1,0 +1,15 @@
+{
+  "id": "N017",
+  "act": "ACTE I — APPRENDRE",
+  "text": "Alors, quand il répond, il ne puise pas dans une expérience. Il puise dans la nôtre. Il est fait de nos traces. Un peu comme un enfant qui répète une phrase entendue sans en comprendre le sens. Sauf que lui peut répéter des millions de phrases à la fois.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "16.9 s of audio in 63.8 s · RTF 3.79",
+  "seconds": 67.2,
+  "generated_at": "2026-11-07T09:03:21+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "N048",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Un dossier de plus. Une frontière de moins. Et une question de plus.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "6.5 s of audio in 26.7 s · RTF 4.08",
+  "seconds": 30.7,
+  "generated_at": "2026-11-07T10:11:51+00:00"
+}

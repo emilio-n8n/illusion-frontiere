@@ -1,0 +1,15 @@
+{
+  "id": "N029",
+  "act": "ACTE III — LE CORPS",
+  "text": "Nous ne pensons pas avec un cerveau posé dans un bocal. Nous pensons avec un corps. Un corps qui a faim, qui a froid, qui a mal, qui vieillit. Un corps qui est tombé, qui s'est cassé, qui a guéri. Nos émotions ne sont pas seulement des programmes. Elles sont aussi des états du corps. La peur accélère le cœur, serre la gorge, dilate les pupilles. La tristesse ralentit tout. La douleur n'est pas une information. C'est une urgence.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "28.1 s of audio in 97.9 s · RTF 3.48",
+  "seconds": 107.6,
+  "generated_at": "2026-11-07T09:46:18+00:00"
+}

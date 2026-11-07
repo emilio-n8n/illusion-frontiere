@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 5.2,
+  "duration": 6.548,
   "subtitle": "Un dossier de plus. Une frontière de moins. Et une question de plus.",
   "shots": [
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 2.86,
+      "duration": 3.601,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -22,8 +22,8 @@
     },
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 2.34,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 2.947,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

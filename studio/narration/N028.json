@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 7,
+  "duration": 47.554,
   "subtitle": "Une machine peut apprendre. Elle peut se souvenir. Alors, peut-être que la différence est ailleurs. Dans le corps.",
   "shots": [
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 3.85,
+      "duration": 26.155,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 3.15,
+      "duration": 21.399,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",

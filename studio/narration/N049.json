@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 6.7,
+  "duration": 7.616,
   "subtitle": "Il reste une différence. La plus profonde. Celle que personne n'a jamais réussi à définir. La conscience.",
   "shots": [
     {
       "id": "B05-S01",
       "src": "/assets/generated/B05-S01.png",
-      "duration": 3.685,
+      "duration": 4.189,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B05-S02",
       "src": "/assets/generated/B05-S02.png",
-      "duration": 3.015,
+      "duration": 3.427,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

@@ -1,0 +1,15 @@
+{
+  "id": "N034",
+  "act": "ACTE III — LE CORPS",
+  "text": "Depuis, d'autres équipes vont plus loin. FinalSpark, en Suisse, a construit une plateforme qui connecte des organoïdes cérébraux humains à des électrodes. Seize organoïdes. Environ 160 000 neurones au total. Ils vivent dans des incubateurs, nourris par un liquide qui imite le corps. Ils peuvent être stimulés, observés, utilisés pour des calculs. On appelle ça le biocomputing. Des neurones vivants, dans une machine.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "28.8 s of audio in 98.1 s · RTF 3.41",
+  "seconds": 104.7,
+  "generated_at": "2026-11-07T09:53:55+00:00"
+}

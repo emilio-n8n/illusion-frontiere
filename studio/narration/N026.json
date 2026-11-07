@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 5.2,
+  "duration": 4.923,
   "subtitle": "Un dossier de plus. Une frontière de moins. Et un tiroir de plus.",
   "shots": [
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 2.86,
+      "duration": 2.708,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 2.34,
+      "duration": 2.215,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

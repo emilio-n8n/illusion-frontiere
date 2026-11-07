@@ -1,0 +1,15 @@
+{
+  "id": "N008",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Ce bureau n'existe pas. Vous l'avez compris. Mais vous y êtes déjà entré. Chaque fois que vous avez dit « nous, les humains », vous avez ouvert un tiroir. Chaque fois que vous avez dit « ils ne sont pas comme nous », vous avez poussé une chemise. Ce soir, l'archiviste, c'est un peu vous.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "20.2 s of audio in 74.0 s · RTF 3.66",
+  "seconds": 81.9,
+  "generated_at": "2026-11-07T09:44:31+00:00"
+}

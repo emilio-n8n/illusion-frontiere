@@ -1,0 +1,15 @@
+{
+  "id": "N021",
+  "act": "ACTE II — MÉMOIRE",
+  "text": "On l'appelle H.M. Son cas a changé notre compréhension de la mémoire. Il a montré que se souvenir n'est pas une seule chose. C'est un assemblage. Une mémoire à court terme, qui tient quelques secondes. Une mémoire à long terme, qui peut durer une vie. Et entre les deux, un travail de consolidation. La nuit, pendant que nous dormons, le cerveau rejoue, trie, range. Il ne stocke pas comme un disque dur. Il reconstruit. Chaque souvenir est une histoire qu'on se raconte, et chaque fois qu'on la raconte, on la modifie un peu.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "34.8 s of audio in 125.7 s · RTF 3.61",
+  "seconds": 134.2,
+  "generated_at": "2026-11-07T09:09:41+00:00"
+}

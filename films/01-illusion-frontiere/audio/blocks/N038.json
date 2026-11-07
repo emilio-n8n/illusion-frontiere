@@ -1,0 +1,15 @@
+{
+  "id": "N038",
+  "act": "ACTE III — LE CORPS",
+  "text": "Elle ne déplace pas le dossier. Elle le laisse ouvert sur la table. Pour la première fois, elle a peur de ce qu'elle va trouver dans le tiroir d'à côté.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "10.7 s of audio in 39.8 s · RTF 3.71",
+  "seconds": 47.5,
+  "generated_at": "2026-11-07T09:57:54+00:00"
+}

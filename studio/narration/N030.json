@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 18,
+  "duration": 19.598,
   "subtitle": "Un robot peut avoir des capteurs. Il peut détecter une surchauffe, une collision, une erreur. Mais rien ne prouve qu'il souffre. Il signale. Son existence ne tient pas à ce corps-là. On peut l'éteindre, le réparer, le copier. Ce robot-là ne perd rien. Il n'a rien à perdre.",
   "shots": [
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 9.9,
+      "duration": 10.779,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 8.1,
+      "duration": 8.819,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",

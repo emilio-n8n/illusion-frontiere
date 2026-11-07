@@ -1,0 +1,15 @@
+{
+  "id": "N051",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Les philosophes appellent ça le problème difficile de la conscience. Pas le problème de savoir comment le cerveau traite l'information. Ça, on commence à le comprendre. Le problème, c'est de savoir pourquoi ce traitement s'accompagne d'une expérience. Pourquoi il y a quelque chose que ça fait d'être vous. Pourquoi le rouge est rouge. Pourquoi la douleur fait mal. Pourquoi la mort fait peur.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "21.1 s of audio in 73.6 s · RTF 3.48",
+  "seconds": 77.6,
+  "generated_at": "2026-11-07T13:06:42+00:00"
+}

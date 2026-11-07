@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 6,
+  "duration": 8.313,
   "subtitle": "La frontière n'a jamais été une ligne. C'est une question. Et elle est restée ouverte.",
   "shots": [
     {
       "id": "B06-S01",
       "src": "/assets/generated/B06-S01.png",
-      "duration": 2.7,
+      "duration": 3.741,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 1.8,
+      "duration": 2.494,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B06-S03",
       "src": "/assets/generated/B06-S03.png",
-      "duration": 1.5,
+      "duration": 2.078,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",

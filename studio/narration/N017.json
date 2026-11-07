@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 18.3,
+  "duration": 16.858,
   "subtitle": "Alors, quand il répond, il ne puise pas dans une expérience. Il puise dans la nôtre. Il est fait de nos traces. Un peu comme un enfant qui répète une phrase entendue sans en comprendre le sens. Sauf que lui peut répéter des millions de phrases à la fois.",
   "shots": [
     {
       "id": "B01-S01",
       "src": "/assets/generated/B01-S01.png",
-      "duration": 10.065,
+      "duration": 9.272,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S02",
       "src": "/assets/generated/B01-S02.png",
-      "duration": 8.235,
+      "duration": 7.586,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

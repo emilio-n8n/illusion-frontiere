@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 20.9,
+  "duration": 31.997,
   "subtitle": "Vous avez un corps. Vous avez une mémoire. Vous avez peur, parfois. Vous aimez des gens qui vont mourir. Vous ne pouvez pas prouver que vous êtes conscient. Vous le savez, et c'est tout. Et ce savoir-là, aucune machine ne peut le vérifier. Pas parce qu'elle en est incapable. Parce que personne ne peut vérifier personne.",
   "shots": [
     {
       "id": "B06-S01",
       "src": "/assets/generated/B06-S01.png",
-      "duration": 9.405,
+      "duration": 14.399,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B06-S02",
       "src": "/assets/generated/B06-S02.png",
-      "duration": 6.27,
+      "duration": 9.599,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B06-S03",
       "src": "/assets/generated/B06-S03.png",
-      "duration": 5.225,
+      "duration": 7.999,
       "camera": "push-out",
       "overlay": "",
       "overlayPos": "left",

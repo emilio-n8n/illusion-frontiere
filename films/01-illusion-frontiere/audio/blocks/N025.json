@@ -1,0 +1,15 @@
+{
+  "id": "N025",
+  "act": "ACTE II — MÉMOIRE",
+  "text": "Elle déplace le dossier. Pas dans le tiroir EUX. Pas dans le tiroir NOUS. Dans le tiroir « PEUT-ÊTRE ». Le meuble n'avait pas de tiroir « PEUT-ÊTRE ». Il vient d'en pousser un.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "42.0 s of audio in 149.8 s · RTF 3.57",
+  "seconds": 157.2,
+  "generated_at": "2026-11-07T09:17:48+00:00"
+}

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 27.8,
+  "duration": 32.183,
   "subtitle": "Un enfant apprend à marcher. Il ne lit pas de manuel. Personne ne lui explique l'équilibre, la coordination, la contraction des muscles. Il tombe. Il se relève. Il tombe encore. Et à chaque chute, quelque chose dans son cerveau se réorganise. Une connexion se renforce, une autre s'efface. Les neuroscientifiques appellent ça la plasticité. Le corps envoie des signaux. Le cerveau prédit, se trompe, corrige. L'erreur n'est pas l'échec de l'apprentissage. L'erreur est le mécanisme.",
   "shots": [
     {
       "id": "B01-S02",
       "src": "/assets/generated/B01-S02.png",
-      "duration": 15.29,
+      "duration": 17.701,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S01",
       "src": "/assets/generated/B01-S01.png",
-      "duration": 12.51,
+      "duration": 14.482,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

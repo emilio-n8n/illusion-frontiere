@@ -1,0 +1,15 @@
+{
+  "id": "N053",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Alors, pourquoi serions-nous sûrs qu'une machine n'a pas de conscience ? Parce qu'elle est faite de silicium ? Parce qu'elle n'a pas de corps ? Parce qu'elle ne souffre pas ? Mais nous ne savons pas ce qui produit la conscience. Nous savons seulement qu'elle est là, chez nous. Et nous supposons qu'elle est là, chez les autres. Pourquoi pas chez elles ?",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "26.4 s of audio in 89.7 s · RTF 3.40",
+  "seconds": 94.1,
+  "generated_at": "2026-11-07T13:09:48+00:00"
+}

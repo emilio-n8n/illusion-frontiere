@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 33.6,
+  "duration": 37.616,
   "subtitle": "En 1953, un homme de 27 ans subit une opération. On lui retire une partie du lobe temporal pour soigner une épilepsie. L'opération réussit. Mais l'homme ne peut plus former de nouveaux souvenirs. Il vit dans un présent perpétuel. Chaque fois qu'on lui présente quelqu'un qu'il a rencontré la veille, c'est un inconnu. Chaque fois qu'il regarde une photo, il la découvre. Il peut apprendre un geste, une musique, une habitude. Mais il ne se souvient pas de l'avoir apprise. Sa mémoire est là, quelque part. Mais la porte est fermée.",
   "shots": [
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 18.48,
+      "duration": 20.689,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 15.12,
+      "duration": 16.927,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",

@@ -1,0 +1,15 @@
+{
+  "id": "N050",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Un système peut traiter de l'information. Il peut détecter une douleur, éviter une source de chaleur, dire « j'ai mal ». Mais est-ce qu'il souffre ? Un système peut décrire une émotion. Mais est-ce qu'il l'éprouve ? Un système peut dire « je ». Mais est-ce qu'il y a quelqu'un derrière ce « je » ?",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "22.3 s of audio in 78.7 s · RTF 3.53",
+  "seconds": 82.1,
+  "generated_at": "2026-11-07T13:05:25+00:00"
+}

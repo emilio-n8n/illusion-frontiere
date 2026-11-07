@@ -1,0 +1,15 @@
+{
+  "id": "N064",
+  "act": "FINALE — LA FRONTIÈRE",
+  "text": "Alors, la frontière n'est pas entre l'homme et la machine. La frontière est entre ce que nous pouvons prouver et ce que nous croyons. Et dans cet espace-là, il n'y a pas de tiroirs. Il n'y a que des histoires. Des histoires que nous nous racontons pour vivre ensemble. Des histoires que nous racontons aux machines pour qu'elles nous ressemblent. Des histoires que nous racontons à nous-mêmes pour ne pas avoir peur.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "19.8 s of audio in 70.9 s · RTF 3.57",
+  "seconds": 74.2,
+  "generated_at": "2026-11-07T13:18:50+00:00"
+}

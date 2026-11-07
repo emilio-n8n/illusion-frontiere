@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 26.3,
+  "duration": 33.112,
   "subtitle": "Maintenant, regardez la machine. Elle a des paramètres, figés après l'entraînement. Une fenêtre de contexte, qui contient ce qu'on vient de lui dire. Parfois, une mémoire externe, une base de données qu'elle peut consulter. Elle peut restituer une conversation de mille façons. Mais elle ne se souvient pas d'avoir vécu la conversation. Elle n'a pas de nuit. Elle n'a pas de rêve. Elle n'a pas d'odeur qui déclenche un souvenir d'enfance.",
   "shots": [
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 14.465,
+      "duration": 18.212,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 11.835,
+      "duration": 14.9,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",

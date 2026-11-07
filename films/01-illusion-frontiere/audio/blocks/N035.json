@@ -1,0 +1,15 @@
+{
+  "id": "N035",
+  "act": "ACTE III — LE CORPS",
+  "text": "Il faut être clair. Ce ne sont pas des cerveaux miniatures. Ce ne sont pas des personnes. Ce ne sont pas des consciences en boîte. Ce sont des cultures de cellules, sans yeux, sans oreilles, sans histoire, sans monde. Elles ne pensent pas à vous. Elles ne pensent à rien. Mais elles sont vivantes. Et elles sont dans un ordinateur.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "21.5 s of audio in 74.6 s · RTF 3.47",
+  "seconds": 86.8,
+  "generated_at": "2026-11-07T09:55:22+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "N027",
+  "act": "ACTE II — MÉMOIRE",
+  "text": "Elle commence à comprendre quelque chose. Le meuble ne se vide pas. Plus elle classe, plus il y a de tiroirs. La frontière ne recule pas. Elle se multiplie. Chaque différence qu'elle déplace en crée deux autres. C'est peut-être ça, une frontière : pas une ligne, mais une machine à fabriquer des lignes.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "21.1 s of audio in 77.1 s · RTF 3.66",
+  "seconds": 80.8,
+  "generated_at": "2026-11-07T09:19:34+00:00"
+}

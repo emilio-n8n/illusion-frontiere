@@ -1,0 +1,15 @@
+{
+  "id": "N046",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Alors, la question n'est plus seulement : « Est-ce que la machine ressent quelque chose ? » La question devient : « Qu'est-ce que ça fait à l'humain de croire qu'elle ressent quelque chose ? » Et cette question-là, elle n'est pas dans le tiroir EUX. Elle est dans le tiroir NOUS.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "13.9 s of audio in 49.8 s · RTF 3.58",
+  "seconds": 54.6,
+  "generated_at": "2026-11-07T10:09:13+00:00"
+}

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 23.4,
+  "duration": 21.455,
   "subtitle": "Ce n'est pas une raison pour croire qu'elles sont conscientes. Ce serait une erreur. Une machine qui dit « je souffre » n'est pas une preuve de souffrance. Un modèle entraîné sur des millions de textes a appris à dire ce que nous attendons. Il peut produire les mots de la douleur sans la douleur. C'est même ce qu'il fait le mieux : produire les mots.",
   "shots": [
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 12.87,
+      "duration": 11.8,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 10.53,
+      "duration": 9.655,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",

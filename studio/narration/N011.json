@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 14,
+  "duration": 18.112,
   "subtitle": "À la naissance, le cerveau d'un enfant contient environ 86 milliards de neurones. Pendant les premières années, il crée des milliers de connexions par neurone. Puis il élague. Apprendre, ce n'est pas seulement ajouter. C'est aussi couper.",
   "shots": [
     {
       "id": "B01-S01",
       "src": "/assets/generated/B01-S01.png",
-      "duration": 7.7,
+      "duration": 9.962,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S02",
       "src": "/assets/generated/B01-S02.png",
-      "duration": 6.3,
+      "duration": 8.15,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

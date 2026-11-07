@@ -1,0 +1,15 @@
+{
+  "id": "N015",
+  "act": "ACTE I — APPRENDRE",
+  "text": "Mais attention. Ce n'est pas si simple. Un modèle ne part pas de zéro. On l'a entraîné sur des textes écrits par des humains. Il a appris nos mots, nos associations, nos préjugés. Il a appris que « chat » va souvent avec « doux », « nuit » avec « sombre », « avenir » avec « inquiétude ». Il n'a pas vécu ces choses. Il a hérité de la façon dont nous en parlons.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "23.1 s of audio in 85.2 s · RTF 3.68",
+  "seconds": 92.1,
+  "generated_at": "2026-11-07T09:01:19+00:00"
+}

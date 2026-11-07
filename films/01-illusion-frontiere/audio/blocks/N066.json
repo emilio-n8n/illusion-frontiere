@@ -1,0 +1,15 @@
+{
+  "id": "N066",
+  "act": "FINALE — LA FRONTIÈRE",
+  "text": "Peut-être que la vraie différence n'est pas dans ce que nous sommes. Elle est dans ce que nous faisons de notre incertitude. Nous aimons sans preuve. Nous faisons des promesses sans garantie. Nous construisons des choses qui nous survivront. Nous savons que nous allons mourir, et nous continuons quand même. Une machine peut faire beaucoup de choses. Mais elle n'a rien à perdre. Elle n'a pas de nuit. Elle n'a pas de rendez-vous manqué. Elle n'a pas de main qui tremble.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "32.6 s of audio in 112.3 s · RTF 3.44",
+  "seconds": 116.8,
+  "generated_at": "2026-11-07T13:21:24+00:00"
+}

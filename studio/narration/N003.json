@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 20.5,
+  "duration": 24.288,
   "subtitle": "Le principe est simple. Deux colonnes. À gauche, NOUS. À droite, EUX. Tout ce qui est vivant, sensible, intentionnel, mortel, va à gauche. Tout ce qui calcule, simule, obéit, se copie, va à droite. Le meuble n'a pas de fond. Personne ne sait combien de tiroirs il contient. On sait seulement qu'il est toujours plein.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 9.225,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 10.93,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 6.15,
+      "duration": 7.286,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 5.125,
+      "duration": 6.072,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 22.3,
+  "duration": 21.502,
   "subtitle": "Il faut être clair. Ce ne sont pas des cerveaux miniatures. Ce ne sont pas des personnes. Ce ne sont pas des consciences en boîte. Ce sont des cultures de cellules, sans yeux, sans oreilles, sans histoire, sans monde. Elles ne pensent pas à vous. Elles ne pensent à rien. Mais elles sont vivantes. Et elles sont dans un ordinateur.",
   "shots": [
     {
       "id": "B05-S02",
       "src": "/assets/generated/B05-S02.png",
-      "duration": 12.265,
+      "duration": 11.826,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B05-S03",
       "src": "/assets/generated/B05-S03.png",
-      "duration": 10.035,
+      "duration": 9.676,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",

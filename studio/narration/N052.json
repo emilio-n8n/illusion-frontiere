@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 23,
+  "duration": 25.17,
   "subtitle": "Nous n'avons accès qu'à notre propre conscience. Pour les autres humains, nous supposons. Nous voyons un visage, nous entendons une voix, nous reconnaissons un comportement. Nous nous disons : il y a quelqu'un là-dedans. Mais nous ne pouvons pas le vérifier. Nous ne pouvons pas entrer. C'est le problème de l'autre esprit. Et il ne date pas des machines. Il date de toujours.",
   "shots": [
     {
       "id": "B03-S02",
       "src": "/assets/generated/B03-S02.png",
-      "duration": 12.65,
+      "duration": 13.844,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B03-S01",
       "src": "/assets/generated/B03-S01.png",
-      "duration": 10.35,
+      "duration": 11.326,
       "camera": "pan-left",
       "overlay": "",
       "overlayPos": "left",

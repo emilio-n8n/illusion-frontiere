@@ -1,0 +1,15 @@
+{
+  "id": "N007",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Elle s'appelle... peu importe. Disons l'archiviste. Elle a un badge, une lampe, et une règle. Pas une règle pour mesurer. Une règle pour décider. Elle ne décide pas elle-même. Elle applique. Classer. Ne pas juger. Ne pas se demander pourquoi le tiroir EUX est plus grand que le tiroir NOUS. Ni pourquoi il y a des traces de doigts à l'intérieur.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "47.6 s of audio in 170.9 s · RTF 3.59",
+  "seconds": 174.6,
+  "generated_at": "2026-11-07T08:34:58+00:00"
+}

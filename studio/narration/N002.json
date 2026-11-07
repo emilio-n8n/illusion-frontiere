@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 5.6,
+  "duration": 5.248,
   "subtitle": "Et dans ces tiroirs, on ne range pas des gens. On range des différences.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 2.52,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 2.362,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 1.68,
+      "duration": 1.574,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 1.4,
+      "duration": 1.312,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

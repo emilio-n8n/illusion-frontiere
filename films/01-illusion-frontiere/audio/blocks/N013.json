@@ -1,0 +1,15 @@
+{
+  "id": "N013",
+  "act": "ACTE I — APPRENDRE",
+  "text": "Vous voyez le parallèle. Il est si propre qu'il donne le vertige. Deux systèmes. Deux expériences. Deux façons de devenir meilleur en se trompant. Alors, la différence n'est pas là. Elle est peut-être dans la raison pour laquelle on apprend.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "18.0 s of audio in 70.0 s · RTF 3.89",
+  "seconds": 73.3,
+  "generated_at": "2026-11-07T08:57:55+00:00"
+}

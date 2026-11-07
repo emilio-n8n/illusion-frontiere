@@ -1,0 +1,15 @@
+{
+  "id": "N014",
+  "act": "ACTE I — APPRENDRE",
+  "text": "L'enfant ne tombe pas pour optimiser sa marche. Il tombe parce qu'il veut atteindre quelqu'un. Il y a un corps qui a faim, qui a froid, qui cherche un visage. Il y a une voix, une main, un rire. Son apprentissage est orienté par un besoin. La machine, elle, n'a besoin de rien. On lui donne un objectif. Elle l'optimise. Elle ne veut pas reconnaître le chat. Elle n'a jamais vu un chat. Elle n'a jamais eu envie de voir un chat.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "29.9 s of audio in 108.8 s · RTF 3.64",
+  "seconds": 112.7,
+  "generated_at": "2026-11-07T08:59:47+00:00"
+}

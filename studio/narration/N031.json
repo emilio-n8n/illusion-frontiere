@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 17.2,
+  "duration": 17.694,
   "subtitle": "Et pourtant, nous sommes en train de construire des machines avec des corps. Des robots qui marchent, qui saisissent, qui apprennent par essai-erreur. Des prothèses qui renvoient des sensations. Des interfaces qui connectent le cerveau à un ordinateur. La frontière du corps n'est plus si nette.",
   "shots": [
     {
       "id": "B01-S01",
       "src": "/assets/generated/B01-S01.png",
-      "duration": 9.46,
+      "duration": 9.732,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S02",
       "src": "/assets/generated/B01-S02.png",
-      "duration": 7.74,
+      "duration": 7.962,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

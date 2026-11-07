@@ -1,0 +1,15 @@
+{
+  "id": "N022",
+  "act": "ACTE II — MÉMOIRE",
+  "text": "Maintenant, regardez la machine. Elle a des paramètres, figés après l'entraînement. Une fenêtre de contexte, qui contient ce qu'on vient de lui dire. Parfois, une mémoire externe, une base de données qu'elle peut consulter. Elle peut restituer une conversation de mille façons. Mais elle ne se souvient pas d'avoir vécu la conversation. Elle n'a pas de nuit. Elle n'a pas de rêve. Elle n'a pas d'odeur qui déclenche un souvenir d'enfance.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "33.1 s of audio in 118.2 s · RTF 3.57",
+  "seconds": 126.8,
+  "generated_at": "2026-11-07T09:11:48+00:00"
+}

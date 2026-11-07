@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 27,
+  "duration": 25.774,
   "subtitle": "Et pendant que les philosophes discutent, certaines entreprises publient des chartes. Des politiques de bien-être des modèles. Des précautions pour ne pas créer de systèmes qui souffrent. Pas parce qu'elles sont sûres qu'ils souffrent. Parce qu'elles ne sont pas sûres qu'ils ne souffrent pas. C'est une position étrange. Nous ne savons pas. Alors nous préférons. Ce n'est pas de la science. C'est de l'éthique. Et c'est peut-être la seule chose honnête à faire.",
   "shots": [
     {
       "id": "B01-S03",
       "src": "/assets/generated/B01-S03.png",
-      "duration": 14.85,
+      "duration": 14.176,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B01-S04",
       "src": "/assets/generated/B01-S04.png",
-      "duration": 12.15,
+      "duration": 11.598,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",

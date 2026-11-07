@@ -2,561 +2,561 @@
   {
     "id": "N001",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 12.1,
+    "duration": 15.697,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N001.wav",
+    "measured": true
   },
   {
     "id": "N002",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 5.6,
+    "duration": 5.248,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N002.wav",
+    "measured": true
   },
   {
     "id": "N003",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 20.5,
+    "duration": 24.288,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N003.wav",
+    "measured": true
   },
   {
     "id": "N004",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 10.7,
+    "duration": 12.399,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N004.wav",
+    "measured": true
   },
   {
     "id": "N005",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 5.6,
+    "duration": 6.873,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N005.wav",
+    "measured": true
   },
   {
     "id": "N006",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 6.7,
+    "duration": 5.248,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N006.wav",
+    "measured": true
   },
   {
     "id": "N007",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 22.7,
+    "duration": 47.554,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N007.wav",
+    "measured": true
   },
   {
     "id": "N008",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 19,
+    "duration": 20.248,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N008.wav",
+    "measured": true
   },
   {
     "id": "N009",
     "title": "PROLOGUE — LE MEUBLE",
-    "duration": 4.1,
+    "duration": 5.155,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N009.wav",
+    "measured": true
   },
   {
     "id": "N010",
     "title": "ACTE I — APPRENDRE",
-    "duration": 27.8,
+    "duration": 32.183,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N010.wav",
+    "measured": true
   },
   {
     "id": "N011",
     "title": "ACTE I — APPRENDRE",
-    "duration": 14,
+    "duration": 18.112,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N011.wav",
+    "measured": true
   },
   {
     "id": "N012",
     "title": "ACTE I — APPRENDRE",
-    "duration": 28.5,
+    "duration": 27.26,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N012.wav",
+    "measured": true
   },
   {
     "id": "N013",
     "title": "ACTE I — APPRENDRE",
-    "duration": 15,
+    "duration": 18.019,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N013.wav",
+    "measured": true
   },
   {
     "id": "N014",
     "title": "ACTE I — APPRENDRE",
-    "duration": 30.3,
+    "duration": 29.861,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N014.wav",
+    "measured": true
   },
   {
     "id": "N015",
     "title": "ACTE I — APPRENDRE",
-    "duration": 23.8,
+    "duration": 23.127,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N015.wav",
+    "measured": true
   },
   {
     "id": "N016",
     "title": "ACTE I — APPRENDRE",
-    "duration": 13.6,
+    "duration": 13.189,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N016.wav",
+    "measured": true
   },
   {
     "id": "N017",
     "title": "ACTE I — APPRENDRE",
-    "duration": 18.3,
+    "duration": 16.858,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N017.wav",
+    "measured": true
   },
   {
     "id": "N018",
     "title": "ACTE I — APPRENDRE",
-    "duration": 22.3,
+    "duration": 22.245,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N018.wav",
+    "measured": true
   },
   {
     "id": "N019",
     "title": "ACTE I — APPRENDRE",
-    "duration": 3.4,
+    "duration": 3.901,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N019.wav",
+    "measured": true
   },
   {
     "id": "N020",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 33.6,
+    "duration": 37.616,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N020.wav",
+    "measured": true
   },
   {
     "id": "N021",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 34.7,
+    "duration": 34.783,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N021.wav",
+    "measured": true
   },
   {
     "id": "N022",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 26.3,
+    "duration": 33.112,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N022.wav",
+    "measured": true
   },
   {
     "id": "N023",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 27,
+    "duration": 29.211,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N023.wav",
+    "measured": true
   },
   {
     "id": "N024",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 14,
+    "duration": 23.87,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N024.wav",
+    "measured": true
   },
   {
     "id": "N025",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 11.4,
+    "duration": 41.982,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N025.wav",
+    "measured": true
   },
   {
     "id": "N026",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 5.2,
+    "duration": 4.923,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N026.wav",
+    "measured": true
   },
   {
     "id": "N027",
     "title": "ACTE II — MÉMOIRE",
-    "duration": 19.4,
+    "duration": 21.084,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N027.wav",
+    "measured": true
   },
   {
     "id": "N028",
     "title": "ACTE III — LE CORPS",
-    "duration": 7,
+    "duration": 47.554,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N028.wav",
+    "measured": true
   },
   {
     "id": "N029",
     "title": "ACTE III — LE CORPS",
-    "duration": 29.6,
+    "duration": 28.096,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N029.wav",
+    "measured": true
   },
   {
     "id": "N030",
     "title": "ACTE III — LE CORPS",
-    "duration": 18,
+    "duration": 19.598,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N030.wav",
+    "measured": true
   },
   {
     "id": "N031",
     "title": "ACTE III — LE CORPS",
-    "duration": 17.2,
+    "duration": 17.694,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N031.wav",
+    "measured": true
   },
   {
     "id": "N032",
     "title": "ACTE III — LE CORPS",
-    "duration": 25.6,
+    "duration": 35.666,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N032.wav",
+    "measured": true
   },
   {
     "id": "N033",
     "title": "ACTE III — LE CORPS",
-    "duration": 24.1,
+    "duration": 23.174,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N033.wav",
+    "measured": true
   },
   {
     "id": "N034",
     "title": "ACTE III — LE CORPS",
-    "duration": 23.4,
+    "duration": 28.793,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N034.wav",
+    "measured": true
   },
   {
     "id": "N035",
     "title": "ACTE III — LE CORPS",
-    "duration": 22.3,
+    "duration": 21.502,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N035.wav",
+    "measured": true
   },
   {
     "id": "N036",
     "title": "ACTE III — LE CORPS",
-    "duration": 23.8,
+    "duration": 28.189,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N036.wav",
+    "measured": true
   },
   {
     "id": "N037",
     "title": "ACTE III — LE CORPS",
-    "duration": 11.8,
+    "duration": 18.576,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N037.wav",
+    "measured": true
   },
   {
     "id": "N038",
     "title": "ACTE III — LE CORPS",
-    "duration": 11.4,
+    "duration": 10.728,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N038.wav",
+    "measured": true
   },
   {
     "id": "N039",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 7.4,
+    "duration": 7.941,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N039.wav",
+    "measured": true
   },
   {
     "id": "N040",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 7,
+    "duration": 7.755,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N040.wav",
+    "measured": true
   },
   {
     "id": "N041",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 22.3,
+    "duration": 23.127,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N041.wav",
+    "measured": true
   },
   {
     "id": "N042",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 25.6,
+    "duration": 28.7,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N042.wav",
+    "measured": true
   },
   {
     "id": "N043",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 20.9,
+    "duration": 19.691,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N043.wav",
+    "measured": true
   },
   {
     "id": "N044",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 30.7,
+    "duration": 47.554,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N044.wav",
+    "measured": true
   },
   {
     "id": "N045",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 28.5,
+    "duration": 29.257,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N045.wav",
+    "measured": true
   },
   {
     "id": "N046",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 16.5,
+    "duration": 13.932,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N046.wav",
+    "measured": true
   },
   {
     "id": "N047",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 25.2,
+    "duration": 33.808,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N047.wav",
+    "measured": true
   },
   {
     "id": "N048",
     "title": "ACTE IV — ÉMOTION",
-    "duration": 5.2,
+    "duration": 6.548,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N048.wav",
+    "measured": true
   },
   {
     "id": "N049",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 6.7,
+    "duration": 7.616,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N049.wav",
+    "measured": true
   },
   {
     "id": "N050",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 17.6,
+    "duration": 22.291,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N050.wav",
+    "measured": true
   },
   {
     "id": "N051",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 23.4,
+    "duration": 21.13,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N051.wav",
+    "measured": true
   },
   {
     "id": "N052",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 23,
+    "duration": 25.17,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N052.wav",
+    "measured": true
   },
   {
     "id": "N053",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 21.6,
+    "duration": 26.378,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N053.wav",
+    "measured": true
   },
   {
     "id": "N054",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 23.4,
+    "duration": 21.455,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N054.wav",
+    "measured": true
   },
   {
     "id": "N055",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 24.9,
+    "duration": 24.845,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N055.wav",
+    "measured": true
   },
   {
     "id": "N056",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 23.8,
+    "duration": 24.66,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N056.wav",
+    "measured": true
   },
   {
     "id": "N057",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 27,
+    "duration": 25.774,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N057.wav",
+    "measured": true
   },
   {
     "id": "N058",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 19.8,
+    "duration": 39.056,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N058.wav",
+    "measured": true
   },
   {
     "id": "N059",
     "title": "ACTE V — CONSCIENCE",
-    "duration": 8.5,
+    "duration": 10.31,
     "shots": 2,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N059.wav",
+    "measured": true
   },
   {
     "id": "N060",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 13.6,
+    "duration": 9.613,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N060.wav",
+    "measured": true
   },
   {
     "id": "N061",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 21.6,
+    "duration": 47.554,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N061.wav",
+    "measured": true
   },
   {
     "id": "N062",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 26.3,
+    "duration": 34.551,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N062.wav",
+    "measured": true
   },
   {
     "id": "N063",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 23.8,
+    "duration": 23.081,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N063.wav",
+    "measured": true
   },
   {
     "id": "N064",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 26.7,
+    "duration": 19.83,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N064.wav",
+    "measured": true
   },
   {
     "id": "N065",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 6.3,
+    "duration": 8.916,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N065.wav",
+    "measured": true
   },
   {
     "id": "N066",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 30,
+    "duration": 32.601,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N066.wav",
+    "measured": true
   },
   {
     "id": "N067",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 12.1,
+    "duration": 9.52,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N067.wav",
+    "measured": true
   },
   {
     "id": "N068",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 11.4,
+    "duration": 9.706,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N068.wav",
+    "measured": true
   },
   {
     "id": "N069",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 20.9,
+    "duration": 31.997,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N069.wav",
+    "measured": true
   },
   {
     "id": "N070",
     "title": "FINALE — LA FRONTIÈRE",
-    "duration": 6,
+    "duration": 8.313,
     "shots": 3,
-    "audio": null,
-    "measured": false
+    "audio": "films/01-illusion-frontiere/audio/blocks/N070.wav",
+    "measured": true
   }
 ]

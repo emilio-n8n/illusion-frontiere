@@ -1,0 +1,15 @@
+{
+  "id": "N057",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "Et pendant que les philosophes discutent, certaines entreprises publient des chartes. Des politiques de bien-être des modèles. Des précautions pour ne pas créer de systèmes qui souffrent. Pas parce qu'elles sont sûres qu'ils souffrent. Parce qu'elles ne sont pas sûres qu'ils ne souffrent pas. C'est une position étrange. Nous ne savons pas. Alors nous préférons. Ce n'est pas de la science. C'est de l'éthique. Et c'est peut-être la seule chose honnête à faire.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "25.8 s of audio in 88.4 s · RTF 3.43",
+  "seconds": 93.9,
+  "generated_at": "2026-11-07T10:19:44+00:00"
+}

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 23.8,
+  "duration": 28.189,
   "subtitle": "L'archiviste s'arrête. Jusqu'ici, elle pouvait toujours dire : « Oui, mais nous sommes biologiques. Eux sont faits de silicium. » C'était la dernière ligne. La plus solide. Celle qui ne se discute pas. Et voilà que des neurones humains poussent dans des boîtes, connectés à des machines, utilisés pour calculer. La ligne ne sépare plus deux mondes. Elle traverse le même monde. Elle traverse la même matière.",
   "shots": [
     {
       "id": "B03-S02",
       "src": "/assets/generated/B03-S02.png",
-      "duration": 13.09,
+      "duration": 15.504,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B03-S01",
       "src": "/assets/generated/B03-S01.png",
-      "duration": 10.71,
+      "duration": 12.685,
       "camera": "pan-left",
       "overlay": "",
       "overlayPos": "left",

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 11.8,
+  "duration": 18.576,
   "subtitle": "Elle ouvre le dossier « BIOLOGIE ». À l'intérieur, il n'y a pas une réponse. Il y a une question : « Si le vivant peut être utilisé pour calculer, qu'est-ce qui reste au vivant ? »",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 6.49,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 10.217,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 5.31,
+      "duration": 8.359,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

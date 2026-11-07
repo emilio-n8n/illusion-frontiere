@@ -10,7 +10,7 @@
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
+      "src": "/out/blender/shots/B00-S01.mp4",
       "duration": 8,
       "camera": "push-in",
       "overlay": "BUREAU DES FRONTIÈRES",

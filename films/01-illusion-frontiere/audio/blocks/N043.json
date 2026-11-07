@@ -1,0 +1,15 @@
+{
+  "id": "N043",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Comment on lui apprend ça ? On lui montre des exemples. On lui fait comparer deux réponses. On lui dit laquelle est meilleure. Des millions de fois. C'est ce qu'on appelle l'apprentissage par retour humain. On ne lui apprend pas le vrai. On lui apprend le préféré. Et ce que nous préférons dépend de qui nous sommes.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "19.7 s of audio in 68.8 s · RTF 3.49",
+  "seconds": 86.0,
+  "generated_at": "2026-11-07T10:03:41+00:00"
+}

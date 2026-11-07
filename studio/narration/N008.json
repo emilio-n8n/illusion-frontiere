@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 19,
+  "duration": 20.248,
   "subtitle": "Ce bureau n'existe pas. Vous l'avez compris. Mais vous y êtes déjà entré. Chaque fois que vous avez dit « nous, les humains », vous avez ouvert un tiroir. Chaque fois que vous avez dit « ils ne sont pas comme nous », vous avez poussé une chemise. Ce soir, l'archiviste, c'est un peu vous.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 8.55,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 9.112,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 5.7,
+      "duration": 6.074,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 4.75,
+      "duration": 5.062,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 12.1,
+  "duration": 15.697,
   "subtitle": "Imaginez une pièce, sous un bâtiment dont personne ne connaît le nom. Une pièce que personne ne visite. Pas des archives. Pas des serveurs. Des tiroirs. Des centaines. Des milliers. Peut-être plus.",
   "shots": [
     {
       "id": "B00-S01",
-      "src": "/assets/generated/B00-S01.png",
-      "duration": 5.445,
+      "src": "/out/blender/shots/B00-S01.mp4",
+      "duration": 7.064,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B00-S02",
       "src": "/assets/generated/B00-S02.png",
-      "duration": 3.63,
+      "duration": 4.709,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
@@ -34,7 +34,7 @@
     {
       "id": "B00-S03",
       "src": "/assets/generated/B00-S03.png",
-      "duration": 3.025,
+      "duration": 3.924,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

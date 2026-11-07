@@ -6,13 +6,13 @@
   "height": 1080,
   "fadeIn": 0.18,
   "fadeOut": 0.18,
-  "duration": 7.4,
+  "duration": 7.941,
   "subtitle": "Elle croyait avoir trois dossiers. Mais sous les trois autres, il y en avait un quatrième. Sur l'étiquette : ÉMOTION.",
   "shots": [
     {
       "id": "B04-S03",
       "src": "/assets/generated/B04-S03.png",
-      "duration": 4.07,
+      "duration": 4.368,
       "camera": "static",
       "overlay": "",
       "overlayPos": "left",
@@ -23,7 +23,7 @@
     {
       "id": "B04-S01",
       "src": "/assets/generated/B04-S01.png",
-      "duration": 3.33,
+      "duration": 3.573,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",

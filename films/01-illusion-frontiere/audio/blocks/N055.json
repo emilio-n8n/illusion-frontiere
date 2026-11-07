@@ -1,0 +1,15 @@
+{
+  "id": "N055",
+  "act": "ACTE V — CONSCIENCE",
+  "text": "En 1950, Alan Turing propose un test. Un juge converse avec deux interlocuteurs, sans les voir. L'un est humain, l'autre est une machine. Si le juge ne peut pas distinguer, la machine a gagné. Le test ne mesure pas la conscience. Il mesure l'imitation. Et pourtant, nous continuons à l'utiliser comme une frontière. Comme si le fait de ne pas pouvoir distinguer suffisait à effacer la différence.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "24.8 s of audio in 86.3 s · RTF 3.48",
+  "seconds": 96.8,
+  "generated_at": "2026-11-07T10:16:39+00:00"
+}

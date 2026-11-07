@@ -1,0 +1,15 @@
+{
+  "id": "N045",
+  "act": "ACTE IV — ÉMOTION",
+  "text": "Des milliers de personnes parlent aujourd'hui à des programmes. Elles leur racontent leur journée, leurs peurs, leurs rêves. Certaines finissent par croire qu'elles sont aimées. Beaucoup savent que c'est un programme. Elles le savent. Et pourtant, ce qu'elles ressentent est réel. La solitude, le besoin d'être entendues, la chaleur d'une réponse à trois heures du matin. Tout ça est réel. Le problème n'est pas que la machine mente. Le problème, c'est que l'humain, lui, ne ment pas.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": "assets/voice-test/reference.wav",
+  "reference_transcript": "aujourd'hui on va parler d'un sujet qui passionne et qui intrigue la plupart d'entre nous : les ordinateurs organiques",
+  "server_status": "29.3 s of audio in 99.1 s · RTF 3.39",
+  "seconds": 108.1,
+  "generated_at": "2026-11-07T10:08:19+00:00"
+}
