@@ -58,6 +58,13 @@ node studio/render_block.mjs --block B00 --dir blocks --out out/blocks/B00.mp4 -
 
 # tous les blocs prêts, puis concat
 node studio/render_all.mjs --dir blocks --scale 1 --parallel 4 --concat
+
+# une fois la voix mesurée et les blocs reconstruits : voix + image
+python3 tools/measure_audio.py
+node studio/build_narration_blocks.mjs
+node studio/render_all.mjs --dir narration --scale 1 --parallel 4
+node studio/mux_voice.mjs
+node studio/concat.mjs --dir voiced --out out/film-voiced.mp4
 ```
 
 ## Rendu
