@@ -130,7 +130,7 @@ for li, (count, x) in enumerate(zip(LAYERS, XS)):
         hero_red = (li == 0 and i == 2) or (li == 1 and i == 1)
         hero_blue = (li == 2 and i == 1)
         mat = mat_red if hero_red else (mat_blue if (hero_blue or (li == 1)) else mat_blue_dim)
-        bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=3, radius=0.22, location=pos)
+        bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=0.22, location=pos)
         ob = bpy.context.active_object
         ob.name = f"Node-L{li}-{i}"
         ob.data.materials.append(mat)
@@ -147,7 +147,7 @@ def cylinder_between(a, b, radius, mat, name):
     d = b - a
     length = d.length
     mid = (a + b) / 2
-    bpy.ops.mesh.primitive_cylinder_add(radius=radius, depth=1, location=mid)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=12, radius=radius, depth=1, location=mid)
     ob = bpy.context.active_object
     ob.name = name
     ob.rotation_euler = d.to_track_quat("Z", "Y").to_euler()
@@ -275,10 +275,20 @@ if ARGS.engine == "cycles":
             print(f"  [warn] gpu setup ({exc}), falling back to CPU")
             cycles.device = "CPU"
     safe_set(cycles, "use_denoising", True)
+    try:
+        cycles.denoiser = "OPTIX"  # GPU denoiser, much faster than OIDN here
+    except Exception:
+        pass
     # cheap scene: emissive materials barely need indirect bounces
-    safe_set(cycles, "diffuse_bounces", 2)
+    safe_set(cycles, "diffuse_bounces", 1)
     safe_set(cycles, "glossy_bounces", 2)
     safe_set(cycles, "transmission_bounces", 0)
+    safe_set(cycles, "caustics_reflective", False)
+    safe_set(cycles, "caustics_refractive", False)
+    # keep BVH and textures between frames: the big win on animated scenes
+    safe_set(render, "use_persistent_data", True)
+    safe_set(render, "tile_x", 512)
+    safe_set(render, "tile_y", 512)
 else:
     try:
         render.engine = "BLENDER_EEVEE"
