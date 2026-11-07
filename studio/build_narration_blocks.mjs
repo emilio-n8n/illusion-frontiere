@@ -9,11 +9,19 @@ import path from 'node:path';
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const blocksPath = path.join(root, 'films/01-illusion-frontiere/script/blocks.json');
 const shotsPath = path.join(root, 'films/01-illusion-frontiere/storyboard/shots.json');
+const shotsV2Path = path.join(root, 'films/01-illusion-frontiere/storyboard/shots-v2.json');
+const mapPath = path.join(root, 'films/01-illusion-frontiere/storyboard/narration-map.json');
 const outDir = path.join(root, 'studio/narration');
 
 const data = JSON.parse(fs.readFileSync(blocksPath, 'utf8'));
 const storyboard = JSON.parse(fs.readFileSync(shotsPath, 'utf8'));
 const shotMap = new Map(storyboard.shots.map(s => [s.id, s]));
+if (fs.existsSync(shotsV2Path)) {
+  for (const s of JSON.parse(fs.readFileSync(shotsV2Path, 'utf8')).shots) shotMap.set(s.id, s);
+}
+const narrationMap = fs.existsSync(mapPath)
+  ? JSON.parse(fs.readFileSync(mapPath, 'utf8'))
+  : {};
 
 function weights(n) {
   if (n <= 1) return [1];
@@ -35,12 +43,14 @@ function shotSrc(id) {
 }
 
 for (const block of data.blocks) {
-  const ids = (block.suggestedShots && block.suggestedShots.length ? block.suggestedShots : ['B00-S01'])
-    .filter(id => shotMap.has(id));
+  const mapped = narrationMap[block.id];
+  const ids = (mapped && mapped.length ? mapped
+    : (block.suggestedShots && block.suggestedShots.length ? block.suggestedShots : ['B00-S01']))
+    .filter(id => shotMap.has(id) || fs.existsSync(path.join(root, 'assets/generated', `${id}.png`)));
   const w = weights(ids.length);
   let allocated = 0;
   const shots = ids.map((id, i) => {
-    const src = shotMap.get(id);
+    const src = shotMap.get(id) || { camera: i === 0 ? 'push-in' : 'pan-right', seed: 0, title: block.act };
     const last = i === ids.length - 1;
     const duration = last
       ? Math.max(.5, block.seconds - allocated)
