@@ -8,9 +8,13 @@ on:
         required: true
         default: "neural_net"
       frames:
-        description: "number of frames"
+        description: "total frames"
         required: true
         default: "144"
+      chunks:
+        description: "parallel jobs to split the frame range into"
+        required: true
+        default: "8"
       res:
         description: "resolution percentage (100 = 1080p)"
         required: true
@@ -28,9 +32,39 @@ permissions:
   contents: read
 
 jobs:
-  render:
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    outputs:
+      matrix: ${{ steps.set.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: set
+        shell: bash
+        run: |
+          python3 - <<'PY' > chunk_matrix.json
+          import json, math
+          frames = int("${{ inputs.frames }}")
+          chunks = max(1, int("${{ inputs.chunks }}"))
+          size = math.ceil(frames / chunks)
+          matrix = []
+          c = 0; s = 1
+          while s <= frames:
+              e = min(frames, s + size - 1)
+              matrix.append({"chunk": c, "start": s, "end": e})
+              s = e + 1; c += 1
+          print(json.dumps(matrix))
+          PY
+          echo "matrix=$(cat chunk_matrix.json)" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        part: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -55,33 +89,52 @@ jobs:
           echo "/tmp/blender" >> "$GITHUB_PATH"
           blender --version | head -1
 
-      - name: Install system deps (ffmpeg + GL/EGL for headless EEVEE)
+      - name: Install system deps (GL/EGL for headless EEVEE)
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            ffmpeg libgl1 libegl1 libgles2 libxkbcommon0 libx11-6 libxext6 \
+            libgl1 libegl1 libgles2 libxkbcommon0 libx11-6 libxext6 \
             libxi6 libxrandr2 libxxf86vm1 libglu1-mesa libsm6 libice6 \
             libxfixes3 libxrender1 libfontconfig1
 
-      - name: Render scene
+      - name: Render chunk ${{ matrix.part.chunk }}
         env:
           LIBGL_ALWAYS_SOFTWARE: "1"
         run: |
           blender -b --python "blender/${{ inputs.scene }}.py" -- \
             --frames "${{ inputs.frames }}" \
+            --frame-start "${{ matrix.part.start }}" \
+            --frame-end "${{ matrix.part.end }}" \
             --res "${{ inputs.res }}" \
             --samples "${{ inputs.samples }}" \
             --engine "${{ inputs.engine }}" \
-            --out "out/blender/${{ inputs.scene }}"
+            --out "out/blender/${{ inputs.scene }}/chunk-${{ matrix.part.chunk }}"
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: blender-${{ inputs.scene }}-chunk-${{ matrix.part.chunk }}
+          path: out/blender/${{ inputs.scene }}/chunk-${{ matrix.part.chunk }}
+          if-no-files-found: error
+          retention-days: 3
+
+  join:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: blender-${{ inputs.scene }}-chunk-*
+          merge-multiple: true
+          path: out/blender/${{ inputs.scene }}/frames
       - name: Encode (glow + grade + grain)
         run: |
           ffmpeg -y -loglevel error -framerate 24 \
-            -i "out/blender/${{ inputs.scene }}/frame-%04d.png" \
-            -vf "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,eq=saturation=0.85:contrast=1.06,vignette=PI/4,colorbalance=bs=0.08:bm=0.02:hs=-0.02,noise=alls=8:allf=t" \
+            -i "out/blender/${{ inputs.scene }}/frames/frame-%04d.png" \
+            -vf "split[a][b];[b]gblur=sigma=10[b];[a][b]blend=screen,eq=saturation=0.85:contrast=1.06,vignette=PI/4,colorbalance=bs=0.10:bm=0.04,noise=alls=8:allf=t" \
             -c:v libx264 -preset medium -crf 18 -pix_fmt yuv420p -movflags +faststart \
             "out/blender/${{ inputs.scene }}.mp4"
-
       - uses: actions/upload-artifact@v4
         with:
           name: blender-${{ inputs.scene }}

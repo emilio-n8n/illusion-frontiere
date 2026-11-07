@@ -26,9 +26,13 @@ def parse_args():
     argv = argv[argv.index("--") + 1:] if "--" in argv else []
     ap = argparse.ArgumentParser()
     ap.add_argument("--frames", type=int, default=144)
+    ap.add_argument("--frame-start", type=int, default=None, help="render from this frame")
+    ap.add_argument("--frame-end", type=int, default=None, help="render up to this frame")
     ap.add_argument("--res", type=int, default=100, help="resolution percentage")
     ap.add_argument("--samples", type=int, default=64)
     ap.add_argument("--engine", default="eevee", choices=["eevee", "cycles"])
+    ap.add_argument("--device", default="CPU", choices=["CPU", "CUDA", "OPTIX"],
+                    help="cycles compute device (Colab T4: OPTIX)")
     ap.add_argument("--seed", type=int, default=7001)
     ap.add_argument("--out", default="/tmp/blender-out/B01-S03")
     return ap.parse_args(argv)
@@ -86,8 +90,8 @@ def principled_mat(name, base_color, metallic=0.0, roughness=0.5):
 # ---------------------------------------------------------------- build
 clear_scene()
 scene = bpy.context.scene
-scene.frame_start = 1
-scene.frame_end = max(1, ARGS.frames)
+scene.frame_start = ARGS.frame_start if ARGS.frame_start is not None else 1
+scene.frame_end = ARGS.frame_end if ARGS.frame_end is not None else max(1, ARGS.frames)
 
 BLUE = (0.20, 0.45, 0.55)
 BLUE_DIM = (0.10, 0.22, 0.28)
@@ -255,7 +259,20 @@ if ARGS.engine == "cycles":
     render.engine = "CYCLES"
     cycles = scene.cycles
     cycles.samples = ARGS.samples
-    cycles.device = "CPU"
+    if ARGS.device == "CPU":
+        cycles.device = "CPU"
+    else:
+        # headless GPU (Colab T4): enable the compute device in prefs first
+        try:
+            prefs = bpy.context.preferences.addons["cycles"].preferences
+            prefs.compute_device_type = "CUDA"
+            prefs.get_devices()
+            for d in prefs.devices:
+                d.use = (d.type != "CPU")
+            cycles.device = "OPTIX" if ARGS.device == "OPTIX" else "CUDA"
+        except Exception as exc:
+            print(f"  [warn] gpu setup ({exc}), falling back to CPU")
+            cycles.device = "CPU"
     safe_set(cycles, "use_denoising", True)
 else:
     try:
