@@ -1,0 +1,61 @@
+{
+  "project": "01-illusion-frontiere",
+  "model": "ACE-Step 1.5 (DiT Turbo + 0.6B LM)",
+  "note": "All instrumental, no vocals. Durations are multiples of 10 (server constraint). Seeds fixed for reproducibility.",
+  "tracks": [
+    {
+      "id": "M00",
+      "title": "Prologue — drone du Bureau",
+      "style": "dark ambient drone, very slow evolving texture, deep sub bass, empty concrete room tone, faint electrical hum, no melody, no drums, no vocals, ominous and quiet",
+      "duration": 90,
+      "seed": 9001,
+      "bpm": 50,
+      "key": "D minor"
+    },
+    {
+      "id": "M01",
+      "title": "Apprendre — piano feutré",
+      "style": "minimalist ambient, soft felt piano single notes with long reverb, subtle low pulse emerging at the end, intimate and quiet, no drums, no vocals",
+      "duration": 90,
+      "seed": 9002,
+      "bpm": 60,
+      "key": "C major"
+    },
+    {
+      "id": "M02",
+      "title": "Mémoire — motif qui revient",
+      "style": "slow repetitive piano motif, prepared piano, tape hiss, a single melody that returns like a memory, 60 BPM, melancholic, no drums, no vocals",
+      "duration": 90,
+      "seed": 9003,
+      "bpm": 60,
+      "key": "A minor"
+    },
+    {
+      "id": "M03",
+      "title": "Le corps — tension",
+      "style": "dark tense ambient, bowed strings drone, low industrial rumble, rising tension without resolution, cinematic, no drums, no vocals",
+      "duration": 90,
+      "seed": 9004,
+      "bpm": 60,
+      "key": "D minor"
+    },
+    {
+      "id": "M04",
+      "title": "Émotion — 3h du matin",
+      "style": "intimate ambient piano, close and fragile, warm synth pad underneath, late night bedroom, very quiet, no drums, no vocals",
+      "duration": 90,
+      "seed": 9005,
+      "bpm": 55,
+      "key": "F major"
+    },
+    {
+      "id": "M05",
+      "title": "Finale — piano puis silence",
+      "style": "vast spacious ambient, deep strings, then piano alone with long resonance fading into silence, emotional and minimal, no drums, no vocals",
+      "duration": 120,
+      "seed": 9006,
+      "bpm": 50,
+      "key": "D minor"
+    }
+  ]
+}
