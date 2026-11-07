@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 29.861,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N014-A",
+      "src": "/assets/generated/N014-A.png",
       "duration": 16.424,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100130,
+      "title": "L'enfant ne tombe pas pour optimiser sa marche. Il tombe par"
     },
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N014-B",
+      "src": "/assets/generated/N014-B.png",
       "duration": 13.437,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100131,
+      "title": "L'enfant ne tombe pas pour optimiser sa marche. Il tombe par"
     }
   ]
 }

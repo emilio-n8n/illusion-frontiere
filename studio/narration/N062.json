@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 34.551,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 15.548,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 10.365,
+      "id": "N062-A",
+      "src": "/assets/generated/N062-A.png",
+      "duration": 19.003,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100610,
+      "title": "Présumé. Le mot est là, en petits caractères. Elle ne l'avai"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 8.638,
-      "camera": "push-out",
+      "id": "N062-B",
+      "src": "/assets/generated/N062-B.png",
+      "duration": 15.548,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100611,
+      "title": "Présumé. Le mot est là, en petits caractères. Elle ne l'avai"
     }
   ]
 }

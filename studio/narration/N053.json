@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 26.378,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N053-A",
+      "src": "/assets/generated/N053-A.png",
       "duration": 14.508,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 11.87,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100520,
+      "title": "Alors, pourquoi serions-nous sûrs qu'une machine n'a pas de "
+    },
+    {
+      "id": "N053-B",
+      "src": "/assets/generated/N053-B.png",
+      "duration": 11.87,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100521,
+      "title": "Alors, pourquoi serions-nous sûrs qu'une machine n'a pas de "
     }
   ]
 }

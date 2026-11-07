@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 41.982,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
+      "id": "N025-A",
+      "src": "/assets/generated/N025-A.png",
       "duration": 23.09,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
+      "seed": 100240,
+      "title": "Elle déplace le dossier. Pas dans le tiroir EUX. Pas dans le"
     },
     {
-      "id": "B00-S02",
-      "src": "/assets/clips/B00-S02.mp4",
+      "id": "N025-B",
+      "src": "/assets/generated/N025-B.png",
       "duration": 18.892,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7002,
-      "title": "Le dossier"
+      "seed": 100241,
+      "title": "Elle déplace le dossier. Pas dans le tiroir EUX. Pas dans le"
     }
   ]
 }

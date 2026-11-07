@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 23.87,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B02-S03",
-      "src": "/assets/clips/B02-S03.mp4",
+      "id": "N024-A",
+      "src": "/assets/generated/N024-A.png",
       "duration": 13.129,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7203,
-      "title": "Le scanner"
+      "seed": 100230,
+      "title": "Alors, la mémoire est-elle une différence ? L'archiviste écr"
     },
     {
-      "id": "B02-S01",
-      "src": "/assets/clips/B02-S01.mp4",
+      "id": "N024-B",
+      "src": "/assets/generated/N024-B.png",
       "duration": 10.741,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7201,
-      "title": "H.M., la fenêtre"
+      "seed": 100231,
+      "title": "Alors, la mémoire est-elle une différence ? L'archiviste écr"
     }
   ]
 }

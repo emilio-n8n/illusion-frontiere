@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 17.694,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N031-A",
+      "src": "/assets/generated/N031-A.png",
       "duration": 9.732,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100300,
+      "title": "Et pourtant, nous sommes en train de construire des machines"
     },
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N031-B",
+      "src": "/assets/generated/N031-B.png",
       "duration": 7.962,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100301,
+      "title": "Et pourtant, nous sommes en train de construire des machines"
     }
   ]
 }

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 10.31,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B05-S02",
-      "src": "/assets/clips/B05-S02.mp4",
+      "id": "N059-A",
+      "src": "/assets/generated/N059-A.png",
       "duration": 5.671,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7502,
-      "title": "Le miroir"
+      "seed": 100580,
+      "title": "Elle referme le dossier. Elle regarde le meuble. Pour la pre"
     },
     {
-      "id": "B05-S03",
-      "src": "/assets/clips/B05-S03.mp4",
+      "id": "N059-B",
+      "src": "/assets/generated/N059-B.png",
       "duration": 4.639,
-      "camera": "static",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7503,
-      "title": "La salle du test"
+      "seed": 100581,
+      "title": "Elle referme le dossier. Elle regarde le meuble. Pour la pre"
     }
   ]
 }

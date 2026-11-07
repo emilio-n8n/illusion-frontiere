@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 33.808,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N047-A",
+      "src": "/assets/generated/N047-A.png",
       "duration": 18.594,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 15.214,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100460,
+      "title": "L'archiviste ne classe pas le dossier ÉMOTION. Elle le dupli"
+    },
+    {
+      "id": "N047-B",
+      "src": "/assets/generated/N047-B.png",
+      "duration": 15.214,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100461,
+      "title": "L'archiviste ne classe pas le dossier ÉMOTION. Elle le dupli"
     }
   ]
 }

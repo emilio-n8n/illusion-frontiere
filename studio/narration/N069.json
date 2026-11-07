@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 31.997,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 14.399,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 9.599,
+      "id": "N069-A",
+      "src": "/assets/generated/N069-A.png",
+      "duration": 17.598,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100680,
+      "title": "Vous avez un corps. Vous avez une mémoire. Vous avez peur, p"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 7.999,
-      "camera": "push-out",
+      "id": "N069-B",
+      "src": "/assets/generated/N069-B.png",
+      "duration": 14.399,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100681,
+      "title": "Vous avez un corps. Vous avez une mémoire. Vous avez peur, p"
     }
   ]
 }

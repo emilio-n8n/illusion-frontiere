@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 32.183,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N010-A",
+      "src": "/assets/generated/N010-A.png",
       "duration": 17.701,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100090,
+      "title": "Un enfant apprend à marcher. Il ne lit pas de manuel. Person"
     },
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N010-B",
+      "src": "/assets/generated/N010-B.png",
       "duration": 14.482,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100091,
+      "title": "Un enfant apprend à marcher. Il ne lit pas de manuel. Person"
     }
   ]
 }

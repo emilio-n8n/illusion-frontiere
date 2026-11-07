@@ -8,39 +8,36 @@
   "fadeOut": 0.18,
   "duration": 8.313,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "frontier",
+      "label": "LA FRONTIÈRE",
+      "at": 0.4,
+      "dur": 5.2
+    }
+  ],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 3.741,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 2.494,
+      "id": "N070-A",
+      "src": "/assets/generated/N070-A.png",
+      "duration": 4.572,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100690,
+      "title": "La frontière n'a jamais été une ligne. C'est une question. E"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 2.078,
-      "camera": "push-out",
+      "id": "N070-B",
+      "src": "/assets/generated/N070-B.png",
+      "duration": 3.741,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100691,
+      "title": "La frontière n'a jamais été une ligne. C'est une question. E"
     }
   ]
 }

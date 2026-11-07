@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 19.83,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 8.923,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 5.949,
+      "id": "N064-A",
+      "src": "/assets/generated/N064-A.png",
+      "duration": 10.907,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100630,
+      "title": "Alors, la frontière n'est pas entre l'homme et la machine. L"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 4.958,
-      "camera": "push-out",
+      "id": "N064-B",
+      "src": "/assets/generated/N064-B.png",
+      "duration": 8.923,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100631,
+      "title": "Alors, la frontière n'est pas entre l'homme et la machine. L"
     }
   ]
 }

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 16.858,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N017-A",
+      "src": "/assets/generated/N017-A.png",
       "duration": 9.272,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100160,
+      "title": "Alors, quand il répond, il ne puise pas dans une expérience."
     },
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N017-B",
+      "src": "/assets/generated/N017-B.png",
       "duration": 7.586,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100161,
+      "title": "Alors, quand il répond, il ne puise pas dans une expérience."
     }
   ]
 }

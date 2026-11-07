@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 9.706,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 4.368,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 2.912,
+      "id": "N068-A",
+      "src": "/assets/generated/N068-A.png",
+      "duration": 5.338,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100670,
+      "title": "Le dossier de la conscience est vide. Il l'a toujours été. M"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 2.426,
-      "camera": "push-out",
+      "id": "N068-B",
+      "src": "/assets/generated/N068-B.png",
+      "duration": 4.368,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100671,
+      "title": "Le dossier de la conscience est vide. Il l'a toujours été. M"
     }
   ]
 }

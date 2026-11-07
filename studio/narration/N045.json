@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 29.257,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N045-A",
+      "src": "/assets/generated/N045-A.png",
       "duration": 16.091,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 13.166,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100440,
+      "title": "Des milliers de personnes parlent aujourd'hui à des programm"
+    },
+    {
+      "id": "N045-B",
+      "src": "/assets/generated/N045-B.png",
+      "duration": 13.166,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100441,
+      "title": "Des milliers de personnes parlent aujourd'hui à des programm"
     }
   ]
 }

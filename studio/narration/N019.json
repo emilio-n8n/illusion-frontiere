@@ -8,28 +8,18 @@
   "fadeOut": 0.18,
   "duration": 3.901,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
-      "duration": 2.146,
+      "id": "N019-A",
+      "src": "/assets/generated/N019-A.png",
+      "duration": 3.901,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
-    },
-    {
-      "id": "B00-S02",
-      "src": "/assets/clips/B00-S02.mp4",
-      "duration": 1.755,
-      "camera": "push-in",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7002,
-      "title": "Le dossier"
+      "seed": 100180,
+      "title": "Un dossier de plus. Une frontière de moins."
     }
   ]
 }

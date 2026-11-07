@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 23.174,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S03",
-      "src": "/assets/clips/B03-S03.mp4",
+      "id": "N033-A",
+      "src": "/assets/generated/N033-A.png",
       "duration": 12.746,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7303,
-      "title": "Les neurones dans la boîte"
+      "seed": 100320,
+      "title": "Leur article s'appelle, en substance : « Des neurones in vit"
     },
     {
-      "id": "B03-S04",
-      "src": "/assets/clips/B03-S04.mp4",
+      "id": "N033-B",
+      "src": "/assets/generated/N033-B.png",
       "duration": 10.428,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7304,
-      "title": "Le laboratoire des organoïdes"
+      "seed": 100321,
+      "title": "Leur article s'appelle, en substance : « Des neurones in vit"
     }
   ]
 }

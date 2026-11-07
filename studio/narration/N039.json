@@ -8,28 +8,18 @@
   "fadeOut": 0.18,
   "duration": 7.941,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B04-S03",
-      "src": "/assets/clips/B04-S03.mp4",
-      "duration": 4.368,
-      "camera": "static",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7403,
-      "title": "La chaise vide"
-    },
-    {
-      "id": "B04-S01",
-      "src": "/assets/clips/B04-S01.mp4",
-      "duration": 3.573,
+      "id": "N039-A",
+      "src": "/assets/generated/N039-A.png",
+      "duration": 7.941,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7401,
-      "title": "La femme et le téléphone"
+      "seed": 100380,
+      "title": "Elle croyait avoir trois dossiers. Mais sous les trois autre"
     }
   ]
 }

@@ -8,28 +8,18 @@
   "fadeOut": 0.18,
   "duration": 7.616,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B05-S01",
-      "src": "/assets/clips/B05-S01.mp4",
-      "duration": 4.189,
+      "id": "N049-A",
+      "src": "/assets/generated/N049-A.png",
+      "duration": 7.616,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7501,
-      "title": "L'IRM"
-    },
-    {
-      "id": "B05-S02",
-      "src": "/assets/clips/B05-S02.mp4",
-      "duration": 3.427,
-      "camera": "push-in",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7502,
-      "title": "Le miroir"
+      "seed": 100480,
+      "title": "Il reste une différence. La plus profonde. Celle que personn"
     }
   ]
 }

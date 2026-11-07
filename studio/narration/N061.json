@@ -8,39 +8,41 @@
   "fadeOut": 0.18,
   "duration": 47.554,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "redact",
+      "label": "DOSSIER 01",
+      "stamp": "CONSCIENT : PRÉSUMÉ",
+      "at": 44.39,
+      "dur": 3.16,
+      "x": 690,
+      "y": 330,
+      "w": 560,
+      "h": 300
+    }
+  ],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 21.399,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 14.266,
+      "id": "N061-A",
+      "src": "/assets/generated/N061-A.png",
+      "duration": 26.155,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100600,
+      "title": "Elle l'ouvre. À l'intérieur, il n'y a pas de rapport. Pas de"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 11.889,
-      "camera": "push-out",
+      "id": "N061-B",
+      "src": "/assets/generated/N061-B.png",
+      "duration": 21.399,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100601,
+      "title": "Elle l'ouvre. À l'intérieur, il n'y a pas de rapport. Pas de"
     }
   ]
 }

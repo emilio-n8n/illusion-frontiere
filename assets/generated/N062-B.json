@@ -1,0 +1,17 @@
+{
+  "id": "N062-B",
+  "block": "N062",
+  "act": "FINALE — LA FRONTIÈRE",
+  "title": "Présumé. Le mot est là, en petits caractères. Elle ne l'avai",
+  "prompt": "A projector screen going dark, dust in the beam, a dark archive around it. Over-the-shoulder shot, 40mm lens, the subject soft in the foreground, the room sharp beyond. Cold steel-blue window light from the left, a single warm burgundy practical lamp, thin volumetric haze. Photorealistic, one coherent physical space, a believable light source, quiet negative space for typography, clean unmarked surfaces, no text. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 100611,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://e6eff52740741708d0.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 31.4s (31.4s/image) | Seeds: [100611] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 37.7,
+  "generated_at": "2026-11-07T19:10:10+00:00"
+}

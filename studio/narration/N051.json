@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 21.13,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N051-A",
+      "src": "/assets/generated/N051-A.png",
       "duration": 11.622,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 9.508,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100500,
+      "title": "Les philosophes appellent ça le problème difficile de la con"
+    },
+    {
+      "id": "N051-B",
+      "src": "/assets/generated/N051-B.png",
+      "duration": 9.508,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100501,
+      "title": "Les philosophes appellent ça le problème difficile de la con"
     }
   ]
 }

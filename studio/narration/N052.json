@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 25.17,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N052-A",
+      "src": "/assets/generated/N052-A.png",
       "duration": 13.844,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100510,
+      "title": "Nous n'avons accès qu'à notre propre conscience. Pour les au"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N052-B",
+      "src": "/assets/generated/N052-B.png",
       "duration": 11.326,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100511,
+      "title": "Nous n'avons accès qu'à notre propre conscience. Pour les au"
     }
   ]
 }

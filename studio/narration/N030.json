@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 19.598,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
+      "id": "N030-A",
+      "src": "/assets/generated/N030-A.png",
       "duration": 10.779,
-      "camera": "static",
+      "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100290,
+      "title": "Un robot peut avoir des capteurs. Il peut détecter une surch"
     },
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N030-B",
+      "src": "/assets/generated/N030-B.png",
       "duration": 8.819,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
+      "seed": 100291,
+      "title": "Un robot peut avoir des capteurs. Il peut détecter une surch"
     }
   ]
 }

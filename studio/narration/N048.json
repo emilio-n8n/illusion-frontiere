@@ -8,28 +8,18 @@
   "fadeOut": 0.18,
   "duration": 6.548,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 3.601,
+      "id": "N048-A",
+      "src": "/assets/generated/N048-A.png",
+      "duration": 6.548,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
-    },
-    {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
-      "duration": 2.947,
-      "camera": "push-in",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
+      "seed": 100470,
+      "title": "Un dossier de plus. Une frontière de moins. Et une question "
     }
   ]
 }

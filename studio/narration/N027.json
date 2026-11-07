@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 21.084,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
+      "id": "N027-A",
+      "src": "/assets/generated/N027-A.png",
       "duration": 11.596,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100260,
+      "title": "Elle commence à comprendre quelque chose. Le meuble ne se vi"
     },
     {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
+      "id": "N027-B",
+      "src": "/assets/generated/N027-B.png",
       "duration": 9.488,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
+      "seed": 100261,
+      "title": "Elle commence à comprendre quelque chose. Le meuble ne se vi"
     }
   ]
 }

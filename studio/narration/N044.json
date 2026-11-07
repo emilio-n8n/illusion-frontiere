@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 47.554,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B05-S02",
-      "src": "/assets/clips/B05-S02.mp4",
+      "id": "N044-A",
+      "src": "/assets/generated/N044-A.png",
       "duration": 26.155,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7502,
-      "title": "Le miroir"
+      "seed": 100430,
+      "title": "Mais voici la question qui dérange. Est-ce que nous, nous fa"
     },
     {
-      "id": "B05-S03",
-      "src": "/assets/clips/B05-S03.mp4",
+      "id": "N044-B",
+      "src": "/assets/generated/N044-B.png",
       "duration": 21.399,
-      "camera": "static",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7503,
-      "title": "La salle du test"
+      "seed": 100431,
+      "title": "Mais voici la question qui dérange. Est-ce que nous, nous fa"
     }
   ]
 }

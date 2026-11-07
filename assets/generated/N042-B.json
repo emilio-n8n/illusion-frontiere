@@ -1,0 +1,17 @@
+{
+  "id": "N042-B",
+  "block": "N042",
+  "act": "ACTE IV — ÉMOTION",
+  "title": "Un modèle peut reconnaître une émotion dans un texte. Il peu",
+  "prompt": "A phone vibrating on a wooden table, motion blur, dark room, cold screen glow. Close-up, 85mm lens, very shallow depth of field, quiet negative space on one side. Soft cold moonlight through haze, muted burgundy midtones, deep shadow. Photorealistic, one coherent physical space, a believable light source, quiet negative space for typography, clean unmarked surfaces, no text. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 100411,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://e6eff52740741708d0.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 31.2s (31.2s/image) | Seeds: [100411] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 35.0,
+  "generated_at": "2026-11-07T18:46:44+00:00"
+}

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 24.66,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B05-S02",
-      "src": "/assets/clips/B05-S02.mp4",
+      "id": "N056-A",
+      "src": "/assets/generated/N056-A.png",
       "duration": 13.563,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7502,
-      "title": "Le miroir"
+      "seed": 100550,
+      "title": "Certains chercheurs proposent d'autres tests. La théorie de "
     },
     {
-      "id": "B05-S03",
-      "src": "/assets/clips/B05-S03.mp4",
+      "id": "N056-B",
+      "src": "/assets/generated/N056-B.png",
       "duration": 11.097,
-      "camera": "static",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7503,
-      "title": "La salle du test"
+      "seed": 100551,
+      "title": "Certains chercheurs proposent d'autres tests. La théorie de "
     }
   ]
 }

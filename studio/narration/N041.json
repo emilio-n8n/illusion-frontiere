@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 23.127,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N041-A",
+      "src": "/assets/generated/N041-A.png",
       "duration": 12.72,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 10.407,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100400,
+      "title": "Nous avons tendance à croire que les émotions sont l'intérie"
+    },
+    {
+      "id": "N041-B",
+      "src": "/assets/generated/N041-B.png",
+      "duration": 10.407,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100401,
+      "title": "Nous avons tendance à croire que les émotions sont l'intérie"
     }
   ]
 }

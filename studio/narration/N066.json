@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 32.601,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 14.67,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 9.78,
+      "id": "N066-A",
+      "src": "/assets/generated/N066-A.png",
+      "duration": 17.931,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100650,
+      "title": "Peut-être que la vraie différence n'est pas dans ce que nous"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 8.151,
-      "camera": "push-out",
+      "id": "N066-B",
+      "src": "/assets/generated/N066-B.png",
+      "duration": 14.67,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100651,
+      "title": "Peut-être que la vraie différence n'est pas dans ce que nous"
     }
   ]
 }

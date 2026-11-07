@@ -8,28 +8,57 @@
   "fadeOut": 0.18,
   "duration": 24.845,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "timeline",
+      "title": "LA FRONTIÈRE, MISE À L'ÉPREUVE",
+      "points": [
+        {
+          "year": "1950",
+          "label": "TURING"
+        },
+        {
+          "year": "1953",
+          "label": "H.M."
+        },
+        {
+          "year": "2022",
+          "label": "DISHBRAIN"
+        },
+        {
+          "year": "2024",
+          "label": "FINALSPARK"
+        }
+      ],
+      "at": 0.4,
+      "dur": 5.4,
+      "x": 200,
+      "y": 760,
+      "w": 1520
+    }
+  ],
   "shots": [
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N055-A",
+      "src": "/assets/generated/N055-A.png",
       "duration": 13.665,
-      "camera": "pan-left",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
-    },
-    {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
-      "duration": 11.18,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100540,
+      "title": "En 1950, Alan Turing propose un test. Un juge converse avec "
+    },
+    {
+      "id": "N055-B",
+      "src": "/assets/generated/N055-B.png",
+      "duration": 11.18,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100541,
+      "title": "En 1950, Alan Turing propose un test. Un juge converse avec "
     }
   ]
 }

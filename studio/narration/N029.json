@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 28.096,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N029-A",
+      "src": "/assets/generated/N029-A.png",
       "duration": 15.453,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100280,
+      "title": "Nous ne pensons pas avec un cerveau posé dans un bocal. Nous"
     },
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N029-B",
+      "src": "/assets/generated/N029-B.png",
       "duration": 12.643,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100281,
+      "title": "Nous ne pensons pas avec un cerveau posé dans un bocal. Nous"
     }
   ]
 }

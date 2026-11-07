@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 23.127,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N015-A",
+      "src": "/assets/generated/N015-A.png",
       "duration": 12.72,
+      "camera": "push-in",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100140,
+      "title": "Mais attention. Ce n'est pas si simple. Un modèle ne part pa"
+    },
+    {
+      "id": "N015-B",
+      "src": "/assets/generated/N015-B.png",
+      "duration": 10.407,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
-    },
-    {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
-      "duration": 10.407,
-      "camera": "static",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100141,
+      "title": "Mais attention. Ce n'est pas si simple. Un modèle ne part pa"
     }
   ]
 }

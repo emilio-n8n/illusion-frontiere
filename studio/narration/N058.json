@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 39.056,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B05-S01",
-      "src": "/assets/clips/B05-S01.mp4",
+      "id": "N058-A",
+      "src": "/assets/generated/N058-A.png",
       "duration": 21.481,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7501,
-      "title": "L'IRM"
+      "seed": 100570,
+      "title": "L'archiviste ouvre le dossier CONSCIENCE. Il est vide. Pas p"
     },
     {
-      "id": "B05-S02",
-      "src": "/assets/clips/B05-S02.mp4",
+      "id": "N058-B",
+      "src": "/assets/generated/N058-B.png",
       "duration": 17.575,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7502,
-      "title": "Le miroir"
+      "seed": 100571,
+      "title": "L'archiviste ouvre le dossier CONSCIENCE. Il est vide. Pas p"
     }
   ]
 }

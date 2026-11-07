@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 13.932,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N046-A",
+      "src": "/assets/generated/N046-A.png",
       "duration": 7.663,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100450,
+      "title": "Alors, la question n'est plus seulement : « Est-ce que la ma"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N046-B",
+      "src": "/assets/generated/N046-B.png",
       "duration": 6.269,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100451,
+      "title": "Alors, la question n'est plus seulement : « Est-ce que la ma"
     }
   ]
 }

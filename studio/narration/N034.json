@@ -8,28 +8,52 @@
   "fadeOut": 0.18,
   "duration": 28.793,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "bars",
+      "title": "NEURONES HUMAINS CULTIVÉS",
+      "bars": [
+        {
+          "label": "DISHBRAIN 2022",
+          "value": 800000,
+          "color": "red"
+        },
+        {
+          "label": "FINALSPARK 2024",
+          "value": 160000,
+          "color": "teal"
+        }
+      ],
+      "at": 12.47,
+      "dur": 5,
+      "x": 1080,
+      "y": 220,
+      "w": 660,
+      "barH": 12
+    }
+  ],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N034-A",
+      "src": "/assets/generated/N034-A.png",
       "duration": 15.836,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100330,
+      "title": "Depuis, d'autres équipes vont plus loin. FinalSpark, en Suis"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N034-B",
+      "src": "/assets/generated/N034-B.png",
       "duration": 12.957,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100331,
+      "title": "Depuis, d'autres équipes vont plus loin. FinalSpark, en Suis"
     }
   ]
 }

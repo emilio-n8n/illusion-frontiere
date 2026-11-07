@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 22.291,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N050-A",
+      "src": "/assets/generated/N050-A.png",
       "duration": 12.26,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100490,
+      "title": "Un système peut traiter de l'information. Il peut détecter u"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N050-B",
+      "src": "/assets/generated/N050-B.png",
       "duration": 10.031,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100491,
+      "title": "Un système peut traiter de l'information. Il peut détecter u"
     }
   ]
 }

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 28.189,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N036-A",
+      "src": "/assets/generated/N036-A.png",
       "duration": 15.504,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100350,
+      "title": "L'archiviste s'arrête. Jusqu'ici, elle pouvait toujours dire"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N036-B",
+      "src": "/assets/generated/N036-B.png",
       "duration": 12.685,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100351,
+      "title": "L'archiviste s'arrête. Jusqu'ici, elle pouvait toujours dire"
     }
   ]
 }

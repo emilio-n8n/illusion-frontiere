@@ -8,28 +8,41 @@
   "fadeOut": 0.18,
   "duration": 35.666,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "number",
+      "value": "800 000",
+      "label": "NEURONES HUMAINS CULTIVÉS",
+      "sublabel": "CORTICAL LABS — DISHBRAIN, 2022",
+      "at": 12.69,
+      "dur": 5,
+      "x": 120,
+      "y": 150,
+      "size": 104
+    }
+  ],
   "shots": [
     {
-      "id": "B03-S02",
-      "src": "/assets/clips/B03-S02.mp4",
+      "id": "N032-A",
+      "src": "/assets/generated/N032-A.png",
       "duration": 19.616,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7302,
-      "title": "La main coupée"
+      "seed": 100310,
+      "title": "Mais il y a quelque chose de plus troublant. En 2022, une éq"
     },
     {
-      "id": "B03-S01",
-      "src": "/assets/clips/B03-S01.mp4",
+      "id": "N032-B",
+      "src": "/assets/generated/N032-B.png",
       "duration": 16.05,
-      "camera": "pan-left",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7301,
-      "title": "Le bras robotisé"
+      "seed": 100311,
+      "title": "Mais il y a quelque chose de plus troublant. En 2022, une éq"
     }
   ]
 }

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 29.211,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B02-S02",
-      "src": "/assets/clips/B02-S02.mp4",
+      "id": "N023-A",
+      "src": "/assets/generated/N023-A.png",
       "duration": 16.066,
-      "camera": "pan-right",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7202,
-      "title": "La table des souvenirs"
-    },
-    {
-      "id": "B02-S03",
-      "src": "/assets/clips/B02-S03.mp4",
-      "duration": 13.145,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7203,
-      "title": "Le scanner"
+      "seed": 100220,
+      "title": "Et pourtant. Une mémoire humaine n'est pas non plus un disqu"
+    },
+    {
+      "id": "N023-B",
+      "src": "/assets/generated/N023-B.png",
+      "duration": 13.145,
+      "camera": "pan-right",
+      "overlay": "",
+      "overlayPos": "left",
+      "transition": "cut",
+      "seed": 100221,
+      "title": "Et pourtant. Une mémoire humaine n'est pas non plus un disqu"
     }
   ]
 }

@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 22.245,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
+      "id": "N018-A",
+      "src": "/assets/generated/N018-A.png",
       "duration": 12.235,
-      "camera": "static",
+      "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100170,
+      "title": "L'archiviste referme le dossier. Elle le pose sur la pile du"
     },
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N018-B",
+      "src": "/assets/generated/N018-B.png",
       "duration": 10.01,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
+      "seed": 100171,
+      "title": "L'archiviste referme le dossier. Elle le pose sur la pile du"
     }
   ]
 }

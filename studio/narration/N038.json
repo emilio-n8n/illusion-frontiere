@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 10.728,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B00-S02",
-      "src": "/assets/clips/B00-S02.mp4",
+      "id": "N038-A",
+      "src": "/assets/generated/N038-A.png",
       "duration": 5.9,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7002,
-      "title": "Le dossier"
+      "seed": 100370,
+      "title": "Elle ne déplace pas le dossier. Elle le laisse ouvert sur la"
     },
     {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
+      "id": "N038-B",
+      "src": "/assets/generated/N038-B.png",
       "duration": 4.828,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100371,
+      "title": "Elle ne déplace pas le dossier. Elle le laisse ouvert sur la"
     }
   ]
 }

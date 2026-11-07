@@ -8,28 +8,41 @@
   "fadeOut": 0.18,
   "duration": 37.616,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "brackets",
+      "label": "1953",
+      "sublabel": "MÉMOIRE",
+      "at": 0.4,
+      "dur": 5,
+      "x": 930,
+      "y": 190,
+      "w": 570,
+      "h": 680
+    }
+  ],
   "shots": [
     {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
+      "id": "N020-A",
+      "src": "/assets/generated/N020-A.png",
       "duration": 20.689,
-      "camera": "static",
+      "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100190,
+      "title": "En 1953, un homme de 27 ans subit une opération. On lui reti"
     },
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N020-B",
+      "src": "/assets/generated/N020-B.png",
       "duration": 16.927,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
+      "seed": 100191,
+      "title": "En 1953, un homme de 27 ans subit une opération. On lui reti"
     }
   ]
 }

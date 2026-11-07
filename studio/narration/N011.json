@@ -8,28 +8,44 @@
   "fadeOut": 0.18,
   "duration": 18.112,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "dots",
+      "value": 86,
+      "unit": "MILLIARDS",
+      "label": "NEURONES DANS UN CERVEAU D'ENFANT",
+      "legend": "1 POINT = 540 MILLIONS",
+      "at": 4.26,
+      "dur": 5.2,
+      "x": 1010,
+      "y": 150,
+      "w": 760,
+      "h": 470,
+      "highlight": 0.35
+    }
+  ],
   "shots": [
     {
-      "id": "B01-S01",
-      "src": "/assets/clips/B01-S01.mp4",
+      "id": "N011-A",
+      "src": "/assets/generated/N011-A.png",
       "duration": 9.962,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7101,
-      "title": "L'enfant qui tombe"
+      "seed": 100100,
+      "title": "À la naissance, le cerveau d'un enfant contient environ 86 m"
     },
     {
-      "id": "B01-S02",
-      "src": "/assets/clips/B01-S02.mp4",
+      "id": "N011-B",
+      "src": "/assets/generated/N011-B.png",
       "duration": 8.15,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7102,
-      "title": "Le visage de l'enfant"
+      "seed": 100101,
+      "title": "À la naissance, le cerveau d'un enfant contient environ 86 m"
     }
   ]
 }

@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 8.916,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 4.012,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 2.675,
+      "id": "N065-A",
+      "src": "/assets/generated/N065-A.png",
+      "duration": 4.904,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100640,
+      "title": "Un dossier de plus. Une frontière de moins. Et cette fois, c"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 2.229,
-      "camera": "push-out",
+      "id": "N065-B",
+      "src": "/assets/generated/N065-B.png",
+      "duration": 4.012,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100641,
+      "title": "Un dossier de plus. Une frontière de moins. Et cette fois, c"
     }
   ]
 }

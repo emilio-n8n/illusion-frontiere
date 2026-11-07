@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 18.576,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
+      "id": "N037-A",
+      "src": "/assets/generated/N037-A.png",
       "duration": 10.217,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
+      "seed": 100360,
+      "title": "Elle ouvre le dossier « BIOLOGIE ». À l'intérieur, il n'y a "
     },
     {
-      "id": "B00-S02",
-      "src": "/assets/clips/B00-S02.mp4",
+      "id": "N037-B",
+      "src": "/assets/generated/N037-B.png",
       "duration": 8.359,
-      "camera": "push-in",
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7002,
-      "title": "Le dossier"
+      "seed": 100361,
+      "title": "Elle ouvre le dossier « BIOLOGIE ». À l'intérieur, il n'y a "
     }
   ]
 }

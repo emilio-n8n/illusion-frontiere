@@ -1,0 +1,17 @@
+{
+  "id": "N056-B",
+  "block": "N056",
+  "act": "ACTE V — CONSCIENCE",
+  "title": "Certains chercheurs proposent d'autres tests. La théorie de ",
+  "prompt": "A mirror reflecting a blank projector screen in a dark room, dust, cold blue. Wide shot, 35mm anamorphic lens, deep spatial layering, foreground / subject / background. Dim monitor glow on skin and metal, teal shadows, a distant red emergency light. Photorealistic, one coherent physical space, a believable light source, quiet negative space for typography, clean unmarked surfaces, no text. Photorealistic, coherent single scene with real spatial depth and a believable camera position. Deep blue-black shadows, steel-blue ambient light, muted burgundy practical accents, pale silver highlights, never a warm orange grade. Thin volumetric haze, natural shallow depth of field, subtle anamorphic character, fine film grain, physically plausible materials, muted desaturated palette. Clean unmarked surfaces.",
+  "negative": "collage, photo montage, cut-out, pasted layers, split screen, diptych, triptych, infographic, chart, diagram, illustration, vector art, cartoon, anime, 3d render, CGI, video game, plastic skin, waxy skin, oversaturated colors, neon purple, magenta glow, teal and orange grade, glowing hologram, futuristic UI, HUD, text, letters, words, typography, watermark, logo, signature, border, frame, poster layout, low resolution, jpeg artifacts, deformed anatomy, extra fingers, extra limbs, disfigured face",
+  "seed": 100551,
+  "resolution": "1024px (Standard)",
+  "aspect": "16:9 Landscape",
+  "steps": 8,
+  "nag": 1.25,
+  "endpoint": "https://e6eff52740741708d0.gradio.live",
+  "server_status": "✅ Generated 1 image(s) in 30.9s (30.9s/image) | Seeds: [100551] | 1024x576 | 8 steps | INT8: Comfy Kitchen INT8",
+  "seconds": 35.0,
+  "generated_at": "2026-11-07T19:02:38+00:00"
+}

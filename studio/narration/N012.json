@@ -8,28 +8,40 @@
   "fadeOut": 0.18,
   "duration": 27.26,
   "subtitle": null,
+  "motions": [
+    {
+      "type": "diagram",
+      "title": "L'ERREUR COMME MÉCANISME",
+      "at": 25.76,
+      "dur": 1.8,
+      "x": 1080,
+      "y": 230,
+      "w": 620,
+      "h": 420
+    }
+  ],
   "shots": [
     {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
+      "id": "N012-A",
+      "src": "/assets/generated/N012-A.png",
       "duration": 14.993,
-      "camera": "static",
+      "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100110,
+      "title": "Maintenant, regardez l'autre côté de la frontière. Une machi"
     },
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N012-B",
+      "src": "/assets/generated/N012-B.png",
       "duration": 12.267,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
+      "seed": 100111,
+      "title": "Maintenant, regardez l'autre côté de la frontière. Une machi"
     }
   ]
 }

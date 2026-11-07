@@ -3,7 +3,7 @@
     "id": "N001",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 15.697,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N001.wav",
     "measured": true
   },
@@ -11,7 +11,7 @@
     "id": "N002",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 5.248,
-    "shots": 3,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N002.wav",
     "measured": true
   },
@@ -19,7 +19,7 @@
     "id": "N003",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 24.288,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N003.wav",
     "measured": true
   },
@@ -27,7 +27,7 @@
     "id": "N004",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 12.399,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N004.wav",
     "measured": true
   },
@@ -35,7 +35,7 @@
     "id": "N005",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 6.873,
-    "shots": 3,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N005.wav",
     "measured": true
   },
@@ -43,7 +43,7 @@
     "id": "N006",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 5.248,
-    "shots": 3,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N006.wav",
     "measured": true
   },
@@ -51,7 +51,7 @@
     "id": "N007",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 47.554,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N007.wav",
     "measured": true
   },
@@ -59,7 +59,7 @@
     "id": "N008",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 20.248,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N008.wav",
     "measured": true
   },
@@ -67,7 +67,7 @@
     "id": "N009",
     "title": "PROLOGUE — LE MEUBLE",
     "duration": 5.155,
-    "shots": 3,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N009.wav",
     "measured": true
   },
@@ -147,7 +147,7 @@
     "id": "N019",
     "title": "ACTE I — APPRENDRE",
     "duration": 3.901,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N019.wav",
     "measured": true
   },
@@ -203,7 +203,7 @@
     "id": "N026",
     "title": "ACTE II — MÉMOIRE",
     "duration": 4.923,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N026.wav",
     "measured": true
   },
@@ -307,7 +307,7 @@
     "id": "N039",
     "title": "ACTE IV — ÉMOTION",
     "duration": 7.941,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N039.wav",
     "measured": true
   },
@@ -315,7 +315,7 @@
     "id": "N040",
     "title": "ACTE IV — ÉMOTION",
     "duration": 7.755,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N040.wav",
     "measured": true
   },
@@ -379,7 +379,7 @@
     "id": "N048",
     "title": "ACTE IV — ÉMOTION",
     "duration": 6.548,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N048.wav",
     "measured": true
   },
@@ -387,7 +387,7 @@
     "id": "N049",
     "title": "ACTE V — CONSCIENCE",
     "duration": 7.616,
-    "shots": 2,
+    "shots": 1,
     "audio": "films/01-illusion-frontiere/audio/blocks/N049.wav",
     "measured": true
   },
@@ -475,7 +475,7 @@
     "id": "N060",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 9.613,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N060.wav",
     "measured": true
   },
@@ -483,7 +483,7 @@
     "id": "N061",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 47.554,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N061.wav",
     "measured": true
   },
@@ -491,7 +491,7 @@
     "id": "N062",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 34.551,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N062.wav",
     "measured": true
   },
@@ -499,7 +499,7 @@
     "id": "N063",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 23.081,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N063.wav",
     "measured": true
   },
@@ -507,7 +507,7 @@
     "id": "N064",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 19.83,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N064.wav",
     "measured": true
   },
@@ -515,7 +515,7 @@
     "id": "N065",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 8.916,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N065.wav",
     "measured": true
   },
@@ -523,7 +523,7 @@
     "id": "N066",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 32.601,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N066.wav",
     "measured": true
   },
@@ -531,7 +531,7 @@
     "id": "N067",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 9.52,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N067.wav",
     "measured": true
   },
@@ -539,7 +539,7 @@
     "id": "N068",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 9.706,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N068.wav",
     "measured": true
   },
@@ -547,7 +547,7 @@
     "id": "N069",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 31.997,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N069.wav",
     "measured": true
   },
@@ -555,7 +555,7 @@
     "id": "N070",
     "title": "FINALE — LA FRONTIÈRE",
     "duration": 8.313,
-    "shots": 3,
+    "shots": 2,
     "audio": "films/01-illusion-frontiere/audio/blocks/N070.wav",
     "measured": true
   }

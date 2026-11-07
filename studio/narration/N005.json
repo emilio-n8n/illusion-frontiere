@@ -8,39 +8,18 @@
   "fadeOut": 0.18,
   "duration": 6.873,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B00-S01",
-      "src": "/assets/clips/B00-S01.mp4",
-      "duration": 3.093,
+      "id": "N005-A",
+      "src": "/assets/generated/N005-A.png",
+      "duration": 6.873,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7001,
-      "title": "Le Bureau des frontières"
-    },
-    {
-      "id": "B00-S02",
-      "src": "/assets/clips/B00-S02.mp4",
-      "duration": 2.062,
-      "camera": "push-in",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7002,
-      "title": "Le dossier"
-    },
-    {
-      "id": "B00-S03",
-      "src": "/assets/clips/B00-S03.mp4",
-      "duration": 1.718,
-      "camera": "push-in",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7003,
-      "title": "Le couloir"
+      "seed": 100040,
+      "title": "Ce soir, elle en a trois à déplacer. Trois différences qui v"
     }
   ]
 }

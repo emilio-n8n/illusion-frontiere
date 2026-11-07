@@ -8,28 +8,29 @@
   "fadeOut": 0.18,
   "duration": 21.455,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B01-S04",
-      "src": "/assets/clips/B01-S04.mp4",
+      "id": "N054-A",
+      "src": "/assets/generated/N054-A.png",
       "duration": 11.8,
-      "camera": "static",
+      "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7104,
-      "title": "Les mains de l'archiviste"
+      "seed": 100530,
+      "title": "Ce n'est pas une raison pour croire qu'elles sont consciente"
     },
     {
-      "id": "B01-S03",
-      "src": "/assets/clips/B01-S03.mp4",
+      "id": "N054-B",
+      "src": "/assets/generated/N054-B.png",
       "duration": 9.655,
       "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7103,
-      "title": "La machine qui apprend"
+      "seed": 100531,
+      "title": "Ce n'est pas une raison pour croire qu'elles sont consciente"
     }
   ]
 }

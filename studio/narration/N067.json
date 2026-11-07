@@ -8,39 +8,29 @@
   "fadeOut": 0.18,
   "duration": 9.52,
   "subtitle": null,
+  "motions": [],
   "shots": [
     {
-      "id": "B06-S01",
-      "src": "/assets/clips/B06-S01.mp4",
-      "duration": 4.284,
-      "camera": "push-out",
-      "overlay": "",
-      "overlayPos": "left",
-      "transition": "cut",
-      "seed": 7601,
-      "title": "Le retour au Bureau"
-    },
-    {
-      "id": "B06-S02",
-      "src": "/assets/clips/B06-S02.mp4",
-      "duration": 2.856,
+      "id": "N067-A",
+      "src": "/assets/generated/N067-A.png",
+      "duration": 5.236,
       "camera": "push-in",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7602,
-      "title": "La fiche"
+      "seed": 100660,
+      "title": "Et si un jour elle a tout cela, alors la question ne sera pl"
     },
     {
-      "id": "B06-S03",
-      "src": "/assets/clips/B06-S03.mp4",
-      "duration": 2.38,
-      "camera": "push-out",
+      "id": "N067-B",
+      "src": "/assets/generated/N067-B.png",
+      "duration": 4.284,
+      "camera": "pan-right",
       "overlay": "",
       "overlayPos": "left",
       "transition": "cut",
-      "seed": 7603,
-      "title": "La salle vide"
+      "seed": 100661,
+      "title": "Et si un jour elle a tout cela, alors la question ne sera pl"
     }
   ]
 }
