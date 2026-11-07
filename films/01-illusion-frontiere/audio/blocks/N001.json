@@ -1,0 +1,15 @@
+{
+  "id": "N001",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Imaginez une pièce, sous un bâtiment dont personne ne connaît le nom. Une pièce que personne ne visite. Pas des archives. Pas des serveurs. Des tiroirs. Des centaines. Des milliers. Peut-être plus.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": null,
+  "reference_transcript": "",
+  "server_status": "15.7 s of audio in 52.1 s · RTF 3.31",
+  "seconds": 58.5,
+  "generated_at": "2026-11-07T07:30:52+00:00"
+}

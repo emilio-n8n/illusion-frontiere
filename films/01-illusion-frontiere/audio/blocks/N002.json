@@ -1,0 +1,15 @@
+{
+  "id": "N002",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Et dans ces tiroirs, on ne range pas des gens. On range des différences.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": null,
+  "reference_transcript": "",
+  "server_status": "6.9 s of audio in 24.1 s · RTF 3.48",
+  "seconds": 27.8,
+  "generated_at": "2026-11-07T07:31:35+00:00"
+}

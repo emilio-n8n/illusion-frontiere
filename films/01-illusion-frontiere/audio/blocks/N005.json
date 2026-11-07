@@ -1,0 +1,15 @@
+{
+  "id": "N005",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Ce soir, elle en a trois à déplacer. Trois différences qui viennent de tomber.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": null,
+  "reference_transcript": "",
+  "server_status": "7.7 s of audio in 26.4 s · RTF 3.42",
+  "seconds": 29.9,
+  "generated_at": "2026-11-07T07:34:29+00:00"
+}

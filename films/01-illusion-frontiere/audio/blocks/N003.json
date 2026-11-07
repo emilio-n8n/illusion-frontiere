@@ -1,0 +1,15 @@
+{
+  "id": "N003",
+  "act": "PROLOGUE — LE MEUBLE",
+  "text": "Le principe est simple. Deux colonnes. À gauche, NOUS. À droite, EUX. Tout ce qui est vivant, sensible, intentionnel, mortel, va à gauche. Tout ce qui calcule, simule, obéit, se copie, va à droite. Le meuble n'a pas de fond. Personne ne sait combien de tiroirs il contient. On sait seulement qu'il est toujours plein.",
+  "direction": "[calm, low voice, intimate documentary narrator, slow, close to the microphone]",
+  "seed": 424242,
+  "temperature": 0.7,
+  "top_p": 0.7,
+  "one_pass": true,
+  "reference": null,
+  "reference_transcript": "",
+  "server_status": "23.4 s of audio in 77.8 s · RTF 3.32",
+  "seconds": 84.8,
+  "generated_at": "2026-11-07T07:33:00+00:00"
+}

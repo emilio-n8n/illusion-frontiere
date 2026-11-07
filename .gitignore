@@ -15,3 +15,6 @@ __pycache__/
 
 assets/generated/contact-*.jpg
 assets/generated/batch.log
+
+assets/voice-test/*.wav
+films/01-illusion-frontiere/audio/blocks/*.wav
