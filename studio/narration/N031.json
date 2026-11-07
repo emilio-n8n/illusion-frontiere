@@ -7,7 +7,7 @@
   "fadeIn": 0.18,
   "fadeOut": 0.18,
   "duration": 17.694,
-  "subtitle": "Et pourtant, nous sommes en train de construire des machines avec des corps. Des robots qui marchent, qui saisissent, qui apprennent par essai-erreur. Des prothèses qui renvoient des sensations. Des interfaces qui connectent le cerveau à un ordinateur. La frontière du corps n'est plus si nette.",
+  "subtitle": null,
   "shots": [
     {
       "id": "B01-S01",

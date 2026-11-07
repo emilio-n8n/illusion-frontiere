@@ -7,7 +7,7 @@
   "fadeIn": 0.18,
   "fadeOut": 0.18,
   "duration": 33.112,
-  "subtitle": "Maintenant, regardez la machine. Elle a des paramètres, figés après l'entraînement. Une fenêtre de contexte, qui contient ce qu'on vient de lui dire. Parfois, une mémoire externe, une base de données qu'elle peut consulter. Elle peut restituer une conversation de mille façons. Mais elle ne se souvient pas d'avoir vécu la conversation. Elle n'a pas de nuit. Elle n'a pas de rêve. Elle n'a pas d'odeur qui déclenche un souvenir d'enfance.",
+  "subtitle": null,
   "shots": [
     {
       "id": "B01-S04",

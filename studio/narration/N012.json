@@ -7,7 +7,7 @@
   "fadeIn": 0.18,
   "fadeOut": 0.18,
   "duration": 27.26,
-  "subtitle": "Maintenant, regardez l'autre côté de la frontière. Une machine apprend à reconnaître un chat. On lui montre un million d'images. Elle se trompe. On lui dit : ce n'est pas un chat, c'est un chien. Elle ajuste des nombres. Des millions, des milliards de nombres. Elle se trompe encore. Elle ajuste encore. Jusqu'au jour où elle ne se trompe plus. Les chercheurs appellent ça la descente de gradient. L'erreur n'est pas l'échec de l'apprentissage. L'erreur est le mécanisme.",
+  "subtitle": null,
   "shots": [
     {
       "id": "B01-S04",

@@ -7,7 +7,7 @@
   "fadeIn": 0.18,
   "fadeOut": 0.18,
   "duration": 19.598,
-  "subtitle": "Un robot peut avoir des capteurs. Il peut détecter une surchauffe, une collision, une erreur. Mais rien ne prouve qu'il souffre. Il signale. Son existence ne tient pas à ce corps-là. On peut l'éteindre, le réparer, le copier. Ce robot-là ne perd rien. Il n'a rien à perdre.",
+  "subtitle": null,
   "shots": [
     {
       "id": "B01-S04",

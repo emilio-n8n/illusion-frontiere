@@ -7,7 +7,7 @@
   "fadeIn": 0.18,
   "fadeOut": 0.18,
   "duration": 15.697,
-  "subtitle": "Imaginez une pièce, sous un bâtiment dont personne ne connaît le nom. Une pièce que personne ne visite. Pas des archives. Pas des serveurs. Des tiroirs. Des centaines. Des milliers. Peut-être plus.",
+  "subtitle": null,
   "shots": [
     {
       "id": "B00-S01",
