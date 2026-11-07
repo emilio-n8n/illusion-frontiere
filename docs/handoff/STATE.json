@@ -9,7 +9,8 @@
     "fps": 24,
     "resolution": "1920x1080",
     "v1": "out/film-final-intro.mp4",
-    "v2": "rendering on Actions (run 42406191098)"
+    "v2": "out/film-final-v2.mp4",
+    "v2Release": "https://github.com/emilio-n8n/illusion-frontiere/releases/tag/film-final-v2"
   },
   "voice": {
     "blocks": 70,
@@ -51,13 +52,14 @@
     "blenderWorkflow": ".github/workflows/blender.yml"
   },
   "openTasks": [
-    "assemble v2 intro+film+mix and release",
     "place SFX",
     "final mix polish",
     "fact-check final",
-    "SRT, generique, thumbnail, metadata",
+    "SRT, generique, metadata",
+    "choose thumbnail",
     "publish"
   ],
-  "motionDesign": "implemented and timed (8 inserts)",
-  "handoff": "docs/handoff"
+  "motionDesign": "implemented, timed, rendered (8 inserts)",
+  "handoff": "docs/handoff",
+  "thumbnails": "assets/thumbnail/humain-ou-machine.jpg + la-frontiere-nexiste-pas.jpg (release thumbnail-v1)"
 }
