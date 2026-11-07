@@ -180,7 +180,7 @@ jobs:
           retention-days: 3
 
   join:
-    needs: render
+    needs: [plan, render]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
