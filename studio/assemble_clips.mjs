@@ -24,6 +24,11 @@ const GRADE = [
   'colorbalance=bs=0.10:bm=0.04,noise=alls=8:allf=t',
 ].join(';');
 
+// Clips are raw media: the engine (studio/render.html) owns the grade, grain
+// and vignette so a clip and a still in the same block match exactly.
+// --grade bakes the look into the clip instead (standalone delivery only).
+const useGrade = process.argv.includes('--grade');
+
 let ok = 0;
 for (const b of batch) {
   const shot = b.shot;
@@ -53,7 +58,7 @@ for (const b of batch) {
   const r = spawnSync('ffmpeg', [
     '-y', '-loglevel', 'error', '-framerate', '24',
     '-i', path.join(frameDir, 'frame-%04d.png'),
-    '-vf', GRADE,
+    ...(useGrade ? ['-vf', GRADE] : []),
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '18',
     '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out,
   ], { stdio: 'inherit' });
