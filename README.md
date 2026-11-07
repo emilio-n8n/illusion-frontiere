@@ -98,6 +98,4 @@ Workflow manuel `render` :
 
 Chaque bloc est rendu dans un job séparé, uploadé en artefact, puis le job `join` concatène le master. Les mp4 ne sont pas versionnés.
 
-Remote : https://github.com/emilio-n8n/illusion-frontiere (privé).
-
-> Visibilité : un dépôt public donne des minutes Actions illimitées ; un dépôt privé est limité à 2 000 min/mois sur le plan gratuit. Le passer en public quand le pipeline est stable, ou garder les assets sensibles dans un dépôt séparé.
+Remote : https://github.com/emilio-n8n/illusion-frontiere (public, minutes Actions illimitées).
