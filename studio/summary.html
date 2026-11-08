@@ -451,11 +451,11 @@ function scene3(local) {
   fade('1 POINT = 540 MILLIONS', 980, 590, 1.35, { size: 13, ls: 3, color: T.dim, alpha: .7 });
 
   if (local > 4.0) {
-    const w = measure('IL NE STOCKE PAS. IL RECONSTRUIT.', 30);
-    line(140, 815, 140 + Math.min(700, w) * out(clamp((local - 4.0) / .8)), 815, 'rgba(168,31,22,.6)', 1);
-    fade('IL NE STOCKE PAS.', 140, 870, 4.1, { size: 30, ls: 2, color: T.screen, alpha: .9 });
-    fade('IL RECONSTRUIT.', 400, 870, 4.35, { size: 30, ls: 2, color: T.redHot, alpha: .95 });
-    fade('CHAQUE SOUVENIR EST UNE HISTOIRE.', 140, 915, 4.75, { size: 14, ls: 4, color: T.text, alpha: .45 });
+    const w = measure('IL NE STOCKE PAS.', 30);
+    line(140, 795, 140 + Math.min(560, w) * out(clamp((local - 4.0) / .8)), 795, 'rgba(168,31,22,.6)', 1);
+    fade('IL NE STOCKE PAS.', 140, 845, 4.1, { size: 30, ls: 2, color: T.screen, alpha: .9 });
+    fade('IL RECONSTRUIT.', 140, 887, 4.35, { size: 30, ls: 2, color: T.redHot, alpha: .95 });
+    fade('CHAQUE SOUVENIR EST UNE HISTOIRE.', 140, 937, 4.75, { size: 14, ls: 4, color: T.text, alpha: .55 });
   }
 }
 
@@ -745,7 +745,7 @@ function scene8(local) {
   if (local > 4.5) {
     rise('C\u2019EST UNE HISTOIRE.', 740, 455, 4.5, { size: 74, color: T.screen, shadow: 24, dur: .75 });
     rise('QUE NOUS NOUS RACONTONS.', 740, 545, 4.72, { size: 56, color: T.redHot, shadow: 20, dur: .8 });
-    fade('ET LA LIGNE S\u2019EFFACE.', 740, 620, 5.4, { size: 14, ls: 5, color: T.text, alpha: .45 });
+    fade('ET LA LIGNE S\u2019EFFACE.', 740, 620, 5.4, { size: 15, ls: 5, color: T.text, alpha: .55 });
   }
 
   wipe('LA LIGNE', 140, 170, .15, { size: 15, ls: 6, color: T.redHot });
