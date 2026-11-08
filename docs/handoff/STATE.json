@@ -61,5 +61,6 @@
   ],
   "motionDesign": "implemented, timed, rendered (8 inserts)",
   "handoff": "docs/handoff",
-  "thumbnails": "assets/thumbnail/humain-ou-machine.jpg + la-frontiere-nexiste-pas.jpg (release thumbnail-v1)"
+  "thumbnails": "assets/thumbnail/humain-ou-machine.jpg + la-frontiere-nexiste-pas.jpg (release thumbnail-v1)",
+  "process": "docs/process"
 }

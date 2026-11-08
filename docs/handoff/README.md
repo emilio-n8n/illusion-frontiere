@@ -29,6 +29,13 @@ Documentaire français de ~26 minutes sur la frontière homme/machine : une arch
 6. `06-links.md` — liens, endpoints, secrets.
 7. `STATE.json` — état machine.
 
+## Process détaillé
+
+Le process complet, le motion design, la génération d'assets et surtout le **post-mortem des erreurs et du temps perdu** sont dans `docs/process/` :
+
+- `README.md`, `01-pipeline.md`, `02-assets.md`, `03-motion.md`
+- `04-render-actions.md`, `05-postmortem.md`, `06-checklist.md`, `07-time-ledger.md`
+
 ## Règle d'or
 
 Ne jamais casser le thème : archive sombre, écran pâle, teal/bordeaux, grain, typographie mono + Archivo Black. Le motion design Vox doit être **projeté dans ce monde**, pas posé par-dessus comme une infographie claire.
