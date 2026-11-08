@@ -16,6 +16,7 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const { values } = parseArgs({
   options: {
     block: { type: 'string' },
+    page: { type: 'string', default: 'render.html' },
     dir: { type: 'string', default: 'blocks' },
     out: { type: 'string' },
     scale: { type: 'string', default: '1' },
@@ -97,7 +98,7 @@ try {
   page.on('console', msg => { if (msg.type() === 'error') console.error('  page:', msg.text()); });
   page.on('pageerror', err => console.error('  pageerror:', err.message));
 
-  const url = `http://127.0.0.1:${port}/studio/render.html?block=${encodeURIComponent(blockId)}&scale=${scale}&dir=${encodeURIComponent(values.dir)}`;
+  const url = `http://127.0.0.1:${port}/studio/${values.page}?block=${encodeURIComponent(blockId)}&scale=${scale}&dir=${encodeURIComponent(values.dir)}`;
   console.log(`[${blockId}] ${W}x${H} scale=${scale} — ${url}`);
   await page.goto(url, { waitUntil: 'load', timeout: 120000 });
   await page.waitForFunction(() => window.READY === true || window.READY_ERROR, null, { timeout: 180000 });

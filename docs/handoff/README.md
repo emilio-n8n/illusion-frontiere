@@ -36,6 +36,10 @@ Le process complet, le motion design, la génération d'assets et surtout le **p
 - `README.md`, `01-pipeline.md`, `02-assets.md`, `03-motion.md`
 - `04-render-actions.md`, `05-postmortem.md`, `06-checklist.md`, `07-time-ledger.md`
 
+## Résumé 60 s
+
+Une version motion design de 60 secondes, sans voix, résume le film : `docs/summary/README.md`. Sortie : `out/summary/illusion-frontiere-60s.mp4`, release `summary-60s` (1080p, 24 fps, musique + SFX, -14 LUFS).
+
 ## Règle d'or
 
 Ne jamais casser le thème : archive sombre, écran pâle, teal/bordeaux, grain, typographie mono + Archivo Black. Le motion design Vox doit être **projeté dans ce monde**, pas posé par-dessus comme une infographie claire.

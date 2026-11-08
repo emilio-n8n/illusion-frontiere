@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Frontière — résumé 60 s</title>
+<style>
+  @font-face { font-family: JBMono; src: url(/studio/fonts/JetBrainsMono.ttf); }
+  @font-face { font-family: ArchivoBlack; src: url(/studio/fonts/ArchivoBlack.ttf); }
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+'use strict';
+
+const W = 1920, H = 1080;
+const params = new URLSearchParams(location.search);
+const scale = Math.max(0.1, Math.min(1, Number(params.get('scale') || 1)));
+
+const cv = document.getElementById('c');
+cv.width = Math.round(W * scale);
+cv.height = Math.round(H * scale);
+const ctx = cv.getContext('2d', { alpha: false });
+
+const T = {
+  bg: '#04070A',
+  screen: '#C9C4B8',
+  text: '#C6D3CF',
+  dim: '#6E827E',
+  red: '#A81F16',
+  redHot: '#C9331F',
+};
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const smooth = t => { t = clamp(t); return t * t * (3 - 2 * t); };
+const out = t => 1 - Math.pow(1 - clamp(t), 3);
+const tri = x => { const f = x - Math.floor(x); return f < .5 ? f * 2 : 2 - f * 2; };
+
+const SCENES = [
+  { id: 'S1', t0: 0,  t1: 4,  label: 'OUVERTURE' },
+  { id: 'S2', t0: 4,  t1: 11, label: 'LA QUESTION' },
+  { id: 'S3', t0: 11, t1: 19, label: 'LE CERVEAU' },
+  { id: 'S4', t0: 19, t1: 26, label: 'LE DISHBRAIN' },
+  { id: 'S5', t0: 26, t1: 33, label: 'LA MATIÈRE' },
+  { id: 'S6', t0: 33, t1: 41, label: 'LA FRONTIÈRE RECULE' },
+  { id: 'S7', t0: 41, t1: 48, label: 'LE DOUTE' },
+  { id: 'S8', t0: 48, t1: 56, label: 'LA LIGNE' },
+  { id: 'S9', t0: 56, t1: 60, label: '' },
+];
+const TOTAL = 60;
+const FPS = 24;
+let NOW = 0;
+
+function makeCanvas(w, h) {
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  return c;
+}
+
+function makeGrain() {
+  const c = makeCanvas(960, 540), g = c.getContext('2d');
+  const id = g.createImageData(960, 540);
+  let seed = 0x9e3779b9;
+  const rnd = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296; };
+  for (let i = 0; i < id.data.length; i += 4) {
+    const v = 15 + rnd() * 240;
+    id.data[i] = id.data[i + 1] = id.data[i + 2] = v;
+    id.data[i + 3] = 22 + rnd() * 36;
+  }
+  g.putImageData(id, 0, 0);
+  return c;
+}
+
+function makeVignette() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  const v = g.createRadialGradient(W * .5, H * .47, H * .18, W * .5, H * .5, H * .85);
+  v.addColorStop(0, 'rgba(0,0,0,0)');
+  v.addColorStop(.55, 'rgba(0,0,0,.10)');
+  v.addColorStop(1, 'rgba(0,0,0,.72)');
+  g.fillStyle = v; g.fillRect(0, 0, W, H);
+  return c;
+}
+
+function makeGrade() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  g.fillStyle = 'rgba(7,17,24,.10)'; g.fillRect(0, 0, W, H);
+  g.globalCompositeOperation = 'soft-light';
+  const lg = g.createLinearGradient(0, 0, W, H);
+  lg.addColorStop(0, 'rgba(52,110,132,.22)');
+  lg.addColorStop(.52, 'rgba(20,42,52,.06)');
+  lg.addColorStop(1, 'rgba(96,38,30,.18)');
+  g.fillStyle = lg; g.fillRect(0, 0, W, H);
+  g.globalCompositeOperation = 'source-over';
+  return c;
+}
+
+function makeScan() {
+  const c = makeCanvas(W, H), g = c.getContext('2d');
+  g.fillStyle = 'rgba(0,0,0,.022)';
+  for (let y = 0; y < H; y += 4) g.fillRect(0, y, W, 1);
+  return c;
+}
+
+const grain = makeGrain();
+const vignette = makeVignette();
+const grade = makeGrade();
+const scan = makeScan();
+
+const SRC = {
+  intro: '/assets/generated/B00-S01.png',
+  child: '/assets/generated/N011-B.png',
+  network: '/assets/generated/N011-A.png',
+  dish: '/assets/generated/N032-A.png',
+  lab: '/assets/generated/N034-A.png',
+  watch: '/assets/generated/N020-A.png',
+  desk: '/assets/generated/N061-B.png',
+  drawer: '/assets/generated/N070-A.png',
+};
+
+const images = {};
+
+function loadImage(src) {
+  return new Promise((res, rej) => {
+    const im = new Image();
+    im.onload = () => res(im);
+    im.onerror = () => rej(new Error('image failed: ' + src));
+    im.src = src;
+  });
+}
+
+function softCopy(img, w = 960) {
+  const h = Math.round(w * img.height / img.width);
+  const c = makeCanvas(w, h);
+  c.getContext('2d').drawImage(img, 0, 0, w, h);
+  return c;
+}
+
+function setFont(size, mono = false, weight = mono ? 500 : 400) {
+  ctx.font = `${weight} ${size}px ${mono ? 'JBMono' : 'ArchivoBlack'}`;
+  return ctx.font;
+}
+
+function measure(str, size, o = {}) {
+  setFont(size, !!o.mono, o.weight);
+  ctx.letterSpacing = `${o.ls || 0}px`;
+  return ctx.measureText(str).width;
+}
+
+function fit(str, maxW, start, o = {}) {
+  let s = start;
+  while (s > (o.min || 24)) {
+    if (measure(str, s, o) <= maxW) break;
+    s -= 2;
+  }
+  return s;
+}
+
+function txt(str, x, y, size, color, o = {}) {
+  if (!str) return 0;
+  setFont(size, !!o.mono, o.weight);
+  ctx.save();
+  ctx.letterSpacing = `${o.ls || 0}px`;
+  ctx.textAlign = o.align || 'left';
+  ctx.textBaseline = 'alphabetic';
+  ctx.globalAlpha = o.alpha == null ? 1 : o.alpha;
+  if (o.shadow) {
+    ctx.shadowColor = 'rgba(0,0,0,.85)';
+    ctx.shadowBlur = o.shadow;
+    ctx.shadowOffsetY = o.shadowY || 0;
+  }
+  ctx.fillStyle = color;
+  ctx.fillText(str, x, y);
+  ctx.restore();
+  return 0;
+}
+
+function rise(str, x, y, t0, o = {}) {
+  const d = o.dur || .75;
+  const p = out(clamp((NOW - t0) / d));
+  if (p <= 0) return;
+  const size = o.size || 100;
+  const w = measure(str, size, o);
+  const align = o.align || 'left';
+  const left = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  const pad = o.pad || 30;
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(left - pad, y - size * 1.14, w + pad * 2, size * 1.42);
+  ctx.clip();
+  txt(str, left, y + (1 - p) * size * 1.12, size, o.color || T.screen, {
+    ...o, align: 'left', alpha: p * (o.alpha == null ? 1 : o.alpha),
+  });
+  ctx.restore();
+}
+
+function wipe(str, x, y, t0, o = {}) {
+  const p = out(clamp((NOW - t0) / (o.dur || .7)));
+  if (p <= 0) return;
+  const size = o.size || 18;
+  const w = measure(str, size, o);
+  const align = o.align || 'left';
+  const left = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(left, y - size * 1.2, w * p, size * 1.6);
+  ctx.clip();
+  txt(str, left, y, size, o.color || T.text, { ...o, align: 'left' });
+  ctx.restore();
+  if (o.caret && p < 1) {
+    ctx.fillStyle = T.red;
+    ctx.fillRect(left + w * p, y - size * .85, 2, size);
+  }
+}
+
+function fade(str, x, y, t0, o = {}) {
+  const p = smooth(clamp((NOW - t0) / (o.dur || .7)));
+  if (p <= 0) return;
+  txt(str, x, y + (1 - p) * (o.rise || 10), o.size || 18, o.color || T.text, {
+    ...o, alpha: p * (o.alpha == null ? 1 : o.alpha),
+  });
+}
+
+function line(x1, y1, x2, y2, color, width = 1) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function bg(name, local, dur, o = {}) {
+  const img = images[name];
+  if (!img) return;
+  const p = smooth(clamp(local / dur));
+  const zoom = (o.zoom || 1.055) + (o.zoom2 == null ? .02 : o.zoom2) * p;
+  const alpha = (o.alpha == null ? 1 : o.alpha) * smooth(clamp(local / (o.fade || 1)));
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(W / 2 + (o.dx || 0), H / 2 + (o.dy || 0));
+  ctx.scale(o.mirror ? -zoom : zoom, zoom);
+  const sc = Math.max(W / img.width, H / img.height);
+  ctx.drawImage(img, -img.width * sc / 2, -img.height * sc / 2, img.width * sc, img.height * sc);
+  ctx.restore();
+
+  const dark = o.dark == null ? .42 : o.dark;
+  ctx.fillStyle = `rgba(4,7,10,${dark})`;
+  ctx.fillRect(0, 0, W, H);
+
+  if (o.grad === 'left') {
+    const g = ctx.createLinearGradient(0, 0, W, 0);
+    g.addColorStop(0, 'rgba(4,7,10,.94)');
+    g.addColorStop(.38, 'rgba(4,7,10,.84)');
+    g.addColorStop(.68, 'rgba(4,7,10,.30)');
+    g.addColorStop(1, 'rgba(4,7,10,.06)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  } else if (o.grad === 'right') {
+    const g = ctx.createLinearGradient(0, 0, W, 0);
+    g.addColorStop(0, 'rgba(4,7,10,.06)');
+    g.addColorStop(.32, 'rgba(4,7,10,.22)');
+    g.addColorStop(.62, 'rgba(4,7,10,.72)');
+    g.addColorStop(1, 'rgba(4,7,10,.94)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  } else if (o.grad === 'bottom') {
+    const g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, 'rgba(4,7,10,.05)');
+    g.addColorStop(.55, 'rgba(4,7,10,.30)');
+    g.addColorStop(1, 'rgba(4,7,10,.92)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
+}
+
+function countUp(value, t0, dur) {
+  const p = out(clamp((NOW - t0) / dur));
+  return Math.round(value * p);
+}
+
+function fr(n) {
+  return new Intl.NumberFormat('fr-FR').format(n).replace(/[\u202f\u00a0]/g, ' ');
+}
+
+function drawDust(t) {
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (let i = 0; i < 34; i++) {
+    const px = ((i * 173.3 + t * (7 + (i % 5) * 1.7)) % (W + 120)) - 60;
+    const py = ((i * 311.7 + Math.sin(t * .25 + i) * 24 + t * 2.2) % (H + 80)) - 40;
+    const r = .6 + (i % 4) * .45;
+    const a = .028 + .045 * Math.abs(Math.sin(t * .6 + i * 1.7));
+    ctx.fillStyle = `rgba(190,225,220,${a})`;
+    ctx.beginPath();
+    ctx.arc(px, py, r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+function drawHud(t, scene) {
+  ctx.save();
+  setFont(13, true, 500);
+  ctx.letterSpacing = '5px';
+  ctx.fillStyle = T.text;
+  ctx.globalAlpha = .34;
+  ctx.textAlign = 'left';
+  ctx.fillText('BUREAU DES FRONTIÈRES', 120, 74);
+  ctx.globalAlpha = .22;
+  ctx.textAlign = 'right';
+  ctx.fillText('DOSSIER 01 — FRONTIÈRE', W - 120, 74);
+
+  const f = Math.floor(t * FPS) % FPS;
+  const s = Math.floor(t) % 60;
+  const m = Math.floor(t / 60);
+  ctx.globalAlpha = .16;
+  ctx.letterSpacing = '3px';
+  ctx.fillText(`00:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}:${String(f).padStart(2, '0')}`, W - 120, 98);
+
+  // progress
+  ctx.globalAlpha = .14;
+  ctx.fillRect(120, H - 38, W - 240, 1);
+  ctx.globalAlpha = .55;
+  ctx.fillStyle = T.red;
+  ctx.fillRect(120, H - 38, (W - 240) * clamp(t / TOTAL), 1);
+
+  if (scene && scene.label) {
+    const idx = SCENES.filter(x => x.id !== 'S9').findIndex(x => x.id === scene.id) + 1;
+    ctx.globalAlpha = .40;
+    ctx.fillStyle = T.redHot;
+    ctx.fillRect(120, H - 72, 3, 14);
+    ctx.globalAlpha = .45;
+    ctx.fillStyle = T.text;
+    ctx.textAlign = 'left';
+    ctx.letterSpacing = '4px';
+    ctx.fillText(`${String(idx).padStart(2, '0')} — ${scene.label}`, 138, H - 60);
+
+    ctx.globalAlpha = .30;
+    ctx.textAlign = 'right';
+    ctx.fillText(`${String(idx).padStart(2, '0')} / 08`, W - 120, H - 60);
+  }
+  ctx.restore();
+}
+
+/* ---------------- scenes ---------------- */
+
+function scene1(local) {
+  bg('intro', local, 4, { alpha: .46, dark: .45, grad: 'left', zoom: 1.05, zoom2: .03, mirror: true, fade: .9 });
+
+  // a vertical hairline on the left, like a file spine
+  ctx.save();
+  ctx.globalAlpha = .22;
+  ctx.fillStyle = T.red;
+  ctx.fillRect(120, 300, 2, 360);
+  ctx.restore();
+
+  wipe('BUREAU DES FRONTIÈRES — DOSSIER 01', 150, 330, .30, { size: 16, ls: 6, color: T.text, alpha: .62, dur: 1.0 });
+  rise("L’ILLUSION", 150, 470, .55, { size: 158, color: T.screen, shadow: 26, dur: .85 });
+  rise('DE LA FRONTIÈRE', 150, 585, .78, { size: 112, color: T.screen, ls: 2, shadow: 26, dur: .9 });
+
+  const rp = out(clamp((local - 1.25) / .7));
+  ctx.save();
+  ctx.fillStyle = T.red;
+  ctx.fillRect(150, 626, 430 * rp, 3);
+  ctx.restore();
+
+  fade('UN DOCUMENTAIRE SUR LA LIGNE QUI NOUS SÉPARE', 150, 685, 1.55, { size: 19, ls: 4, color: T.text, alpha: .78 });
+  fade('26 MINUTES — 70 SÉQUENCES — UNE QUESTION', 150, 728, 1.85, { size: 14, ls: 3, color: T.text, alpha: .38 });
+
+  // right-side folio number
+  ctx.save();
+  ctx.globalAlpha = out(clamp((local - 1.6) / .9)) * .14;
+  txt('01', W - 150, 200, 96, T.screen, { align: 'right', ls: -3 });
+  ctx.restore();
+}
+
+function scene2(local) {
+  bg('child', local, 7, { alpha: .74, dark: .27, grad: 'left', zoom: 1.08, zoom2: .03, fade: .8 });
+
+  wipe('LA QUESTION', 140, 300, .15, { size: 15, ls: 6, color: T.redHot, dur: .7 });
+  rise('OÙ COMMENCE', 140, 455, .35, { size: 122, color: T.screen, shadow: 28, dur: .8 });
+  rise('LA CONSCIENCE ?', 140, 570, .58, { size: 122, color: T.screen, shadow: 28, dur: .85 });
+
+  // frontier hairline + labels
+  const lp = out(clamp((local - 1.55) / .9));
+  const lx = W * .69;
+  ctx.save();
+  ctx.strokeStyle = 'rgba(201,196,184,.38)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([5, 9]);
+  ctx.beginPath();
+  ctx.moveTo(lx, 250);
+  ctx.lineTo(lx, 250 + 560 * lp);
+  ctx.stroke();
+  ctx.restore();
+
+  if (local > 2.05) {
+    fade('HUMAIN', lx - 28, 292, 2.05, { size: 14, ls: 5, align: 'right', color: T.text, alpha: .66 });
+    fade('MACHINE', lx + 28, 292, 2.18, { size: 14, ls: 5, color: T.text, alpha: .66 });
+    const qp = out(clamp((local - 2.3) / .5));
+    ctx.save();
+    ctx.globalAlpha = qp * .9;
+    txt('?', lx, 700, 72, T.redHot, { align: 'center', shadow: 14 });
+    ctx.restore();
+  }
+
+  // the line starts to lie
+  if (local > 4.15) {
+    fade('ET SI ELLE N\u2019EXISTAIT PAS ?', 140, 920, 4.15, { size: 24, ls: 5, color: T.screen, alpha: .82 });
+    const j = Math.sin((local - 4.15) * 9.5) * 2.2;
+    ctx.save();
+    ctx.globalAlpha = .55;
+    ctx.fillStyle = T.red;
+    ctx.fillRect(lx - 1 + j, 390, 2, 160);
+    ctx.restore();
+  }
+}
+
+function scene3(local) {
+  bg('network', local, 8, { alpha: .52, dark: .42, grad: 'left', zoom: 1.07, zoom2: .02, fade: .8 });
+
+  wipe('LE CERVEAU', 140, 160, .18, { size: 15, ls: 6, color: T.redHot });
+
+  const n3 = Math.round(86 * out(clamp((local - .35) / 1.1)));
+  if (local > .35) txt(String(n3), 140, 330 + (1 - out(clamp((local - .35) / 1.1))) * 16, 168, T.screen, { shadow: 26, alpha: out(clamp((local - .35) / .3)) });
+  fade('MILLIARDS', 140 + measure('86', 168) + 24, 328, .9, { size: 30, ls: 6, color: T.text, alpha: .9 });
+  fade('DE NEURONES', 140, 390, 1.0, { size: 19, ls: 5, color: T.text, alpha: .72 });
+
+  // dots grid on the right
+  const gx = 980, gy = 200, gw = 800, gh = 300;
+  const cols = 20, rows = 8, total = cols * rows;
+  const dx = gw / (cols - 1), dy = gh / (rows - 1);
+  const redN = Math.round(total * .35);
+  for (let i = 0; i < total; i++) {
+    const col = i % cols, row = Math.floor(i / cols);
+    const p = clamp((local - .65 - col * .022 - row * .022) / .55);
+    if (p <= 0) continue;
+    const x = gx + col * dx, y = gy + row * dy;
+    const r = 3.4 * (.5 + .5 * out(p));
+    ctx.save();
+    ctx.globalAlpha = .92 * out(p) * (i < redN ? .95 : .5);
+    ctx.fillStyle = i < redN ? T.red : T.screen;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+  fade('NEURONES DANS UN CERVEAU D\u2019ENFANT', 980, 555, 1.05, { size: 17, ls: 4, color: T.text, alpha: .64 });
+  fade('1 POINT = 540 MILLIONS', 980, 590, 1.35, { size: 13, ls: 3, color: T.dim, alpha: .7 });
+
+  if (local > 4.0) {
+    const w = measure('IL NE STOCKE PAS. IL RECONSTRUIT.', 30);
+    line(140, 815, 140 + Math.min(700, w) * out(clamp((local - 4.0) / .8)), 815, 'rgba(168,31,22,.6)', 1);
+    fade('IL NE STOCKE PAS.', 140, 870, 4.1, { size: 30, ls: 2, color: T.screen, alpha: .9 });
+    fade('IL RECONSTRUIT.', 400, 870, 4.35, { size: 30, ls: 2, color: T.redHot, alpha: .95 });
+    fade('CHAQUE SOUVENIR EST UNE HISTOIRE.', 140, 915, 4.75, { size: 14, ls: 4, color: T.text, alpha: .45 });
+  }
+}
+
+function scene4(local) {
+  bg('dish', local, 7, { alpha: .6, dark: .38, grad: 'left', zoom: 1.07, zoom2: .02, fade: .8 });
+
+  wipe('CORTICAL LABS — 2022', 140, 160, .15, { size: 15, ls: 5, color: T.redHot });
+  const n4 = 800000 * out(clamp((local - .35) / 1.25));
+  if (local > .35) txt(fr(Math.round(n4 / 100) * 100), 140, 350, 142, T.screen, { shadow: 26, alpha: out(clamp((local - .35) / .3)) });
+  fade('NEURONES HUMAINS CULTIVÉS SUR UNE PUCE', 140, 405, .85, { size: 16, ls: 4, color: T.text, alpha: .7 });
+
+  // small pong court
+  const px = 140, py = 500, pw = 520, ph = 212;
+  const cp = out(clamp((local - 1.3) / .7));
+  ctx.save();
+  ctx.globalAlpha = cp * .85;
+  ctx.strokeStyle = 'rgba(201,196,184,.5)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(px, py, pw, ph);
+  ctx.setLineDash([4, 8]);
+  ctx.beginPath();
+  ctx.moveTo(px + pw / 2, py + 10);
+  ctx.lineTo(px + pw / 2, py + ph - 10);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
+
+  if (local > 1.4) {
+    const bx = px + 24 + tri(local * .46) * (pw - 48);
+    const by = py + 24 + tri(local * .31 + .22) * (ph - 48);
+    const cy = py + ph / 2;
+    const p1 = clamp(cy - 24 + (by - cy) * .45, py + 4, py + ph - 52);
+    const p2 = clamp(cy - 24 + (by - cy) * .25, py + 4, py + ph - 52);
+    ctx.save();
+    ctx.globalAlpha = cp * .92;
+    ctx.fillStyle = T.screen;
+    ctx.fillRect(px + 10, p1, 6, 48);
+    ctx.fillRect(px + pw - 16, p2, 6, 48);
+    ctx.fillStyle = T.redHot;
+    ctx.beginPath();
+    ctx.arc(bx, by, 5.5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  fade('APRÈS QUELQUES MINUTES,', 140, 785, 2.5, { size: 18, ls: 4, color: T.text, alpha: .62 });
+  fade('ILS JOUENT MIEUX QUE LE HASARD.', 140, 822, 2.75, { size: 27, ls: 1, color: T.screen, alpha: .92 });
+  fade('ET PERSONNE NE SAIT CE QUE ÇA VEUT DIRE.', 140, 866, 3.4, { size: 15, ls: 2, color: T.redHot, alpha: .8, shadow: 10 });
+}
+
+function scene5(local) {
+  bg('lab', local, 7, { alpha: .44, dark: .46, grad: 'left', zoom: 1.07, zoom2: .02, fade: .8 });
+
+  wipe('FINALSPARK — BIOCOMPUTING', 140, 160, .15, { size: 15, ls: 5, color: T.redHot });
+
+  const n5 = Math.round(16 * out(clamp((local - .35) / .9)));
+  if (local > .35) txt(String(n5), 140, 390, 190, T.screen, { shadow: 24, alpha: out(clamp((local - .35) / .3)) });
+  fade('ORGANOÏDES HUMAINS', 140, 450, .8, { size: 19, ls: 4, color: T.text, alpha: .72 });
+  fade('160 000 NEURONES', 140, 488, 1.0, { size: 15, ls: 4, color: T.text, alpha: .58 });
+  fade('DE LA MATIÈRE VIVANTE', 140, 700, 2.6, { size: 23, ls: 3, color: T.screen, alpha: .8 });
+  fade('QUI CALCULE.', 140, 738, 2.85, { size: 23, ls: 3, color: T.redHot, alpha: .9 });
+
+  // bars on the right
+  const bx = 1010, bw = 720;
+  fade('NEURONES HUMAINS CULTIVÉS', bx, 300, .7, { size: 15, ls: 4, color: T.text, alpha: .65 });
+  const bars = [
+    { label: 'DISHBRAIN 2022', value: 800000, color: T.red, y: 370 },
+    { label: 'FINALSPARK', value: 160000, color: 'rgba(143,214,214,.78)', y: 478 },
+  ];
+  bars.forEach((b, i) => {
+    const p = out(clamp((local - 1.0 - i * .22) / 1.1));
+    const w = (b.value / 800000) * bw * p;
+    ctx.save();
+    ctx.globalAlpha = .12;
+    ctx.fillStyle = T.screen;
+    ctx.fillRect(bx, b.y, bw, 20);
+    ctx.restore();
+    ctx.save();
+    ctx.globalAlpha = .9;
+    ctx.fillStyle = b.color;
+    ctx.fillRect(bx, b.y, Math.max(2, w), 20);
+    ctx.restore();
+    fade(b.label, bx, b.y - 12, 1.0 + i * .22, { size: 14, ls: 4, color: T.text, alpha: .58 });
+    fade(fr(b.value), bx + bw, b.y - 12, 1.1 + i * .22, { size: 30, align: 'right', color: T.screen, alpha: .92 });
+  });
+  fade('DES CULTURES SANS YEUX, SANS OREILLES, SANS HISTOIRE.', bx, 600, 2.7, { size: 13.5, ls: 3, color: T.text, alpha: .45 });
+}
+
+function scene6(local) {
+  bg('watch', local, 8, { alpha: .34, dark: .5, grad: 'bottom', zoom: 1.06, zoom2: .02, fade: 1.0 });
+
+  wipe('LA FRONTIÈRE RECULE', 140, 160, .15, { size: 15, ls: 5, color: T.redHot });
+
+  const tx = 200, ty = 620, tw = 1520;
+  const lp = out(clamp((local - .55) / 1.4));
+  ctx.save();
+  ctx.strokeStyle = 'rgba(201,196,184,.55)';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(tx, ty);
+  ctx.lineTo(tx + tw * lp, ty);
+  ctx.stroke();
+  ctx.restore();
+
+  // dashed extension to the question mark
+  if (lp > .98) {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(168,31,22,.45)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 8]);
+    ctx.beginPath();
+    ctx.moveTo(tx + tw * .9, ty);
+    ctx.lineTo(tx + tw, ty);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  const pts = [
+    { x: tx + tw * 0,    y: '1950', l: 'TEST DE TURING' },
+    { x: tx + tw * .25,  y: '1953', l: 'LE CAS H.M.' },
+    { x: tx + tw * .5,   y: '2022', l: 'DISHBRAIN' },
+    { x: tx + tw * .75,  y: 'AUJOURD\u2019HUI', l: 'BIEN-ÊTRE DES MODÈLES' },
+    { x: tx + tw,        y: '?',    l: 'DEMAIN' },
+  ];
+  pts.forEach((p, i) => {
+    const pp = out(clamp((local - .95 - i * .17) / .45));
+    if (pp <= 0) return;
+    ctx.save();
+    ctx.globalAlpha = pp;
+    ctx.fillStyle = i === 4 ? T.redHot : T.red;
+    ctx.beginPath();
+    ctx.arc(p.x, ty, (i === 4 ? 5.5 : 4.5) * pp, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const isToday = i === 3;
+    const isQ = i === 4;
+    txt(p.y, p.x, ty - 22, isToday ? 16 : isQ ? 44 : 34, isQ ? T.redHot : T.screen, {
+      align: 'center', mono: isToday, ls: isToday ? 2 : 0, alpha: pp * (isQ ? .95 : .9),
+    });
+    txt(p.l, p.x, ty + 38, 13, isQ ? T.redHot : T.text, {
+      align: 'center', mono: true, ls: 2.5, alpha: pp * (isQ ? .85 : .7),
+    });
+  });
+
+  // statement
+  if (local > 3.6) {
+    const s1 = 'À CHAQUE FOIS QU\u2019ON LA CROIT FIXE,';
+    const s2 = 'ELLE BOUGE.';
+    fade(s1, W / 2, 830, 3.6, { size: 36, align: 'center', color: T.screen, alpha: .9 });
+    fade(s2, W / 2, 885, 3.95, { size: 36, align: 'center', color: T.redHot, alpha: .95 });
+  }
+}
+
+function scene7(local) {
+  bg('desk', local, 7, { alpha: .5, dark: .45, grad: 'left', zoom: 1.06, zoom2: .02, fade: .8 });
+
+  wipe('LE DOUTE', 140, 170, .15, { size: 15, ls: 6, color: T.redHot });
+  rise('NOUS NE', 140, 360, .35, { size: 108, color: T.screen, shadow: 24, dur: .7 });
+  rise('SAVONS PAS.', 140, 468, .55, { size: 108, color: T.screen, shadow: 24, dur: .75 });
+  fade('ALORS NOUS PRÉFÉRONS.', 140, 545, 1.4, { size: 26, ls: 3, color: T.redHot, alpha: .92 });
+  fade('CE N\u2019EST PAS DE LA SCIENCE.', 140, 620, 1.9, { size: 15, ls: 4, color: T.text, alpha: .5 });
+  fade('C\u2019EST DE L\u2019ÉTHIQUE.', 140, 650, 2.1, { size: 15, ls: 4, color: T.text, alpha: .5 });
+
+  // dossier page
+  const px = 1080, py = 240, pw = 620, ph = 440;
+  const pp = out(clamp((local - .7) / .7));
+  ctx.save();
+  ctx.globalAlpha = pp;
+  ctx.translate(px + pw / 2, py + ph / 2 + (1 - pp) * 24);
+  ctx.rotate(-.012);
+  ctx.translate(-pw / 2, -ph / 2);
+  ctx.shadowColor = 'rgba(0,0,0,.55)';
+  ctx.shadowBlur = 46;
+  ctx.shadowOffsetY = 22;
+  ctx.fillStyle = '#BDB8AB';
+  ctx.fillRect(0, 0, pw, ph);
+  ctx.shadowColor = 'transparent';
+  ctx.shadowBlur = 0;
+  ctx.shadowOffsetY = 0;
+
+  // page header
+  ctx.fillStyle = 'rgba(20,24,25,.72)';
+  ctx.font = '500 11px JBMono';
+  ctx.letterSpacing = '3px';
+  ctx.fillText('DOSSIER 01 — CONSCIENCE', 34, 42);
+  ctx.fillStyle = 'rgba(168,31,22,.9)';
+  ctx.fillRect(34, 54, 110, 2);
+
+  // typed lines
+  for (let i = 0; i < 9; i++) {
+    const y = 92 + i * 34;
+    const frac = [.86, .72, .9, .62, .8, .54, .88, .7, .4][i];
+    ctx.fillStyle = 'rgba(22,26,27,.30)';
+    ctx.fillRect(34, y, (pw - 68) * frac, 7);
+  }
+
+  // redaction bars
+  ctx.fillStyle = 'rgba(3,5,7,.94)';
+  const reds = [[92, .62], [160, .5], [228, .7], [296, .44]];
+  reds.forEach(([y, frac], i) => {
+    const rp = out(clamp((local - 2.0 - i * .12) / .55));
+    ctx.fillRect(34, y, (pw - 68) * frac * rp, 19);
+  });
+
+  // stamp
+  const sp = clamp((local - 4.0) / .22);
+  if (sp > 0) {
+    const sc = 1.8 - .8 * out(sp);
+    ctx.save();
+    ctx.translate(pw * .52, 350);
+    ctx.rotate(-.07);
+    ctx.scale(sc, sc);
+    ctx.globalAlpha = smooth(clamp((local - 4.0) / .12));
+    ctx.strokeStyle = 'rgba(168,31,22,.92)';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(-270, -36, 540, 72);
+    ctx.fillStyle = T.red;
+    ctx.font = '400 25px ArchivoBlack';
+    ctx.letterSpacing = '2px';
+    ctx.textAlign = 'center';
+    ctx.fillText('CONSCIENT : PRÉSUMÉ', 0, 10);
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+function scene8(local) {
+  // black stage, no image: the line is the image
+  const lx = W * .36;
+  const top = 175, bot = 920;
+  const drawP = out(clamp((local - .45) / 1.1));
+
+  // dotted guide traces, then is erased from the top with the red line
+  const erase = smooth(clamp((local - 4.3) / 1.2));
+  const yStart = top + (bot - top) * erase;
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(lx - 20, yStart, 40, Math.max(0, bot - yStart));
+  ctx.clip();
+  ctx.strokeStyle = 'rgba(201,196,184,.34)';
+  ctx.lineWidth = 1.2;
+  ctx.setLineDash([5, 9]);
+  ctx.beginPath();
+  ctx.moveTo(lx, top);
+  ctx.lineTo(lx, top + (bot - top) * drawP);
+  ctx.stroke();
+  ctx.restore();
+  if (drawP > 0) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(lx - 20, yStart, 40, Math.max(0, bot - yStart));
+    ctx.clip();
+    ctx.shadowColor = 'rgba(168,31,22,.8)';
+    ctx.shadowBlur = 16;
+    ctx.strokeStyle = 'rgba(168,31,22,.95)';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(lx, top);
+    ctx.lineTo(lx, top + (bot - top) * drawP);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  if (erase > 0 && erase < 1) {
+    ctx.save();
+    ctx.globalAlpha = (1 - erase) * .8;
+    ctx.fillStyle = T.redHot;
+    ctx.fillRect(lx - 34, yStart, 68, 2);
+    ctx.restore();
+  }
+
+  if (local > 1.5 && erase < .55) {
+    const la = (1 - smooth(clamp((local - 4.3) / .8))) * .8;
+    txt('NOUS', lx - 30, 225, 16, T.text, { align: 'right', ls: 5, alpha: la });
+    txt('EUX', lx + 30, 225, 16, T.text, { ls: 5, alpha: la });
+  }
+
+  // first statement
+  const a1 = 1 - smooth(clamp((local - 3.85) / .55));
+  if (a1 > 0) {
+    rise('LA FRONTIÈRE', 740, 455, 1.15, { size: 82, color: T.screen, shadow: 24, dur: .8, alpha: a1 });
+    rise('N\u2019EST PAS UNE LIGNE.', 740, 555, 1.4, { size: 82, color: T.screen, shadow: 24, dur: .85, alpha: a1 });
+  }
+
+  // second statement
+  if (local > 4.5) {
+    rise('C\u2019EST UNE HISTOIRE.', 740, 455, 4.5, { size: 74, color: T.screen, shadow: 24, dur: .75 });
+    rise('QUE NOUS NOUS RACONTONS.', 740, 545, 4.72, { size: 56, color: T.redHot, shadow: 20, dur: .8 });
+    fade('ET LA LIGNE S\u2019EFFACE.', 740, 620, 5.4, { size: 14, ls: 5, color: T.text, alpha: .45 });
+  }
+
+  wipe('LA LIGNE', 140, 170, .15, { size: 15, ls: 6, color: T.redHot });
+
+}
+
+function scene9(local) {
+  bg('drawer', local, 4, { alpha: .38, dark: .46, grad: 'bottom', zoom: 1.04, zoom2: .03, fade: 1.0 });
+
+  const a = smooth(clamp((local - .15) / 1.0));
+  ctx.save();
+  ctx.globalAlpha = a * .55;
+  ctx.fillStyle = T.red;
+  ctx.fillRect(W / 2 - 150, 396, 300, 2);
+  ctx.restore();
+
+  fade('BUREAU DES FRONTIÈRES — DOSSIER 01', W / 2, 360, .2, { size: 14, ls: 6, align: 'center', color: T.text, alpha: .55 });
+  const size = fit('L\u2019ILLUSION DE LA FRONTIÈRE', 1460, 92);
+  rise('L\u2019ILLUSION DE LA FRONTIÈRE', W / 2, 515, .35, { size, align: 'center', color: T.screen, shadow: 24, dur: .85 });
+  fade('LE FILM COMPLET — 26 MINUTES', W / 2, 580, .9, { size: 18, ls: 5, align: 'center', color: T.text, alpha: .68 });
+  fade('DOSSIER 01 — 2026', W / 2, 655, 1.35, { size: 15, ls: 5, align: 'center', color: T.redHot, alpha: .85 });
+}
+
+const SCENE_FNS = { S1: scene1, S2: scene2, S3: scene3, S4: scene4, S5: scene5, S6: scene6, S7: scene7, S8: scene8, S9: scene9 };
+
+async function draw(t) {
+  t = clamp(t, 0, TOTAL - 1e-4);
+  NOW = t;
+  const scene = SCENES.find(s => t >= s.t0 && t < s.t1) || SCENES[SCENES.length - 1];
+  const local = t - scene.t0;
+  const dur = scene.t1 - scene.t0;
+
+  ctx.save();
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  ctx.fillStyle = T.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // stamp shake
+  let sx = 0, sy = 0;
+  if (scene.id === 'S7' && local > 4.0 && local < 4.32) {
+    const q = 1 - (local - 4.0) / .32;
+    sx = Math.sin(local * 190) * 5 * q;
+    sy = Math.cos(local * 240) * 4 * q;
+  }
+  ctx.translate(sx, sy);
+
+  NOW = local;
+  SCENE_FNS[scene.id](local);
+  ctx.drawImage(grade, 0, 0);
+  ctx.drawImage(vignette, 0, 0);
+
+  // film texture over everything drawn so far
+  ctx.globalCompositeOperation = 'overlay';
+  ctx.globalAlpha = .10;
+  const ox = (t * 37) % 40, oy = (t * 53) % 40;
+  ctx.drawImage(grain, -ox, -oy, W + 80, H + 80);
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.globalAlpha = 1;
+  ctx.drawImage(scan, 0, 0);
+  drawDust(t);
+  drawHud(t, scene);
+
+  ctx.translate(-sx, -sy);
+
+  // entry dip and final fade
+  let black = 0;
+  if (scene.t0 === 0) black = 1 - smooth(clamp(t / .9));
+  else black = 1 - smooth(clamp(local / .13));
+  if (scene.id === 'S9') black = Math.max(black, smooth(clamp((local - (dur - 1.25)) / 1.25)));
+  if (black > 0) {
+    ctx.fillStyle = `rgba(0,0,0,${black})`;
+    ctx.fillRect(0, 0, W, H);
+  }
+  ctx.restore();
+}
+
+async function boot() {
+  const entries = await Promise.all(Object.entries(SRC).map(async ([k, src]) => {
+    const im = await loadImage(src);
+    return [k, softCopy(im, 1280)];
+  }));
+  for (const [k, im] of entries) images[k] = im;
+
+  await Promise.all([
+    document.fonts.load('16px JBMono'),
+    document.fonts.load('16px ArchivoBlack'),
+    document.fonts.ready,
+  ]);
+
+  window.SPEC = { duration: TOTAL, fps: FPS, width: W, height: H };
+  window.setT = draw;
+  await draw(0);
+  window.READY = true;
+}
+
+boot().catch(err => {
+  window.READY_ERROR = String(err && err.stack || err);
+  console.error(err);
+});
+</script>
+</body>
+</html>

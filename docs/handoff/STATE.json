@@ -62,5 +62,14 @@
   "motionDesign": "implemented, timed, rendered (8 inserts)",
   "handoff": "docs/handoff",
   "thumbnails": "assets/thumbnail/humain-ou-machine.jpg + la-frontiere-nexiste-pas.jpg (release thumbnail-v1)",
-  "process": "docs/process"
+  "process": "docs/process",
+  "summary": {
+    "duration": 60,
+    "voice": false,
+    "path": "out/summary/illusion-frontiere-60s.mp4",
+    "release": "https://github.com/emilio-n8n/illusion-frontiere/releases/tag/summary-60s",
+    "docs": "docs/summary/README.md",
+    "engine": "studio/summary.html",
+    "mix": "studio/mix_summary.mjs"
+  }
 }
